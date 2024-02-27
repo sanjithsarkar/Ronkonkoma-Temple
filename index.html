@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Include Tailwind CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.0/dist/tailwind.min.css" rel="stylesheet"> -->
+
+    <!----------------------------------- Goolge Fonts ----------------------------------------->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!----------------------------------- Bootstrap ----------------------------------------->
+    <!-- <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css"> -->
+
+    <!----------------------------------- Font Awesome ----------------------------------------->
+    <link rel="stylesheet" href="css/font-awesome/css/all.min.css">
+
+    <!----------------------------------- Responsive CSS ----------------------------------------->
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!----------------------------------- Style CSS ----------------------------------------->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!----------------------------------- Animate CSS ----------------------------------------->
+    <link rel="stylesheet" href="css/animate/animate.css">
+
+    <!--------------------------  AOS css  -------------------->
+    <!-- <link rel="stylesheet" href="{{ asset('css/aos/aos.css') }}"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.css" />
+
+    <!------------------------------------------------- Jquery js --------------------------------------------->
+    <script src="js/jquery.js"></script>
+
+    <!----------------------------------- Waypoints ----------------------------------------->
+    <script src="js/waypoints/jquery.waypoints.min.js"></script>
+
+    <!----------------------------------- WOW ----------------------------------------->
+    <script src="js/wow/wow.min.js"></script>
+
+    <!----------------------------------- Type-it js ----------------------------------------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/5.0.2/typeit.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+</head>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbarNav">
+    <div id="preloader" class="fixed top-0 bottom-0 left-0 right-0 bg-white z-50 flex justify-center items-center">
+
+        <div id="status" class="w-16 h-16 bg-center bg-no-repeat">
+
+        </div>
+    </div>
+
+    <nav class="bg-gray-800 p-3">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center flex-shrink-0 text-white mr-6">
+                <!-- <span class="font-semibold text-xl tracking-tight">Your Logo</span> -->
+                <img src="../ronkonkoma//image/Swastik-Logo.png" alt="" width="45px">
+            </div>
+
+            <!-- Mobile menu toggle -->
+            <div class="block lg:hidden">
+                <button id="nav-toggle"
+                    class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Desktop menu -->
+            <div class="hidden lg:flex lg:items-center lg:w-auto" id="nav-menu">
+                <ul class="list-none lg:flex lg:text-sm lg:justify-end">
+                    <li>
+                        <a href="#home"
+                            class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#vission"
+                            class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
+                            Vission
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#events"
+                            class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
+                            Events
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#gallery"
+                            class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
+                            Gallery
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#members"
+                            class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
+                            Members
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact"
+                            class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+                <div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="hidden lg:hidden" id="mobile-nav">
+            <ul class="list-none">
+                <li>
+                    <a href="#home" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
+                        Home</a>
+                </li>
+                <li>
+                    <a href="#vission" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
+                        Vission</a>
+                </li>
+                <li>
+                    <a href="#events" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
+                        Events
+                    </a>
+                </li>
+                <li>
+                    <a href="#gallery" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
+                        Gallery
+                    </a>
+                </li>
+                <li>
+                    <a href="#members" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
+                        Members
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <section id="slider" class="lg:h-screen lg:h-auto">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- <div class="swiper-slide">
+                    <div class="slide-image text-white"
+                        style="background-image: url(../ronkonkoma/image/2.jpg);">
+                        <div class="w-2/4 p-4 ml-24 content-box-md banner-content">
+                            <h2 class="text-xl md:text-2xl lg:text-3xl font-bold mb-2">Some Important Life Lessons From
+                                Gita</h2>
+                            <p class="text-sm md:text-base lg:text-lg"> We are a Hindu that belives in Lord Rama and
+                                Vishnu Deva the followers and We are a Hindu that belives in Lord Rama and Vishnu Deva.
+                                This is where you should start.</p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="swiper-slide relative">
+                    <div class="relative">
+                        <div class="slide-image text-white bg-cover bg-center h-full"
+                            style="background-image: url(../ronkonkoma/image/1.jpg);">
+                        </div>
+                        <div class="absolute inset-0 bg-black opacity-50"></div>
+                        <div class="absolute banner-content inset-0 text-white flex flex-col justify-center">
+                            <div class="grid grid-cols-4 flex flex-col justify-start">
+                                <div class="col-span-2 mt-0 w-full">
+                                    <h3 class="mb-6 md:text-3xl font-medium"><span id="type-it">
+                                            वसुधैव कुटुम्बकम्(Vasudhaiva Kutumbakam)</span>
+                                    </h3>
+                                    <h1 class="text-3xl text-2xl font-normal mb-2">Some Important Life Lessons From Gita
+                                    </h1>
+                                    <h6 class="text-sm md:text-base">We are a Hindu that belives in Lord Rama and Vishnu
+                                        Deva the followers and We are a Hindu that belives in Lord Rama and Vishnu Deva.
+                                        This is where you should start.</h6>
+                                </div>
+                                <div class="col-span-2 flex flex-col justify-start items-center">
+                                    <img src="../ronkonkoma/image/lotus.png" alt="" class="max-w-full h-auto">
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="swiper-slide">
+                    <div class="slide-image relative text-white"
+                        style="background-image: url(../ronkonkoma/image/2.jpg);">
+                        <div class="absolute inset-0 bg-black opacity-50"></div>
+                        <div class="absolute banner-content inset-0 text-white flex flex-col justify-center">
+                            <div class="grid grid-cols-4 flex flex-col justify-start">
+                                <div class="col-span-2 mt-0 w-full">
+                                    <h3 class="mb-6 md:text-3xl font-medium"><span id="type-it">
+                                            वसुधैव कुटुम्बकम्(Vasudhaiva Kutumbakam)</span>
+                                    </h3>
+                                    <h1 class="text-3xl text-2xl font-normal mb-2">Some Important Life Lessons From Gita
+                                    </h1>
+                                    <h6 class="text-sm md:text-base">We are a Hindu that belives in Lord Rama and Vishnu
+                                        Deva the followers and We are a Hindu that belives in Lord Rama and Vishnu Deva.
+                                        This is where you should start.</h6>
+                                </div>
+                                <div class="col-span-2 flex flex-col justify-start items-center">
+                                    <img src="../ronkonkoma/image/lotus.png" alt="" class="max-w-full h-auto">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="relative">
+                        <div class="slide-image" style="background-image: url(../ronkonkoma/image/3.jpg);">
+                            <div class="absolute inset-0 bg-black opacity-40"></div> <!-- Overlay div -->
+                            <div class="absolute banner-content inset-0 text-white flex flex-col justify-center">
+                                <div class="grid grid-cols-4 flex flex-col justify-start">
+                                    <div class="col-span-2 mt-0 w-full">
+                                        <h3 class="mb-6 md:text-3xl font-medium"><span id="type-it">
+                                                वसुधैव कुटुम्बकम्(Vasudhaiva Kutumbakam)</span>
+                                        </h3>
+                                        <h1 class="text-3xl text-2xl font-normal mb-2">Some Important Life Lessons From Gita
+                                        </h1>
+                                        <h6 class="text-sm md:text-base">We are a Hindu that belives in Lord Rama and Vishnu
+                                            Deva the followers and We are a Hindu that belives in Lord Rama and Vishnu Deva.
+                                            This is where you should start.</h6>
+                                    </div>
+                                    <div class="col-span-2 flex flex-col justify-start items-center">
+                                        <img src="../ronkonkoma/image/lotus.png" alt="" class="max-w-full h-auto">
+                                    </div>
+                                </div>
+    
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide relative">
+                    <div class="relative">
+                        <div class="slide-image text-white bg-cover bg-center h-full"
+                            style="background-image: url(../ronkonkoma/image/4.jpg);">
+                        </div>
+                        <div class="absolute inset-0 bg-black opacity-50"></div>
+                        <div class="absolute banner-content inset-0 text-white flex flex-col justify-center">
+                            <div class="grid grid-cols-4 flex flex-col justify-start">
+                                <div class="col-span-2 mt-0 w-full">
+                                    <h3 class="mb-6 md:text-3xl font-medium"><span id="type-it">
+                                            वसुधैव कुटुम्बकम्(Vasudhaiva Kutumbakam)</span>
+                                    </h3>
+                                    <h1 class="text-3xl text-2xl font-normal mb-2">Some Important Life Lessons From Gita
+                                    </h1>
+                                    <h6 class="text-sm md:text-base">We are a Hindu that belives in Lord Rama and Vishnu
+                                        Deva the followers and We are a Hindu that belives in Lord Rama and Vishnu Deva.
+                                        This is where you should start.</h6>
+                                </div>
+                                <div class="col-span-2 flex flex-col justify-start items-center">
+                                    <img src="../ronkonkoma/image/lotus.png" alt="" class="max-w-full h-auto">
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more slides as needed -->
+            </div>
+            <!-- Add pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+
+
+    <section id="vission" class="lg:h-screen content-box-md">
+        <div class="vission_title text-center">
+            <h2>Our Vision</h2>
+        </div>
+        <div class="vission-content grid grid-cols-1 lg:grid-cols-2 mt-10">
+            <div class="col-span-1 w-full lg:w-1/1 flex justify-center" data-aos="zoom-in" data-aos-duration="1500">
+                <div class="wow slideInLeft w-4/5" data-wow-duration="2s">
+                    <img src="../ronkonkoma/image/about.jpg" alt="" class="object-cover mx-auto">
+                </div>
+            </div>
+
+            <div class="col-span-1 w-full lg:w-1/1 lg:flex flex-col justify-center " data-aos="zoom-in"
+                data-aos-duration="1500">
+                <div class="w-full lg:w-4/5">
+                    <div class="vission-content wow slideInRight" data-wow-duration="2s">
+                        <div class="vission-content-inner lg:text-left">
+                            <h2 class="text-xl font-semibold mb-3">Our Vision</h2>
+                            <p class="text-base font-normal mb-3">Working with technology is my passion and Programming
+                                is something I enjoy performing. At the moment, I'm working with the Laravel Web
+                                Application Framework. Proficient in C, C++, Java, PHP, and JavaScript among other
+                                programming languages.</p>
+                            <p class="text-base font-normal mb-3">Learning and utilizing new technology is my important
+                                aspects. Trying to develop a non-competitive knowledge and establish an excellent career
+                            </p>
+                            <button
+                                class="cv_content px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">CV</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="events" class="lg:h-screen content-box-md">
+        <div class="vission_title text-center">
+            <h2>Our Vision</h2>
+        </div>
+        <div class="vission-content grid grid-cols-1 lg:grid-cols-2 mt-10">
+            <div class="col-span-1 w-full lg:w-1/1 flex justify-center" data-aos="zoom-in" data-aos-duration="1500">
+                <div class="wow slideInLeft w-4/5" data-wow-duration="2s">
+                    <img src="../ronkonkoma/image/4.jpg" alt="" class="object-cover mx-auto">
+                </div>
+            </div>
+
+            <div class="col-span-1 w-full lg:w-1/1 lg:flex flex-col justify-center " data-aos="zoom-in"
+                data-aos-duration="1500">
+                <div class="w-full lg:w-4/5">
+                    <div class="vission-content wow slideInRight" data-wow-duration="2s">
+                        <div class="vission-content-inner lg:text-left">
+                            <h2 class="text-xl font-semibold mb-3">Our Vision</h2>
+                            <p class="text-base font-normal mb-3">Working with technology is my passion and Programming
+                                is something I enjoy performing. At the moment, I'm working with the Laravel Web
+                                Application Framework. Proficient in C, C++, Java, PHP, and JavaScript among other
+                                programming languages.</p>
+                            <p class="text-base font-normal mb-3">Learning and utilizing new technology is my important
+                                aspects. Trying to develop a non-competitive knowledge and establish an excellent career
+                            </p>
+                            <button
+                                class="cv_content px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">CV</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section id="gallery" class="lg:h-screen content-box-md">
+        <div class="vission_title text-center">
+            <h2>Our Vision</h2>
+        </div>
+        <div class="vission-content grid grid-cols-1 lg:grid-cols-2 mt-10">
+            <div class="col-span-1 w-full lg:w-1/1 flex justify-center" data-aos="zoom-in" data-aos-duration="1500">
+                <div class="wow slideInLeft w-4/5" data-wow-duration="2s">
+                    <img src="../ronkonkoma/image/4.jpg" alt="" class="object-cover mx-auto">
+                </div>
+            </div>
+
+            <div class="col-span-1 w-full lg:w-1/1 lg:flex flex-col justify-center " data-aos="zoom-in"
+                data-aos-duration="1500">
+                <div class="w-full lg:w-4/5">
+                    <div class="vission-content wow slideInRight" data-wow-duration="2s">
+                        <div class="vission-content-inner lg:text-left">
+                            <h2 class="text-xl font-semibold mb-3">Our Vision</h2>
+                            <p class="text-base font-normal mb-3">Working with technology is my passion and Programming
+                                is something I enjoy performing. At the moment, I'm working with the Laravel Web
+                                Application Framework. Proficient in C, C++, Java, PHP, and JavaScript among other
+                                programming languages.</p>
+                            <p class="text-base font-normal mb-3">Learning and utilizing new technology is my important
+                                aspects. Trying to develop a non-competitive knowledge and establish an excellent career
+                            </p>
+                            <button
+                                class="cv_content px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">CV</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <section id="members" class="lg:h-screen content-box-md">
+        <div class="vission_title text-center">
+            <h2>Our Vision</h2>
+        </div>
+        <div class="vission-content grid grid-cols-1 lg:grid-cols-2 mt-10">
+            <div class="col-span-1 w-full lg:w-1/1 flex justify-center" data-aos="zoom-in" data-aos-duration="1500">
+                <div class="wow slideInLeft w-4/5" data-wow-duration="2s">
+                    <img src="../ronkonkoma/image/4.jpg" alt="" class="object-cover mx-auto">
+                </div>
+            </div>
+
+            <div class="col-span-1 w-full lg:w-1/1 lg:flex flex-col justify-center " data-aos="zoom-in"
+                data-aos-duration="1500">
+                <div class="w-full lg:w-4/5">
+                    <div class="vission-content wow slideInRight" data-wow-duration="2s">
+                        <div class="vission-content-inner lg:text-left">
+                            <h2 class="text-xl font-semibold mb-3">Our Vision</h2>
+                            <p class="text-base font-normal mb-3">Working with technology is my passion and Programming
+                                is something I enjoy performing. At the moment, I'm working with the Laravel Web
+                                Application Framework. Proficient in C, C++, Java, PHP, and JavaScript among other
+                                programming languages.</p>
+                            <p class="text-base font-normal mb-3">Learning and utilizing new technology is my important
+                                aspects. Trying to develop a non-competitive knowledge and establish an excellent career
+                            </p>
+                            <button
+                                class="cv_content px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">CV</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+    <!---------------------------  AOS --------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.js"></script>
+
+    <!----------------------------------- Script js ----------------------------------------->
+    <script src="js/script.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // Autoplay
+            autoplay: {
+                delay: 3000000, // Delay between slides in milliseconds (5 seconds)
+                disableOnInteraction: false, // Continue autoplay even when user interacts with swiper
+            },
+
+            // If you need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+    <script>
+        // Toggle mobile menu visibility
+        document.getElementById('nav-toggle').addEventListener('click', function () {
+            var mobileNav = document.getElementById('mobile-nav');
+            mobileNav.classList.toggle('hidden');
+        });
+    </script>
+
+
+</body>
+
+</html>

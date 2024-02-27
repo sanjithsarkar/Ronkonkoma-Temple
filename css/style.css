@@ -1,0 +1,555 @@
+/* ================================================
+    Default Theme
+    -----------------------------------------------
+    Fonts: Raleway, Open Sans
+    -----------------------------------------------
+    Colors:
+            Moon Yellow:    #f4c613
+            Grey:           #212226
+            White Smoke:    #f4f4f4
+            White:          #fff
+            Black:          #000
+
+===================================================
+*/
+
+/* ================================================
+                    HTML, Body
+===================================================
+*/
+html,
+body {
+	height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Raleway", sans-serif;
+}
+
+section {
+	background: #fff;
+	overflow: hidden;
+}
+
+
+
+/* ================================================
+                    preloader
+===================================================
+*/
+
+#preloader {
+	background-color: #fff;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+}
+
+#status {
+	background: url('../image/preloader/preloader.gif');
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -35px;
+	margin-left: -35px;
+}
+
+
+/* ================================================
+                    Content Boxes
+===================================================
+*/
+
+.content-box-lg {
+	padding: 120px 0;
+}
+
+.content-box-md {
+	padding: 100px 0;
+
+}
+
+
+/* ================================================
+                    Header 
+===================================================
+*/
+
+
+
+/* ================================================
+                    particles
+===================================================
+*/
+
+.slide-image {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	position: relative;
+}
+
+.banner-content {
+	margin-left: 10%;
+}
+/* ================================================
+                    Home
+===================================================
+*/
+
+#home {
+	background: none;
+	position: relative;
+	height: 100%;
+}
+
+
+#home-content {
+	width: 100%;
+	height: 100%;
+	display: table;
+}
+
+#home-content-inner {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.profile-home {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 90px;
+	top: 130px;
+}
+
+#home_title {
+	font-size: 27px;
+	font-family: "Raleway";
+	font-weight: 200;
+}
+
+#home_subtitle {
+	font-size: 28px;
+	font-family: "Raleway";
+	font-weight: 400;
+	padding: 3px 0px;
+}
+
+#home_desk {
+	font-size: 14px;
+	font-family: "Raleway";
+	font-weight: 200;
+}
+
+
+#home-content-details {
+	padding: 85px 0;
+}
+
+#home_contact {
+	background: #f4c613;
+	border-radius: 8px;
+	padding: 5px 10px;
+	margin: 0;
+	border: transparent;
+}
+
+#home_contact a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 14px;
+}
+
+#arrow-down {
+	position: absolute;
+	left: 50%;
+	bottom: 20px;
+	color: #212226;
+	font-size: 20px;
+	width: 32px;
+	height: 32px;
+	margin-left: -16px;
+	text-align: center;
+	z-index: 1;
+}
+
+#arrow-down:hover,
+#arrow-down:focus {
+	color: #f4c613;
+}
+
+
+
+/* ================================================
+                    About
+===================================================
+*/
+
+#about {
+	background: #f4f4f4;
+}
+
+.vission_title h2 {
+	font-size: 30px;
+	font-family: "Raleway";
+	font-weight: 200;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.vission_title h2::after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 50px;
+	height: 3px;
+	background: #f4c613;
+	bottom: 0;
+	left: calc(50% - 25px);
+}
+
+#about-full-div {
+	margin-top: 40px;
+}
+
+/* .vission-content {
+	width: 100%;
+	height: 100%;
+	display: table;
+}
+
+.vission-content-inner {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.vission-content-inner h2 {
+	font-size: 25px;
+	font-weight: 200;
+	font-family: "Raleway", sans-serif;
+	padding: 0 0 3px 0;
+}
+
+.vission-content-inner p {
+	font-size: 14px;
+	font-weight: 300;
+	font-family: "Raleway";
+	line-height: 25px;
+} */
+
+.cv_content {
+	background-color: #f4c613;
+	padding: 5px 18px;
+	border-radius: 5px;
+	color: #fff;
+	border: transparent;
+}
+
+
+/* ================================================
+                    About
+===================================================
+*/
+
+.skill-heading h3 {
+	font-size: 25px;
+	font-family: "Raleway";
+	font-weight: 300;
+	display: inline-block;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.skill-heading h3::after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 50px;
+	height: 3px;
+	background: #f4c613;
+	bottom: 0;
+	left: calc(50% - 25px);
+}
+
+.skill-content h3 {
+	/* text-align: center; */
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: 300;
+	padding: 20px 0;
+}
+
+.skill h4 {
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 14px;
+	font-family: "Raleway";
+}
+
+#progress-elements {
+	margin-top: 30px;
+}
+
+.progress {
+	height: 5px;
+	border-radius: 0;
+	background: #efefef;
+	margin: 12px 0 25px 0;
+	overflow: visible;
+}
+
+.progress-bar {
+	background: #f4c613;
+	position: relative;
+	overflow: visible;
+}
+
+.progress-bar span {
+	font-size: 12px;
+	font-weight: 400;
+	padding: 3px;
+	background: #212226;
+	position: absolute;
+	left: 97%;
+	top: -45px;
+	border-radius: 10%;
+}
+
+.progress-bar span::before {
+	content: "";
+	border-top: 7px solid #212226;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	position: absolute;
+	bottom: -6px;
+	left: 25%;
+}
+
+.message-alert {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+	text-align: center;
+	padding: 10px;
+	font-weight: bold;
+}
+
+/* ========================================================
+                    Animation
+===========================================================*/
+
+#home_title {
+	animation-duration: 1.5s;
+	animation-delay: 1s;
+}
+
+#home_subtitle {
+	animation-duration: 1.5s;
+	animation-delay: 1.5s;
+}
+
+#home_desk {
+	animation-duration: 1.5s;
+	animation-delay: 2s;
+}
+
+#home_contact {
+	animation-duration: 1.5s;
+	animation-delay: 2.5s;
+}
+
+#arrow-down {
+	animation-duration: 1.5s;
+	animation-delay: 3s;
+}
+
+
+/* ========================================================
+                    Service
+===========================================================*/
+
+#service {
+	background: #f4f4f4;
+}
+
+#navbar-brand {
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: 500;
+	font-family: "Raleway";
+	padding-left: 112px;
+}
+
+.service-content {
+	text-align: center;
+	padding: 35px 35px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	margin: 25px 0;
+	background-color: #fff;
+}
+
+.service-content h3 {
+	display: block;
+}
+
+.fa-solid {
+	padding: 35px 0 25px 0;
+	font-size: 30px;
+}
+
+.service-content h3 {
+	text-transform: uppercase;
+	font-size: 23px;
+	font-weight: 400;
+	font-family: "Raleway";
+}
+
+.service-des p {
+	font-size: 13px;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+	padding: 12px 0;
+	line-height: 25px;
+}
+
+hr {
+	width: 45px;
+	height: 3px;
+	margin: 0 auto;
+	background-color: #f4c613;
+	border: none;
+}
+
+.service-content:hover {
+	background-color: #f4c613;
+	color: #fff;
+	transition: all 400ms ease-in-out;
+	transform: translateY(-15px);
+}
+
+
+.service-content:hover i {
+	transform: translateY(-12px);
+	transition: all 400ms linear;
+}
+
+.service-content:hover hr {
+	background: #fff;
+}
+
+.service-heading h3 {
+	font-size: 25px;
+	font-weight: 400;
+	line-height: 30px;
+}
+
+.service-heading p {
+	text-transform: uppercase;
+	font-size: 13px;
+	font-weight: 200;
+	font-family: "Raleway";
+}
+
+/* ========================================================
+                    Portfolio
+===========================================================*/
+
+.portfolio-heading {
+	padding-bottom: 40px;
+}
+
+.portfolio-heading h3 {
+	font-size: 25px;
+	font-family: "Raleway";
+	font-weight: 300;
+	display: inline-block;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.portfolio-heading h3::after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 50px;
+	height: 3px;
+	background: #f4c613;
+	bottom: 0;
+	left: calc(50% - 25px);
+}
+
+.slick-prev.slick-arrow {
+	background: #bbb;
+	width: 30px;
+	height: 30px;
+}
+
+.slick-next.slick-arrow {
+	background: #bbb;
+	width: 30px;
+	height: 30px;
+}
+
+.slide.slick-initialized.slick-slider {
+	margin-top: 80px;
+}
+
+.fa-solid.fa-circle {
+	font-size: 7px;
+	padding: 5px;
+}
+
+.technology p {
+	display: inline;
+}
+
+#portfolio-content p {
+	font-family: "Open Sans", sans-serif !important;
+	font-size: 15px;
+	font-weight: 200;
+}
+
+
+
+
+/* ========================================================
+            	Arrow button Back to Top
+===========================================================*/
+
+.btn-back-to-top {
+	position: fixed;
+	bottom: 20px;
+	right: 5px;
+	padding: 3px 10px;
+	font-size: 22px;
+}
+
+.btn-back-to-top:hover {
+	color: #f4c613;
+}
+
+
+/* ========================================================
+            	Arrow button Back to Top
+===========================================================*/
+
+#contact {
+	background: #f4f4f4;
+}
+
