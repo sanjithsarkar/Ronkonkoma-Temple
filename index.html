@@ -58,108 +58,110 @@
         </div>
     </div>
 
-    <nav class="bg-gray-800 p-3">
-        <div class="container mx-auto flex justify-between items-center">
-            <!-- Logo -->
-            <div class="flex items-center flex-shrink-0 text-white mr-6">
-                <!-- <span class="font-semibold text-xl tracking-tight">Your Logo</span> -->
-                <img src="../ronkonkoma//image/Swastik-Logo.png" alt="" width="45px">
+    <div class="fixed w-full z-10">
+        <nav class="bg-gray-800 p-3">
+            <div class="container mx-auto flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center flex-shrink-0 text-white ml-16">
+                    <!-- <span class="font-semibold text-xl tracking-tight">Your Logo</span> -->
+                    <img src="../ronkonkoma//image/Om_symbol.png" alt="" width="40px">
+                </div>
+    
+                <!-- Mobile menu toggle -->
+                <div class="block lg:hidden">
+                    <button id="nav-toggle"
+                        class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white">
+                        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <title>Menu</title>
+                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                        </svg>
+                    </button>
+                </div>
+    
+                <!-- Desktop menu -->
+                <div class="hidden lg:flex lg:items-center lg:w-auto" id="nav-menu">
+                    <ul class="list-none lg:flex lg:text-sm lg:justify-end">
+                        <li>
+                            <a href="#home"
+                                class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#vission"
+                                class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
+                                Vission
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#events"
+                                class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
+                                Events
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#gallery"
+                                class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
+                                Gallery
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#members"
+                                class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
+                                Members
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact"
+                                class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <div>
+                    </div>
+                </div>
+    
             </div>
-
-            <!-- Mobile menu toggle -->
-            <div class="block lg:hidden">
-                <button id="nav-toggle"
-                    class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white">
-                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <title>Menu</title>
-                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Desktop menu -->
-            <div class="hidden lg:flex lg:items-center lg:w-auto" id="nav-menu">
-                <ul class="list-none lg:flex lg:text-sm lg:justify-end">
+    
+            <!-- Mobile menu -->
+            <div class="hidden lg:hidden" id="mobile-nav">
+                <ul class="list-none">
                     <li>
-                        <a href="#home"
-                            class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
-                            Home
-                        </a>
+                        <a href="#home" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
+                            Home</a>
                     </li>
                     <li>
-                        <a href="#vission"
-                            class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
-                            Vission
-                        </a>
+                        <a href="#vission" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
+                            Vission</a>
                     </li>
                     <li>
-                        <a href="#events"
-                            class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
+                        <a href="#events" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
                             Events
                         </a>
                     </li>
                     <li>
-                        <a href="#gallery"
-                            class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
+                        <a href="#gallery" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
                             Gallery
                         </a>
                     </li>
                     <li>
-                        <a href="#members"
-                            class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
+                        <a href="#members" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
                             Members
                         </a>
                     </li>
                     <li>
-                        <a href="#contact"
-                            class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
+                        <a href="#contact" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
                             Contact
                         </a>
                     </li>
                 </ul>
-                <div>
-                </div>
             </div>
-
-        </div>
-
-        <!-- Mobile menu -->
-        <div class="hidden lg:hidden" id="mobile-nav">
-            <ul class="list-none">
-                <li>
-                    <a href="#home" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
-                        Home</a>
-                </li>
-                <li>
-                    <a href="#vission" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
-                        Vission</a>
-                </li>
-                <li>
-                    <a href="#events" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
-                        Events
-                    </a>
-                </li>
-                <li>
-                    <a href="#gallery" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
-                        Gallery
-                    </a>
-                </li>
-                <li>
-                    <a href="#members" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
-                        Members
-                    </a>
-                </li>
-                <li>
-                    <a href="#contact" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
-                        Contact
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+        </nav>
+    </div>
 
 
-    <section id="slider" class="lg:h-screen lg:h-auto">
+    <section id="slider" class="lg:h-screen lg:h-auto relative z-0">
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <!-- <div class="swiper-slide">
