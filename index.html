@@ -46,19 +46,23 @@
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
+
+
 
 </head>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbarNav">
-    <div id="preloader" class="fixed top-0 bottom-0 left-0 right-0 bg-white z-50 flex justify-center items-center">
+    <div id="preloader" class="fixed top-0 bottom-0 left-0 right-0 bg-white z-50 flex justify-center items-center"
+        data-scroll-container>
 
         <div id="status" class="w-16 h-16 bg-center bg-no-repeat">
 
         </div>
     </div>
 
-    <div class="fixed w-full z-10">
+    <div class="fixed w-full z-10" data-scroll-section>
         <nav class="bg-gray-800 p-3">
             <div class="container mx-auto flex justify-between items-center">
                 <!-- Logo -->
@@ -67,7 +71,7 @@
                         <img src="../ronkonkoma//image/Om_symbol.png" alt="" width="40px">
                     </a>
                 </div>
-    
+
                 <!-- Mobile menu toggle -->
                 <div class="block lg:hidden">
                     <button id="nav-toggle"
@@ -78,7 +82,7 @@
                         </svg>
                     </button>
                 </div>
-    
+
                 <!-- Desktop menu -->
                 <div class="hidden lg:flex lg:items-center lg:w-auto" id="nav-menu">
                     <ul class="list-none lg:flex lg:text-sm lg:justify-end">
@@ -122,37 +126,43 @@
                     <div>
                     </div>
                 </div>
-    
+
             </div>
-    
+
             <!-- Mobile menu -->
             <div class="hidden lg:hidden" id="mobile-nav">
                 <ul class="list-none">
                     <li>
-                        <a href="#slider" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
+                        <a href="#slider"
+                            class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
                             Home</a>
                     </li>
                     <li>
-                        <a href="#vission" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
+                        <a href="#vission"
+                            class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
                             Vission</a>
                     </li>
                     <li>
-                        <a href="#events" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
+                        <a href="#events"
+                            class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
                             Events
                         </a>
                     </li>
                     <li>
-                        <a href="#gallery" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
+                        <a href="#gallery"
+                            class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
                             Gallery
                         </a>
                     </li>
                     <li>
-                        <a href="#members" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
+                        <a href="#members"
+                            class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
                             Members
                         </a>
                     </li>
                     <li>
-                        <a href="#contact" class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
+                        <a href="#contact"
+                            class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
                             Contact
                         </a>
                     </li>
@@ -162,7 +172,7 @@
     </div>
 
 
-    <section id="slider" class="lg:h-screen lg:h-auto relative z-0">
+    <section id="slider" class="lg:h-screen lg:h-auto relative z-0" data-scroll-section>
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <!-- <div class="swiper-slide">
@@ -241,18 +251,21 @@
                                         <h3 class="mb-6 md:text-3xl font-medium"><span id="type-it">
                                                 वसुधैव कुटुम्बकम्(Vasudhaiva Kutumbakam)</span>
                                         </h3>
-                                        <h1 class="text-3xl text-2xl font-normal mb-2">Some Important Life Lessons From Gita
+                                        <h1 class="text-3xl text-2xl font-normal mb-2">Some Important Life Lessons From
+                                            Gita
                                         </h1>
-                                        <h6 class="text-sm md:text-base">We are a Hindu that belives in Lord Rama and Vishnu
-                                            Deva the followers and We are a Hindu that belives in Lord Rama and Vishnu Deva.
+                                        <h6 class="text-sm md:text-base">We are a Hindu that belives in Lord Rama and
+                                            Vishnu
+                                            Deva the followers and We are a Hindu that belives in Lord Rama and Vishnu
+                                            Deva.
                                             This is where you should start.</h6>
                                     </div>
                                     <div class="col-span-2 flex flex-col justify-start items-center">
                                         <img src="../ronkonkoma/image/lotus.png" alt="" class="max-w-full h-auto">
                                     </div>
                                 </div>
-    
-    
+
+
                             </div>
                         </div>
                     </div>
@@ -297,7 +310,7 @@
     </section>
 
 
-    <section id="vission" class="lg:h-screen content-box-md">
+    <section id="vission" class="lg:h-screen content-box-md" data-scroll-section>
         <div class="vission_title text-center">
             <h2>Our Vision</h2>
         </div>
@@ -331,7 +344,85 @@
 
     </section>
 
-    <section id="events" class="lg:h-screen content-box-md">
+    <section id="events" class="lg:h-screen content-box-md" data-scroll-section>
+        <div class="vission_title text-center">
+            <h2>Upcoming Events</h2>
+        </div>
+
+        <div class="filter mt-3 space-x-3 text-center mt-8 text-white">
+            <h2 class="sr-only">Filter by type of conference</h2>
+            <button class="bg-yellow-700  filter-btn" data-filter="frontend">Frontend</button>
+            <button class="bg-yellow-700  filter-btn" data-filter="backend">Backend</button>
+            <button class="bg-yellow-700  filter-btn" data-filter="fullstack">Fullstack</button>
+        </div>
+
+        <div class="w-full mt-4">
+            <h1 class="mb-4 text-3xl ml-40 font-bold">Tech Conferences</h1>
+
+            <ul class="gap-4 mx-40">
+                <li class="list-group-item conference" data-category="fullstack">
+                    <div class="conference-details grid grid-cols-4 sm:grid-cols-4">
+                        <div class="col-span-2 mr-10">
+                            <img src="../ronkonkoma//image/4.jpg" alt="" class="rounded">
+                        </div>
+                        
+                        <div class="col-span-2">
+                            <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book. It has
+                                survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h6>
+                        </div>
+                    </div>
+                    <h2 class="conference-name">THAT Conference Texas</h2>
+                </li>
+
+
+                <li class="list-group-item conference" data-category="backend">
+                    <div class="conference-details grid grid-cols-4 sm:grid-cols-4">
+                        <div class="col-span-2 mr-10">
+                            <img src="../ronkonkoma//image/3.jpg" alt="" class="rounded">
+                        </div>
+                        <div class="col-span-2">
+                            <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book. It has
+                                survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h6>
+                        </div>
+                    </div>
+                    <h2 class="conference-name">THAT Conference Texas</h2>
+                </li>
+
+                <li class="list-group-item conference" data-category="frontend">
+                    <div class="conference-details grid grid-cols-4 sm:grid-cols-4">
+                        <div class="col-span-2 mr-10">
+                            <img src="../ronkonkoma//image/2.jpg" alt="" class="rounded">
+                        </div>
+                        <div class="col-span-2">
+                            <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book. It has
+                                survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                                publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h6>
+                        </div>
+                    </div>
+                    <h2 class="conference-name">THAT Conference Texas</h2>
+                </li>
+            </ul>
+        </div>
+
+
+    </section>
+
+
+    <section id="gallery" class="lg:h-screen content-box-md" data-scroll-section>
         <div class="vission_title text-center">
             <h2>Our Vision</h2>
         </div>
@@ -366,43 +457,8 @@
     </section>
 
 
-    <section id="gallery" class="lg:h-screen content-box-md">
-        <div class="vission_title text-center">
-            <h2>Our Vision</h2>
-        </div>
-        <div class="vission-content grid grid-cols-1 lg:grid-cols-2 mt-10">
-            <div class="col-span-1 w-full lg:w-1/1 flex justify-center" data-aos="zoom-in" data-aos-duration="1500">
-                <div class="wow slideInLeft w-4/5" data-wow-duration="2s">
-                    <img src="../ronkonkoma/image/4.jpg" alt="" class="object-cover mx-auto">
-                </div>
-            </div>
 
-            <div class="col-span-1 w-full lg:w-1/1 lg:flex flex-col justify-center " data-aos="zoom-in"
-                data-aos-duration="1500">
-                <div class="w-full lg:w-4/5">
-                    <div class="vission-content wow slideInRight" data-wow-duration="2s">
-                        <div class="vission-content-inner lg:text-left">
-                            <h2 class="text-xl font-semibold mb-3">Our Vision</h2>
-                            <p class="text-base font-normal mb-3">Working with technology is my passion and Programming
-                                is something I enjoy performing. At the moment, I'm working with the Laravel Web
-                                Application Framework. Proficient in C, C++, Java, PHP, and JavaScript among other
-                                programming languages.</p>
-                            <p class="text-base font-normal mb-3">Learning and utilizing new technology is my important
-                                aspects. Trying to develop a non-competitive knowledge and establish an excellent career
-                            </p>
-                            <button
-                                class="cv_content px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">CV</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-
-
-    <section id="members" class="lg:h-screen content-box-md">
+    <section id="members" class="lg:h-screen content-box-md" data-scroll-section>
         <div class="vission_title text-center">
             <h2>Our Vision</h2>
         </div>
@@ -481,6 +537,36 @@
         });
     </script>
 
+    <script>
+        $(document).ready(function() {
+            // Set Frontend filter button as active by default
+            $('.filter-btn[data-filter="frontend"]').addClass('active');
+    
+            // Show only conferences with the "Frontend" category initially
+            $('.conference').each(function() {
+                if ($(this).data('category') !== 'frontend') {
+                    $(this).hide();
+                }
+            });
+    
+            // Filter conferences based on the selected category
+            $('.filter-btn').click(function() {
+                var category = $(this).data('filter');
+                $('.filter-btn').removeClass('active');
+                $(this).addClass('active');
+                
+                // Show/hide conferences based on the selected category
+                $('.conference').each(function() {
+                    var conferenceCategory = $(this).data('category');
+                    if (category === 'all' || conferenceCategory === category) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 

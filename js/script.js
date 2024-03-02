@@ -157,3 +157,12 @@ new TypeIt('#type-it', {
 
 AOS.init();
 
+
+/*=========================================
+                 Locomtive
+========================================*/
+
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true,
+  });
