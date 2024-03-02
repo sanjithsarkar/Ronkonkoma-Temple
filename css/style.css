@@ -239,15 +239,18 @@ section {
 ===================================================
 */
 
-.filter-btn {
-	padding: 7px 14px;
-	border-radius: 4px;
+.filter-btn,
+.filter-btn1 {
+	padding: 8px 14px;
+    border-radius: 6px; /* Adjusted border-radius for both classes */
 }
 
-.bg-yellow-700.filter-btn.active {
-	background: #973c3c;
-	box-shadow: 0 3px 7px rgba(198, 18, 18, 0.8);
+.filter-btn.active,
+.filter-btn1.active {
+    background: #973c3c;
+    box-shadow: 0 3px 7px rgba(198, 18, 18, 0.8);
 }
+
 
 /* ========================================================
                     Animation

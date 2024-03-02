@@ -175,19 +175,6 @@
     <section id="slider" class="lg:h-screen lg:h-auto relative z-0" data-scroll-section>
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <!-- <div class="swiper-slide">
-                    <div class="slide-image text-white"
-                        style="background-image: url(../ronkonkoma/image/2.jpg);">
-                        <div class="w-2/4 p-4 ml-24 content-box-md banner-content">
-                            <h2 class="text-xl md:text-2xl lg:text-3xl font-bold mb-2">Some Important Life Lessons From
-                                Gita</h2>
-                            <p class="text-sm md:text-base lg:text-lg"> We are a Hindu that belives in Lord Rama and
-                                Vishnu Deva the followers and We are a Hindu that belives in Lord Rama and Vishnu Deva.
-                                This is where you should start.</p>
-                        </div>
-                    </div>
-                </div> -->
-
                 <div class="swiper-slide relative">
                     <div class="relative">
                         <div class="slide-image text-white bg-cover bg-center h-full"
@@ -210,8 +197,6 @@
                                     <img src="../ronkonkoma/image/lotus.png" alt="" class="max-w-full h-auto">
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
@@ -310,7 +295,7 @@
     </section>
 
 
-    <section id="vission" class="lg:h-screen content-box-md" data-scroll-section>
+    <section id="vission" class="lg:h-screen content-box-md mx-32" data-scroll-section>
         <div class="vission_title text-center">
             <h2>Our Vision</h2>
         </div>
@@ -344,29 +329,33 @@
 
     </section>
 
-    <section id="events" class="lg:h-screen content-box-md" data-scroll-section>
+    <section id="events" class="lg:h-screen content-box-md mx-32" data-scroll-section>
         <div class="vission_title text-center">
             <h2>Upcoming Events</h2>
         </div>
 
         <div class="filter mt-3 space-x-3 text-center mt-8 text-white">
             <h2 class="sr-only">Filter by type of conference</h2>
-            <button class="bg-yellow-700  filter-btn" data-filter="frontend">Frontend</button>
-            <button class="bg-yellow-700  filter-btn" data-filter="backend">Backend</button>
-            <button class="bg-yellow-700  filter-btn" data-filter="fullstack">Fullstack</button>
+            <button class="bg-yellow-700 filter-btn" data-filter="all">All</button>
+            <button class="bg-yellow-700 filter-btn1" data-filter="frontend">Frontend</button>
+            <button class="bg-yellow-700 filter-btn1" data-filter="backend">Backend</button>
+            <button class="bg-yellow-700 filter-btn1" data-filter="fullstack">Fullstack</button>
         </div>
 
         <div class="w-full mt-4">
-            <h1 class="mb-4 text-3xl ml-40 font-bold">Tech Conferences</h1>
+            <h1 class="mb-4 text-3xl font-bold">Tech Conferences</h1>
 
-            <ul class="gap-4 mx-40">
-                <li class="list-group-item conference" data-category="fullstack">
-                    <div class="conference-details grid grid-cols-4 sm:grid-cols-4">
-                        <div class="col-span-2 mr-10">
+            <div id="event-view" class="grid grid-cols-1 lg:grid-cols-2 mt-10">
+
+            </div>
+            <ul class="event-content grid grid-cols-3 gap-4">
+                <li id="fullstack" class="col-span-1 list-group-item conference" data-category="fullstack">
+                    <div class="conference-details">
+                        <div class="event-image">
                             <img src="../ronkonkoma//image/4.jpg" alt="" class="rounded">
                         </div>
-                        
-                        <div class="col-span-2">
+
+                        <div class="event-content">
                             <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
                                 has been the industry's standard dummy text ever since the 1500s, when an unknown
                                 printer took a galley of type and scrambled it to make a type specimen book. It has
@@ -376,16 +365,15 @@
                                 publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h6>
                         </div>
                     </div>
-                    <h2 class="conference-name">THAT Conference Texas</h2>
+
                 </li>
 
-
-                <li class="list-group-item conference" data-category="backend">
-                    <div class="conference-details grid grid-cols-4 sm:grid-cols-4">
-                        <div class="col-span-2 mr-10">
+                <li id="backend" class="col-span-1 list-group-item conference" data-category="backend">
+                    <div class="conference-details">
+                        <div class="event-image">
                             <img src="../ronkonkoma//image/3.jpg" alt="" class="rounded">
                         </div>
-                        <div class="col-span-2">
+                        <div class="event-text-content">
                             <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
                                 has been the industry's standard dummy text ever since the 1500s, when an unknown
                                 printer took a galley of type and scrambled it to make a type specimen book. It has
@@ -398,12 +386,12 @@
                     <h2 class="conference-name">THAT Conference Texas</h2>
                 </li>
 
-                <li class="list-group-item conference" data-category="frontend">
-                    <div class="conference-details grid grid-cols-4 sm:grid-cols-4">
-                        <div class="col-span-2 mr-10">
+                <li id="frontend" class="col-span-1 list-group-item conference" data-category="frontend">
+                    <div class="conference-details">
+                        <div class="event-image">
                             <img src="../ronkonkoma//image/2.jpg" alt="" class="rounded">
                         </div>
-                        <div class="col-span-2">
+                        <div class="event-content">
                             <h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
                                 has been the industry's standard dummy text ever since the 1500s, when an unknown
                                 printer took a galley of type and scrambled it to make a type specimen book. It has
@@ -512,7 +500,7 @@
 
             // Autoplay
             autoplay: {
-                delay: 3000000, // Delay between slides in milliseconds (5 seconds)
+                delay: 1000, // Delay between slides in milliseconds (5 seconds)
                 disableOnInteraction: false, // Continue autoplay even when user interacts with swiper
             },
 
@@ -537,36 +525,121 @@
         });
     </script>
 
-    <script>
-        $(document).ready(function() {
+    <!-- <script>
+        $(document).ready(function () {
             // Set Frontend filter button as active by default
             $('.filter-btn[data-filter="frontend"]').addClass('active');
-    
+
+
+
             // Show only conferences with the "Frontend" category initially
-            $('.conference').each(function() {
-                if ($(this).data('category') !== 'frontend') {
-                    $(this).hide();
-                }
-            });
-    
+            // $('.conference').each(function() {
+            //     if ($(this).data('category') !== 'frontend') {
+            //         $(this).hide();
+            //     }
+            // });
+
             // Filter conferences based on the selected category
-            $('.filter-btn').click(function() {
+            $('.filter-btn').click(function () {
+                // $('#event-view').hide();
                 var category = $(this).data('filter');
                 $('.filter-btn').removeClass('active');
                 $(this).addClass('active');
-                
+
                 // Show/hide conferences based on the selected category
-                $('.conference').each(function() {
+                $('.conference').each(function () {
                     var conferenceCategory = $(this).data('category');
-                    if (category === 'all' || conferenceCategory === category) {
+                    if (category === 'all') {
                         $(this).show();
-                    } else {
+                    } else if (conferenceCategory === category) {
+                        $(this).show(vissionContent());
+                    }
+                    else {
                         $(this).hide();
                     }
                 });
             });
         });
+    </script> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.filter-btn[data-filter="all"]').addClass('active');
+            $('.filter-btn').click(function () {
+                var category = $(this).data('filter');
+                $('.filter-btn, .filter-btn1').removeClass('active');
+                $(this).addClass('active');
+
+                // Show/hide conferences based on the selected category
+                $('.conference').each(function () {
+                    // var conferenceCategory = $(this).data('category');
+                    if (category === 'all') {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+
+                // Clear the event view
+                $('#event-view').html('');
+            });
+
+            $('.list-group-item').click(function () {
+                const targetElement = $(this);
+                $('.list-group-item').hide();
+                vissionContent(targetElement);
+            });
+        });
+
+        function vissionContent(targetElement) {
+            const vissionContent = `
+                <div id="image-container" class="col-span-1 w-full lg:w-1/1 flex justify-center" data-aos="zoom-in" data-aos-duration="1500">
+                    <div class="wow slideInLeft w-4/5" data-wow-duration="2s">
+                        <img id="image-content" src="${targetElement.find('img').attr('src')}" alt="" class="image-content object-cover mx-auto">
+                    </div>
+                </div>
+                <div id="text-container" class="col-span-1 w-full lg:w-1/1 lg:flex flex-col justify-center " data-aos="zoom-in" data-aos-duration="1500">
+                    <div class="w-full lg:w-4/5">
+                        <div class="vission-content wow slideInRight" data-wow-duration="2s">
+                            <div class="vission-content-inner lg:text-left">
+                                <h2 id="vision-title" class="text-xl font-semibold mb-3">${targetElement.find('.conference-name').text()}</h2>
+                                <p id="vision-description" class="text-base font-normal mb-3">${targetElement.find('h6').text()}</p>
+                                <button class="cv_content px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">CV</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            $('#event-view').html(vissionContent);
+        }
     </script>
+
+    <script>
+        $(document).ready(function () {
+            $('.filter').on('click', '.filter-btn1', function () {
+                var category = $(this).data('filter');
+                $('.filter-btn, .filter-btn1').removeClass('active'); // Remove "active" class from both types of buttons
+                $(this).addClass('active');
+
+                displaySingleCategory(category);
+            });
+
+            function displaySingleCategory(category) {
+                // Show/hide conferences based on the selected category
+                $('.conference').each(function () {
+                    var conferenceCategory = $(this).data('category');
+                    if (conferenceCategory === category) {
+                        $('[data-category]').hide(); // Hide conferences with different category
+                        vissionContent($(this));
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            }
+        });
+    </script>
+
 
 </body>
 
