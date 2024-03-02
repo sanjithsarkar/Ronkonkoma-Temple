@@ -239,6 +239,10 @@ section {
 ===================================================
 */
 
+#events {
+	background: #8080801c;
+}
+
 .filter-btn,
 .filter-btn1 {
 	padding: 8px 14px;
