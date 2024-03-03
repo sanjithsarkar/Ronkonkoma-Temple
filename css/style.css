@@ -255,6 +255,14 @@ section {
     box-shadow: 0 3px 7px rgba(198, 18, 18, 0.8);
 }
 
+.list-group-item {
+	background: #fff;
+}
+
+.event-text-content {
+	padding: 4% 3% 0% 5%;
+	font-size: 13px;
+}
 
 /* ========================================================
                     Animation
