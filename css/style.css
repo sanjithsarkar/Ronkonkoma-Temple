@@ -103,6 +103,7 @@ section {
 .banner-content {
 	margin-left: 10%;
 }
+
 /* ================================================
                     Home
 ===================================================
@@ -246,22 +247,35 @@ section {
 .filter-btn,
 .filter-btn1 {
 	padding: 8px 14px;
-    border-radius: 6px; /* Adjusted border-radius for both classes */
+	border-radius: 6px;
+	/* Adjusted border-radius for both classes */
 }
 
 .filter-btn.active,
 .filter-btn1.active {
-    background: #973c3c;
-    box-shadow: 0 3px 7px rgba(198, 18, 18, 0.8);
+	background: #973c3c;
+	box-shadow: 0 3px 7px rgba(198, 18, 18, 0.8);
+}
+
+.event-image img{
+	width: 100%;
+	height: 250px;
 }
 
 .list-group-item {
 	background: #fff;
 }
-
 .event-text-content {
-	padding: 4% 3% 0% 5%;
-	font-size: 13px;
+	padding: 5% 0% 5% 4%;
+}
+.event-text-content h6 {
+	padding: 2% 0% 0% 3%;
+	font-size: 14px;
+	max-width: 95%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: block;
 }
 
 /* ========================================================
@@ -467,4 +481,3 @@ hr {
 #contact {
 	background: #f4f4f4;
 }
-
