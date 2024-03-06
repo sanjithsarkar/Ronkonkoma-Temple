@@ -3,48 +3,48 @@
 ====================================================*/
 
 /* Large Devices (Desktop & Laptops) */
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
     #home-heading h1 {
         color: #fff;
     }
-}
+} */
 
 /* Medium Devices (Landscape Tablets & Medium Desktops) */
-@media (min-width: 992px) and (max-width: 1199px) {
+/* @media (min-width: 992px) and (max-width: 1199px) {
     .slick-next.slick-arrow {
         background: #bbb;
         width: 30px;
         height: 30px;
     }
-}
+} */
 
 /* Medium Devices (Portrait Tablets & Small Desktops) */
-@media (min-width: 768px) and (max-width: 991px) {
+/* @media (min-width: 768px) and (max-width: 991px) {
 
     .vission-content-inner {
         margin: 0 10%;
     }
-}
+} */
 
 /* Medium Devices (Landscape Phone & Portrait Tablets) */
-@media (max-width: 767px) {
+/* @media (max-width: 767px) { */
 
     /* ----------------------------
             About
     -------------------------------*/
 
-    .vission-content {
+    /* .vission-content {
         padding-top: 45px;
     }
 
     .vission-content-inner {
         margin: 0 10%;
-    }
+    } */
 
 /* --------------------------------
             Portfolio
 -----------------------------------*/
-#portfolio-content {
+/* #portfolio-content {
 	padding-top: 45px;
 	padding-left: 22px;
 }
@@ -53,4 +53,4 @@
     min-height: 40% !important;
     max-height: 50% !important;
 }
-}
+} */
