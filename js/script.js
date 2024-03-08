@@ -55,29 +55,6 @@ $(window).on('load', function () {
 })
 
 
-/*=========================================
-               Home
-========================================*/
-
-
-
-/*   =====================================
-                Progress Bars
-   =====================================*/
-
-$(".progressElement").waypoint(function () {
-
-    // code to execute when the waypoint is triggered
-    $(".progress-bar").each(function () {
-        $(this).animate({
-            width: $(this).attr("aria-valuenow") + "%"
-        }, 1000);
-    });
-    this.destroy();
-}, { offset: 'bottom-in-view' });
-
-
-
 
 /*=========================================
              Smooth Scrolling
@@ -166,3 +143,11 @@ const scroll = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
     smooth: true,
   });
+
+/*=========================================
+                 Loghtbox js
+========================================*/
+  lightbox.option({
+    'resizeDuration': 200,
+    'wrapAround': true
+})
