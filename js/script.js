@@ -1,49 +1,3 @@
-/*========================================================================
-                    Show and Hide Navigation Color
-==========================================================================*/
-$(function () {
-    // show/hide nav on page load
-    showHideNav();
-
-    $(window).scroll(function () {
-        // show/hide nav on window's scroll
-        showHideNav();
-    });
-
-    function showHideNav() {
-        var $navbar = $(".navbar");
-        var $navLinks = $(".nav-link, .navbar-brand");
-        var $navbarBrandImg = $(".navbar-brand img");
-        var scrollTop = $(window).scrollTop();
-
-        if (scrollTop > 50) {
-            // Show White nav
-            $navbar.addClass("bg-gray-400");
-            $navLinks.addClass("text-dark");
-
-            // Show Dark logo
-            $navbarBrandImg.attr("src", "image/logo/logo-dark.png");
-
-            // Show back to top button
-            // $("#back-to-top").fadeIn();
-        } else {
-            // Hide White nav
-            $navbar.removeClass("bg-gray-400");
-            $navLinks.removeClass("text-white");
-
-            // Show Dark text
-            $navLinks.addClass("text-dark");
-
-            // Show logo
-            $navbarBrandImg.attr("src", "image/logo/logo.png");
-
-            // Hide back to top button
-            // $("#back-to-top").fadeOut();
-        }
-    }
-});
-
-
 
 /*=========================================
                Preloader
@@ -84,13 +38,13 @@ $(function () {
 
 new WOW().init();
 
-$(window).on('load', function () {
-    $("#home_title").addClass("animated fadeInDown");
-    $("#home_subtitle").addClass("animated fadeInLeft");
-    $("#home_desk").addClass("animated zoomIn");
-    $("#home_contact").addClass("animated zoomIn");
-    $("#arrow-down i").addClass("animated fadeInDown infinite");
-})
+// $(window).on('load', function () {
+//     $("#home_title").addClass("animated fadeInDown");
+//     $("#home_subtitle").addClass("animated fadeInLeft");
+//     $("#home_desk").addClass("animated zoomIn");
+//     $("#home_contact").addClass("animated zoomIn");
+//     $("#arrow-down i").addClass("animated fadeInDown infinite");
+// })
 
 
 
@@ -151,3 +105,39 @@ const scroll = new LocomotiveScroll({
     'resizeDuration': 200,
     'wrapAround': true
 })
+
+
+/*====================================================
+                 Menu bar Active class
+======================================================*/
+
+window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+  
+    // Define the sections you want to monitor
+    var sections = document.querySelectorAll('[data-scroll-section]');
+
+    console.log(sections);
+  
+    sections.forEach(function(section) {
+      var top = section.offsetTop;
+      var bottom = top + section.offsetHeight;
+  
+      // Check if the current scroll position is within the section
+      if (scrollPosition >= top && scrollPosition < bottom) {
+        // Add the "active" class to the corresponding navigation item
+        var navItem = document.querySelector('nav a[href="#' + section.id + '"]');
+        if (navItem) {
+          navItem.classList.add('active');
+        }
+      } else {
+        // Remove the "active" class if the scroll position is outside the section
+        var navItem = document.querySelector('nav a[href="#' + section.id + '"]');
+        if (navItem) {
+          navItem.classList.remove('active');
+        }
+      }
+    });
+  });
+  
+  

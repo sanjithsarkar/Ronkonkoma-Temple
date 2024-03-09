@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.css" />
 
     <!------------------------------------------------- Jquery js --------------------------------------------->
-    <script src="js/jquery.js"></script>
+    <!-- <script src="js/jquery.js"></script> -->
 
     <!----------------------------------- Waypoints ----------------------------------------->
     <script src="js/waypoints/jquery.waypoints.min.js"></script>
@@ -55,7 +55,7 @@
 </head>
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#navbarNav">
+<body class="scroll-spy" data-target="#nav-menu">
     <div id="preloader" class="fixed top-0 bottom-0 left-0 right-0 bg-white z-50 flex justify-center items-center"
         data-scroll-container>
 
@@ -90,37 +90,37 @@
                     <ul class="list-none lg:flex lg:text-sm lg:justify-end">
                         <li>
                             <a href="#slider"
-                                class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
+                                class="nav-link block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
                                 Home
                             </a>
                         </li>
                         <li>
                             <a href="#vission"
-                                class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
+                                class="nav-link block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
                                 Vission
                             </a>
                         </li>
                         <li>
                             <a href="#events"
-                                class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
+                                class="nav-link block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
                                 Events
                             </a>
                         </li>
                         <li>
                             <a href="#members"
-                                class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
+                                class="nav-link block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
                                 Members
                             </a>
                         </li>
                         <li>
                             <a href="#gallery"
-                                class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
+                                class="nav-link block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
                                 Gallery
                             </a>
                         </li>
                         <li>
                             <a href="#contact"
-                                class="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
+                                class="nav-link block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
                                 Contact
                             </a>
                         </li>
@@ -349,7 +349,7 @@
                 <h2>Upcoming Events</h2>
             </div>
 
-            <div class="filter mt-3 space-x-3 text-center mt-8 text-white">
+            <div class="filter mt-3 space-x-3 text-center mt-8 text-white" data-aos="zoom-in" data-aos-duration="1500">
                 <h2 class="sr-only">Filter by type of conference</h2>
                 <button class="bg-yellow-700 filter-btn" data-filter="all">All Events</button>
                 <button class="bg-yellow-700 filter-btn1" data-filter="frontend">Frontend</button>
@@ -357,7 +357,7 @@
                 <button class="bg-yellow-700 filter-btn1" data-filter="fullstack">Fullstack</button>
             </div>
 
-            <div class="w-full mt-4">
+            <div class="w-full mt-4" data-aos="zoom-in" data-aos-duration="1500">
                 <div id="event-view" class="grid grid-cols-1 lg:grid-cols-2 mt-10">
                 </div>
                 <ul class="event-content grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">
@@ -522,278 +522,332 @@
         </div>
     </section>
 
-    <section id="members">
+    <section id="members" data-scroll-section>
         <div class="content-box-md mx-32">
             <!-- <div class="container-block container"> -->
-                <p class="text-blk team-head-text">
-                    Our Team
-                </p>
-                <div class="responsive-container-block teamcard-container">
-                    <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
-                        <div class="team-card">
-                            <div class="team-img-wrapper">
-                                <img class="team-img"
-                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft12.svg">
-                            </div>
-                            <div class="team-card-content">
-                                <p class="text-blk name">
-                                    Roger Lubin
-                                </p>
-                                <p class="text-blk position">
-                                    CEO
-                                </p>
-                            </div>
+            <p class="text-blk team-head-text">
+                Our Team
+            </p>
+            <div class="responsive-container-block teamcard-container" data-aos="zoom-in" data-aos-duration="1500">
+                <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
+                    <div class="team-card">
+                        <div class="team-img-wrapper">
+                            <img class="team-img"
+                                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft12.svg">
+                            <div class="overlay"></div>
                         </div>
-                    </div>
-                    <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
-                        <div class="team-card">
-                            <div class="team-img-wrapper">
-                                <img class="team-img"
-                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft13.svg">
-                            </div>
-                            <div class="team-card-content">
-                                <p class="text-blk name">
-                                    Roger Lubin
-                                </p>
-                                <p class="text-blk position">
-                                    CEO
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
-                        <div class="team-card">
-                            <div class="team-img-wrapper">
-                                <img class="team-img"
-                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft14.svg">
-                            </div>
-                            <div class="team-card-content">
-                                <p class="text-blk name">
-                                    Roger Lubin
-                                </p>
-                                <p class="text-blk position">
-                                    CEO
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
-                        <div class="team-card">
-                            <div class="team-img-wrapper">
-                                <img class="team-img"
-                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft12.svg">
-                            </div>
-                            <div class="team-card-content">
-                                <p class="text-blk name">
-                                    Roger Lubin
-                                </p>
-                                <p class="text-blk position">
-                                    CEO
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
-                        <div class="team-card">
-                            <div class="team-img-wrapper">
-                                <img class="team-img"
-                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft13.svg">
-                            </div>
-                            <div class="team-card-content">
-                                <p class="text-blk name">
-                                    Roger Lubin
-                                </p>
-                                <p class="text-blk position">
-                                    CEO
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
-                        <div class="team-card">
-                            <div class="team-img-wrapper">
-                                <img class="team-img"
-                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft14.svg">
-                            </div>
-                            <div class="team-card-content">
-                                <p class="text-blk name">
-                                    Roger Lubin
-                                </p>
-                                <p class="text-blk position">
-                                    CEO
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
-                        <div class="team-card">
-                            <div class="team-img-wrapper">
-                                <img class="team-img"
-                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft12.svg">
-                            </div>
-                            <div class="team-card-content">
-                                <p class="text-blk name">
-                                    Roger Lubin
-                                </p>
-                                <p class="text-blk position">
-                                    CEO
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
-                        <div class="team-card">
-                            <div class="team-img-wrapper">
-                                <img class="team-img"
-                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft13.svg">
-                            </div>
-                            <div class="team-card-content">
-                                <p class="text-blk name">
-                                    Roger Lubin
-                                </p>
-                                <p class="text-blk position">
-                                    CEO
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
-                        <div class="team-card">
-                            <div class="team-img-wrapper">
-                                <img class="team-img"
-                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft14.svg">
-                            </div>
-                            <div class="team-card-content">
-                                <p class="text-blk name">
-                                    Roger Lubin
-                                </p>
-                                <p class="text-blk position">
-                                    CEO
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
-                        <div class="team-card">
-                            <div class="team-img-wrapper">
-                                <img class="team-img"
-                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft12.svg">
-                            </div>
-                            <div class="team-card-content">
-                                <p class="text-blk name">
-                                    Roger Lubin
-                                </p>
-                                <p class="text-blk position">
-                                    CEO
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
-                        <div class="team-card">
-                            <div class="team-img-wrapper">
-                                <img class="team-img"
-                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft13.svg">
-                            </div>
-                            <div class="team-card-content">
-                                <p class="text-blk name">
-                                    Roger Lubin
-                                </p>
-                                <p class="text-blk position">
-                                    CEO
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
-                        <div class="team-card">
-                            <div class="team-img-wrapper">
-                                <img class="team-img"
-                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft14.svg">
-                            </div>
-                            <div class="team-card-content">
-                                <p class="text-blk name">
-                                    Roger Lubin
-                                </p>
-                                <p class="text-blk position">
-                                    CEO
-                                </p>
-                            </div>
+                        <div class="team-card-content">
+                            <p class="text-blk name">
+                                Roger Lubin
+                            </p>
+                            <p class="text-blk position">
+                                CEO
+                            </p>
                         </div>
                     </div>
                 </div>
+                <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
+                    <div class="team-card">
+                        <div class="team-img-wrapper">
+                            <img class="team-img"
+                                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft13.svg">
+                        </div>
+                        <div class="team-card-content">
+                            <p class="text-blk name">
+                                Roger Lubin
+                            </p>
+                            <p class="text-blk position">
+                                CEO
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
+                    <div class="team-card">
+                        <div class="team-img-wrapper">
+                            <img class="team-img"
+                                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft14.svg">
+                        </div>
+                        <div class="team-card-content">
+                            <p class="text-blk name">
+                                Roger Lubin
+                            </p>
+                            <p class="text-blk position">
+                                CEO
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
+                    <div class="team-card">
+                        <div class="team-img-wrapper">
+                            <img class="team-img"
+                                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft12.svg">
+                        </div>
+                        <div class="team-card-content">
+                            <p class="text-blk name">
+                                Roger Lubin
+                            </p>
+                            <p class="text-blk position">
+                                CEO
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
+                    <div class="team-card">
+                        <div class="team-img-wrapper">
+                            <img class="team-img"
+                                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft13.svg">
+                        </div>
+                        <div class="team-card-content">
+                            <p class="text-blk name">
+                                Roger Lubin
+                            </p>
+                            <p class="text-blk position">
+                                CEO
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
+                    <div class="team-card">
+                        <div class="team-img-wrapper">
+                            <img class="team-img"
+                                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft14.svg">
+                        </div>
+                        <div class="team-card-content">
+                            <p class="text-blk name">
+                                Roger Lubin
+                            </p>
+                            <p class="text-blk position">
+                                CEO
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
+                    <div class="team-card">
+                        <div class="team-img-wrapper">
+                            <img class="team-img"
+                                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft12.svg">
+                        </div>
+                        <div class="team-card-content">
+                            <p class="text-blk name">
+                                Roger Lubin
+                            </p>
+                            <p class="text-blk position">
+                                CEO
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
+                    <div class="team-card">
+                        <div class="team-img-wrapper">
+                            <img class="team-img"
+                                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft13.svg">
+                        </div>
+                        <div class="team-card-content">
+                            <p class="text-blk name">
+                                Roger Lubin
+                            </p>
+                            <p class="text-blk position">
+                                CEO
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
+                    <div class="team-card">
+                        <div class="team-img-wrapper">
+                            <img class="team-img"
+                                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft14.svg">
+                        </div>
+                        <div class="team-card-content">
+                            <p class="text-blk name">
+                                Roger Lubin
+                            </p>
+                            <p class="text-blk position">
+                                CEO
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
+                    <div class="team-card">
+                        <div class="team-img-wrapper">
+                            <img class="team-img"
+                                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft12.svg">
+                        </div>
+                        <div class="team-card-content">
+                            <p class="text-blk name">
+                                Roger Lubin
+                            </p>
+                            <p class="text-blk position">
+                                CEO
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
+                    <div class="team-card">
+                        <div class="team-img-wrapper">
+                            <img class="team-img"
+                                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft13.svg">
+                        </div>
+                        <div class="team-card-content">
+                            <p class="text-blk name">
+                                Roger Lubin
+                            </p>
+                            <p class="text-blk position">
+                                CEO
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
+                    <div class="team-card">
+                        <div class="team-img-wrapper">
+                            <img class="team-img"
+                                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ft14.svg">
+                        </div>
+                        <div class="team-card-content">
+                            <p class="text-blk name">
+                                Roger Lubin
+                            </p>
+                            <p class="text-blk position">
+                                CEO
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- </div> -->
         </div>
     </section>
 
-    <section id="gallery">
+    <section id="gallery" data-scroll-section>
         <div class="content-box-md mx-32">
             <p class="text-blk team-head-text">
                 Photo Gallery
             </p>
-            <div class="gallery_container">
-                <a href="https://source.unsplash.com/600x600/?sig=1" data-lightbox="homePortfolio">
-                    <img src="https://source.unsplash.com/600x600/?sig=1" />
+            <div class="gallery_container" data-aos="zoom-in" data-aos-duration="1500">
+                <a href="https://static.pexels.com/photos/356056/pexels-photo-356056.jpeg"
+                    data-lightbox="homePortfolio">
+                    <img src="https://static.pexels.com/photos/356056/pexels-photo-356056.jpeg" alt="">
                 </a>
-    
+
                 <a href="https://source.unsplash.com/600x800/?sig=12" data-lightbox="homePortfolio" class="vertical">
                     <img src="https://source.unsplash.com/600x800/?sig=12" />
                 </a>
-    
+
                 <a href="https://source.unsplash.com/800x600/?sig=71" data-lightbox="homePortfolio" class="horizontal">
                     <img src="https://source.unsplash.com/800x600/?sig=71" />
                 </a>
-    
-                <a href="https://source.unsplash.com/600x600/?sig=40" data-lightbox="homePortfolio">
-                    <iframe src="https://source.unsplash.com/600x600/?sig=40" frameborder="0"></iframe>
+
+                <a href="https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg"
+                    data-lightbox="homePortfolio">
+                    <img src="https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg" alt="">
                 </a>
-    
+
                 <a href="https://source.unsplash.com/600x600/?sig=32" data-lightbox="homePortfolio">
                     <img src="https://source.unsplash.com/600x600/?sig=32" />
                 </a>
-    
+
                 <a href="https://source.unsplash.com/800x800/?sig=7" data-lightbox="homePortfolio" class="big">
                     <img src="https://source.unsplash.com/800x800/?sig=7" />
                 </a>
-    
+
                 <a href="https://source.unsplash.com/600x600/?sig=111" data-lightbox="homePortfolio">
                     <img src="https://source.unsplash.com/600x600/?sig=111" />
                 </a>
-    
+
                 <a href="https://source.unsplash.com/600x800/?sig=94" data-lightbox="homePortfolio" class="vertical">
                     <img src="https://source.unsplash.com/600x800/?sig=94" />
                 </a>
-    
-                <a href="https://source.unsplash.com/600x600/?sig=11" data-lightbox="homePortfolio">
-                    <img src="https://source.unsplash.com/600x600/?sig=11" />
+
+                <a href="https://static.pexels.com/photos/373076/pexels-photo-373076.jpeg"
+                    data-lightbox="homePortfolio">
+                    <img src="https://static.pexels.com/photos/373076/pexels-photo-373076.jpeg" alt="">
                 </a>
-    
+
                 <a href="https://source.unsplash.com/800x600/?sig=68" data-lightbox="homePortfolio" class="horizontal">
                     <img src="https://source.unsplash.com/800x600/?sig=68" />
                 </a>
-    
+
                 <a href="https://source.unsplash.com/600x600/?sig=24" data-lightbox="homePortfolio">
                     <img src="https://source.unsplash.com/600x600/?sig=24" />
                 </a>
-    
+
                 <a href="https://source.unsplash.com/800x800/?sig=55" data-lightbox="homePortfolio" class="big">
                     <img src="https://source.unsplash.com/800x800/?sig=55" />
                 </a>
-    
+
                 <a href="https://source.unsplash.com/600x600/?sig=56" data-lightbox="homePortfolio">
                     <img src="https://source.unsplash.com/600x600/?sig=56" />
                 </a>
-    
-                <a href="https://source.unsplash.com/800x600/?sig=186" data-lightbox="homePortfolio" class="horizontal">
+
+                <!-- <a href="https://source.unsplash.com/800x600/?sig=186" data-lightbox="homePortfolio" class="horizontal">
                     <img src="https://source.unsplash.com/800x600/?sig=186" />
-                </a>
-    
+                </a> -->
+
                 <a href="https://source.unsplash.com/600x600/?sig=117" data-lightbox="homePortfolio">
                     <img src="https://source.unsplash.com/600x600/?sig=117" />
                 </a>
             </div>
         </div>
     </section>
+
+    <footer class="footer-section bg-gray-800">
+        <div class="hidden lg:flex lg:items-center lg:w-auto" id="nav-menu">
+            <ul class="list-none lg:flex lg:text-sm lg:justify-end">
+                <li>
+                    <a href="#slider"
+                        class="nav-link block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#vission"
+                        class="nav-link block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
+                        Vission
+                    </a>
+                </li>
+                <li>
+                    <a href="#events"
+                        class="nav-link block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
+                        Events
+                    </a>
+                </li>
+                <li>
+                    <a href="#members"
+                        class="nav-link block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
+                        Members
+                    </a>
+                </li>
+                <li>
+                    <a href="#gallery"
+                        class="nav-link block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
+                        Gallery
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact"
+                        class="nav-link block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+            <div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#slider" id="back-to-top" class="btn btn-sm btn-yellow btn-back-to-top smooth-scroll" title="home"
+        role="button" style="">
+        <i class="fa-solid fa-circle-arrow-up"></i>
+    </a>
 
 
 
