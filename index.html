@@ -840,10 +840,10 @@
                         <img src="../ronkonkoma/image/3.jpg" alt="">
                     </div>
                     <div class="gallery_single_image">
-                        <img src="../ronkonkoma/image/4.jpg" alt="" >
+                        <img src="../ronkonkoma/image/4.jpg" alt="">
                     </div>
                     <div class="gallery_single_image">
-                        <img src="../ronkonkoma/image/1.jpg" alt="" >
+                        <img src="../ronkonkoma/image/1.jpg" alt="">
                     </div>
                     <div class="gallery_single_image">
                         <img src="../ronkonkoma/image/1.jpg" alt="">
@@ -852,19 +852,19 @@
                         <img src="../ronkonkoma/image/2.jpg" alt="">
                     </div>
                     <div class="gallery_single_image">
-                        <img src="../ronkonkoma/image/3.jpg" alt="" >
+                        <img src="../ronkonkoma/image/3.jpg" alt="">
                     </div>
                     <div class="gallery_single_image">
-                        <img src="../ronkonkoma/image/4.jpg" alt="" >
+                        <img src="../ronkonkoma/image/4.jpg" alt="">
                     </div>
                     <div class="gallery_single_image">
-                        <img src="../ronkonkoma/image/1.jpg" alt="" >
+                        <img src="../ronkonkoma/image/1.jpg" alt="">
                     </div>
-                    
+
                 </div>
                 <div class="slider slider-nav mt-5">
                     <div class="slider_image">
-                        <img src="../ronkonkoma/image/1.jpg" alt="" >
+                        <img src="../ronkonkoma/image/1.jpg" alt="">
                     </div>
                     <div class="slider_image">
                         <img src="../ronkonkoma/image/2.jpg" alt="">
@@ -873,25 +873,25 @@
                         <img src="../ronkonkoma/image/3.jpg" alt="">
                     </div>
                     <div class="slider_image">
-                        <img src="../ronkonkoma/image/4.jpg" alt="" >
+                        <img src="../ronkonkoma/image/4.jpg" alt="">
                     </div>
                     <div class="slider_image">
-                        <img src="../ronkonkoma/image/1.jpg" alt="" >
+                        <img src="../ronkonkoma/image/1.jpg" alt="">
                     </div>
                     <div class="slider_image">
-                        <img src="../ronkonkoma/image/1.jpg" alt="" >
+                        <img src="../ronkonkoma/image/1.jpg" alt="">
                     </div>
                     <div class="slider_image">
-                        <img src="../ronkonkoma/image/2.jpg" alt="" >
+                        <img src="../ronkonkoma/image/2.jpg" alt="">
                     </div>
                     <div class="slider_image">
-                        <img src="../ronkonkoma/image/3.jpg" alt="" >
+                        <img src="../ronkonkoma/image/3.jpg" alt="">
                     </div>
                     <div class="slider_image">
                         <img src="../ronkonkoma/image/4.jpg" alt="">
                     </div>
                     <div class="slider_image">
-                        <img src="../ronkonkoma/image/1.jpg" alt="" >
+                        <img src="../ronkonkoma/image/1.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -964,9 +964,6 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <!-- Slick JS -->
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script> -->
-    <!-- Slick JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
 
@@ -977,8 +974,6 @@
             arrows: false,
             fade: true,
             asNavFor: '.slider-nav',
-            prevArrow: '<button type="button" class="slick-prev"><</button>',
-            nextArrow: '<button type="button" class="slick-next">></button>'
         });
         $('.slider-nav').slick({
             slidesToShow: 4,
@@ -986,32 +981,16 @@
             asNavFor: '.slider-for',
             dots: true,
             centerMode: true,
-            focusOnSelect: true
-        });
-    </script>
-
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            // Optional parameters
-            direction: 'horizontal',
-            loop: true,
-
-            // Autoplay
-            autoplay: {
-                delay: 7000, // Delay between slides in milliseconds (5 seconds)
-                disableOnInteraction: false, // Continue autoplay even when user interacts with swiper
-            },
-
-            // If you need pagination
-            pagination: {
-                el: '.swiper-pagination',
-            },
-
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
+            focusOnSelect: true,
+            prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+            nextArrow: '<button type="button" class="slick-next">Next</button>',
+            draggable: true,
+            pauseOnFocus: true,
+            waitForAnimate: true,
+            centerMode: true,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 2000,
         });
     </script>
 
@@ -1059,8 +1038,6 @@
             });
         });
     </script> -->
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function () {
             $('.filter-btn[data-filter="all"]').addClass('active');

@@ -141,3 +141,29 @@ window.addEventListener('scroll', function() {
   });
   
   
+  /*====================================================
+                 swiper Js
+======================================================*/
+
+var swiper = new Swiper('.swiper-container', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // Autoplay
+  autoplay: {
+      delay: 7000, // Delay between slides in milliseconds (5 seconds)
+      disableOnInteraction: false, // Continue autoplay even when user interacts with swiper
+  },
+
+  // If you need pagination
+  pagination: {
+      el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+  },
+});
