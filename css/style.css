@@ -699,3 +699,88 @@ hr {
 	align-items: center;
 	padding: 20px 0;
 }
+
+
+
+/* ===================================
+				Slick Slider
+====================================*/
+
+.gallery_title_h2 h2 {
+	font-size: 30px;
+	font-family: "Raleway";
+	font-weight: 700;
+	padding-bottom: 20px;
+	position: relative;
+	margin-bottom: 50px;
+}
+
+.gallery_title_h2 h2::after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 50px;
+	height: 3px;
+	background: #f4c613;
+	bottom: 0;
+	left: calc(50% - 25px);
+}
+
+.gallery_single_image img {
+	width: 40%;
+	border-radius: 6px;
+	border: 1px solid #80808024;
+	padding: 9px;
+}
+
+.slick-slide {
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+}
+
+.slider-nav .slick-list {
+	width: 80%;
+	margin: 0px 10%;
+}
+.slick-prev {
+	left: 40px !important;
+}
+.slick-next {
+	right: 40px !important;
+	/* z-index: 1; */
+}
+
+.slick-prev, .slick-next {
+	font-size: 0;
+	line-height: 0;
+	position: absolute;
+	top: 50%;
+	display: block;
+	width: 20px;
+	height: 20px;
+	padding: 0;
+	-webkit-transform: translate(0, -50%);
+	-ms-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	cursor: pointer;
+	color: rgb(22, 22, 22) !important;
+	border: none;
+	outline: none;
+	background: rgb(72, 72, 72) !important;
+	z-index: 999;
+}
+
+.slider_image {
+	width: 185px !important;
+	border: 1px solid #80808038;
+	padding: 5px 0;
+	margin: 0 5px;
+	border-radius: 6px;
+}
+
+.slider_image img {
+	width: 175px;
+	height: 130px;
+	border-radius: 6px;
+}
