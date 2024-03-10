@@ -305,8 +305,8 @@
             </div>
             <div class="vission-content grid grid-cols-1 lg:grid-cols-2 mt-10">
                 <div class="col-span-1 w-full lg:w-1/1 flex justify-center" data-aos="zoom-in" data-aos-duration="1500">
-                    <div class="wow slideInLeft w-4/5" data-wow-duration="2s">
-                        <img src="../ronkonkoma/image/about.jpg" alt="" class="object-cover mx-auto">
+                    <div class="flex justify-center items-center wow slideInLeft w-4/5" data-wow-duration="2s">
+                        <img id="image-content" src="../ronkonkoma/image/temple.jpg" alt="" class="object-cover mx-auto">
                     </div>
                 </div>
 
@@ -968,6 +968,31 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
 
     <script>
+        var swiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // Autoplay
+            autoplay: {
+                delay: 7000, // Delay between slides in milliseconds (5 seconds)
+                disableOnInteraction: false, // Continue autoplay even when user interacts with swiper
+            },
+
+            // If you need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+    <script>
         $('.slider-for').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -1080,7 +1105,6 @@
                             <div class="vission-content-inner lg:text-left">
                                 <h2 id="vision-title" class="text-xl font-semibold mb-3">${targetElement.find('.conference-name').text()}</h2>
                                 <p id="vision-description" class="text-base font-normal mb-3">${targetElement.find('h6').text()}</p>
-                                <button class="cv_content px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">CV</button>
                             </div>
                         </div>
                     </div>
