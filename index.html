@@ -1086,13 +1086,13 @@
 
             switch (dataCategory) {
                 case 'fullstack':
-                    vissionContent = fullstackView();
+                    vissionContent = eventJanmashtami();
                     break;
                 case 'frontend':
-                    vissionContent = 'hello frontend';
+                    vissionContent = eventDurgaPuja();
                     break;
                 case 'backend':
-                    vissionContent = 'hello backend';
+                    vissionContent = eventSarawastiPuja();
                     break;
                 default:
                     vissionContent = '';
@@ -1102,7 +1102,7 @@
             $('#event-view').html(vissionContent);
         }
 
-        function fullstackView() {
+        function eventJanmashtami() {
             return `
             <div id="image-container" class="col-span-1 w-full lg:w-1/1 flex justify-center" data-aos="zoom-in" data-aos-duration="1500">
                     <div class="wow slideInLeft w-4/5" data-wow-duration="2s">
@@ -1119,7 +1119,8 @@
                                 <p class="text-base font-normal mb-3">
                                     Sri Krishna Janmashtami is a Hindu festival that celebrates the birth of Lord Krishna. The date of Janmashtami varies each year according to the Hindu lunar calendar. The festival is observed on the eighth day (Ashtami) of the Krishna Paksha (dark fortnight) in the month of Bhadrapada, which usually falls in August or September on the Gregorian calendar...
                                 </p>
-                                <h3 class="vission-purpose pb-2">OUR PURPOSE:</h3>
+                                <h3 class="vission-purpose pb-2">Program:</h3>
+                                <p class="text-base font-normal mb-3">The celebration of Janmashtami typically includes various religious and cultural events:</p>
                                 <ul class="max-w-md space-y-1 text-gray-500 list-inside">
                                     <li class="flex items-center gap-4 text-black">
                                         <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
@@ -1127,8 +1128,7 @@
                                             <path
                                                 d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
                                         </svg>
-                                        To promote the teachings and practice of Sanatan Dharma in a safe and
-                                        comfortable environment that is conducive to learning.
+                                        Fasting: Many devotees observe a fast throughout the day, breaking it at midnight, the time when Lord Krishna is believed to have been born.
                                     </li>
                                     <li class="flex items-center gap-4 text-black">
                                         <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
@@ -1136,8 +1136,7 @@
                                             <path
                                                 d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
                                         </svg>
-                                        To upkeep, promote and celebrate our religion, culture and tradition through
-                                        appropriate forms of worship, music, dance and arts.
+                                        Reading and Reciting Stories of Krishna:Temples and homes often organize readings of sacred texts like the Bhagavad Gita and Bhagavata Purana.
                                     </li>
                                     <li class="flex items-center gap-4 text-black">
                                         <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
@@ -1145,8 +1144,7 @@
                                             <path
                                                 d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
                                         </svg>
-                                        To educate and enlighten the youths of our society so that they can achieve
-                                        their full potential, both spiritual and academic.
+                                        Bhajans and Kirtans:Devotees sing devotional songs in praise of Lord Krishna.
                                     </li>
                                     <li class="flex items-center gap-4 text-black">
                                         <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
@@ -1154,11 +1152,155 @@
                                             <path
                                                 d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
                                         </svg>
-                                        To be a recognized and leading institution in our community that promotes peace,
-                                        harmony, and respect for people of different cultures, religions and faiths.
+                                        Puja and Rituals:Pujas and rituals are performed in temples
+                                    </li>
+                                    <li class="flex items-center gap-4 text-black">
+                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        Krishna Lila: Plays depicting episodes from Lord Krishna's life, called Krishna Lila, are enacted.
                                     </li>
                                 </ul>
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+            `;
+        }
+
+        function eventDurgaPuja() {
+            return `
+            <div id="image-container" class="col-span-1 w-full lg:w-1/1 flex justify-center" data-aos="zoom-in" data-aos-duration="1500">
+                    <div class="wow slideInLeft w-4/5" data-wow-duration="2s">
+                        <img id="image-content" src="../ronkonkoma//image/4.jpg" alt="" class="image-content object-cover mx-auto">
+                    </div>
+                </div>
+                <div id="text-container" class="col-span-1 w-full lg:w-1/1 lg:flex flex-col justify-center " data-aos="zoom-in" data-aos-duration="1500">
+                    <div class="w-full lg:w-4/5">
+                        <div class="vission-content wow slideInRight" data-wow-duration="2s">
+                            <div class="vission-content-inner lg:text-left">
+
+                                <h2 class="text-xl font-semibold mb-3">Sri Krishna Janmashtami</h2>
+
+                                <p class="text-base font-normal mb-3">
+                                    Sri Krishna Janmashtami is a Hindu festival that celebrates the birth of Lord Krishna. The date of Janmashtami varies each year according to the Hindu lunar calendar. The festival is observed on the eighth day (Ashtami) of the Krishna Paksha (dark fortnight) in the month of Bhadrapada, which usually falls in August or September on the Gregorian calendar...
+                                </p>
+                                <h3 class="vission-purpose pb-2">Program:</h3>
+                                <p class="text-base font-normal mb-3">The celebration of Janmashtami typically includes various religious and cultural events:</p>
+                                <ul class="max-w-md space-y-1 text-gray-500 list-inside">
+                                    <li class="flex items-center gap-4 text-black">
+                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        Fasting: Many devotees observe a fast throughout the day, breaking it at midnight, the time when Lord Krishna is believed to have been born.
+                                    </li>
+                                    <li class="flex items-center gap-4 text-black">
+                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        Reading and Reciting Stories of Krishna:Temples and homes often organize readings of sacred texts like the Bhagavad Gita and Bhagavata Purana.
+                                    </li>
+                                    <li class="flex items-center gap-4 text-black">
+                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        Bhajans and Kirtans:Devotees sing devotional songs in praise of Lord Krishna.
+                                    </li>
+                                    <li class="flex items-center gap-4 text-black">
+                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        Puja and Rituals:Pujas and rituals are performed in temples
+                                    </li>
+                                    <li class="flex items-center gap-4 text-black">
+                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        Krishna Lila: Plays depicting episodes from Lord Krishna's life, called Krishna Lila, are enacted.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            `;
+        }
+
+        function eventSarawastiPuja() {
+            return `
+            <div id="image-container" class="col-span-1 w-full lg:w-1/1 flex justify-center" data-aos="zoom-in" data-aos-duration="1500">
+                    <div class="wow slideInLeft w-4/5" data-wow-duration="2s">
+                        <img id="image-content" src="../ronkonkoma//image/4.jpg" alt="" class="image-content object-cover mx-auto">
+                    </div>
+                </div>
+                <div id="text-container" class="col-span-1 w-full lg:w-1/1 lg:flex flex-col justify-center " data-aos="zoom-in" data-aos-duration="1500">
+                    <div class="w-full lg:w-4/5">
+                        <div class="vission-content wow slideInRight" data-wow-duration="2s">
+                            <div class="vission-content-inner lg:text-left">
+
+                                <h2 class="text-xl font-semibold mb-3">Sri Krishna Janmashtami</h2>
+
+                                <p class="text-base font-normal mb-3">
+                                    Sri Krishna Janmashtami is a Hindu festival that celebrates the birth of Lord Krishna. The date of Janmashtami varies each year according to the Hindu lunar calendar. The festival is observed on the eighth day (Ashtami) of the Krishna Paksha (dark fortnight) in the month of Bhadrapada, which usually falls in August or September on the Gregorian calendar...
+                                </p>
+                                <h3 class="vission-purpose pb-2">Program:</h3>
+                                <p class="text-base font-normal mb-3">The celebration of Janmashtami typically includes various religious and cultural events:</p>
+                                <ul class="max-w-md space-y-1 text-gray-500 list-inside">
+                                    <li class="flex items-center gap-4 text-black">
+                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        Fasting: Many devotees observe a fast throughout the day, breaking it at midnight, the time when Lord Krishna is believed to have been born.
+                                    </li>
+                                    <li class="flex items-center gap-4 text-black">
+                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        Reading and Reciting Stories of Krishna:Temples and homes often organize readings of sacred texts like the Bhagavad Gita and Bhagavata Purana.
+                                    </li>
+                                    <li class="flex items-center gap-4 text-black">
+                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        Bhajans and Kirtans:Devotees sing devotional songs in praise of Lord Krishna.
+                                    </li>
+                                    <li class="flex items-center gap-4 text-black">
+                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        Puja and Rituals:Pujas and rituals are performed in temples
+                                    </li>
+                                    <li class="flex items-center gap-4 text-black">
+                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+                                        </svg>
+                                        Krishna Lila: Plays depicting episodes from Lord Krishna's life, called Krishna Lila, are enacted.
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
