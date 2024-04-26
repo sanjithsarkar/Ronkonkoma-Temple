@@ -377,17 +377,17 @@
             <div class="filter mt-3 space-x-3 text-center mt-8 text-white" data-aos="zoom-in" data-aos-duration="1500">
                 <h2 class="sr-only">Filter by type of conference</h2>
                 <button class="bg-yellow-700 filter-btn" data-filter="all">All Events</button>
-                <button class="bg-yellow-700 filter-btn1" data-filter="frontend">Frontend</button>
-                <button class="bg-yellow-700 filter-btn1" data-filter="backend">Backend</button>
-                <button class="bg-yellow-700 filter-btn1" data-filter="fullstack">Fullstack</button>
+                <button class="bg-yellow-700 filter-btn1" data-filter="event-one">Sri Krishna Janmashtami</button>
+                <button class="bg-yellow-700 filter-btn1" data-filter="event-two">Durga Puja</button>
+                <button class="bg-yellow-700 filter-btn1" data-filter="event-three">Saraswati Puja</button>
             </div>
 
             <div class="w-full mt-4" data-aos="zoom-in" data-aos-duration="1500">
                 <div id="event-view" class="grid grid-cols-1 lg:grid-cols-2 mt-10">
                 </div>
                 <ul class="event-content grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">
-                    <li id="fullstack" class="col-span-1 sm:w-1/1 md:w-1/1 lg:w-1/1 list-group-item conference"
-                        data-category="fullstack">
+                    <li id="event-three" class="col-span-1 sm:w-1/1 md:w-1/1 lg:w-1/1 list-group-item conference"
+                        data-category="event-three">
                         <div class="conference-details">
                             <div class="event-image">
                                 <img src="../ronkonkoma//image/4.jpg" alt="" class="rounded">
@@ -425,7 +425,7 @@
 
                     </li>
 
-                    <li id="backend" class="col-span-1 list-group-item conference" data-category="backend">
+                    <li id="event-two" class="col-span-1 list-group-item conference" data-category="event-two">
                         <div class="conference-details">
                             <div class="event-image">
                                 <img src="../ronkonkoma//image/3.jpg" alt="" class="rounded">
@@ -476,7 +476,7 @@
                         </div>
                     </li>
 
-                    <li id="frontend" class="col-span-1 list-group-item conference" data-category="frontend">
+                    <li id="event-one" class="col-span-1 list-group-item conference" data-category="event-one">
                         <div class="conference-details">
                             <div class="event-image">
                                 <img src="../ronkonkoma//image/2.jpg" alt="" class="rounded">
@@ -1015,14 +1015,14 @@
 
     <!-- <script>
         $(document).ready(function () {
-            // Set Frontend filter button as active by default
-            $('.filter-btn[data-filter="frontend"]').addClass('active');
+            // Set event-one filter button as active by default
+            $('.filter-btn[data-filter="event-one"]').addClass('active');
 
 
 
-            // Show only conferences with the "Frontend" category initially
+            // Show only conferences with the "event-one" category initially
             // $('.conference').each(function() {
-            //     if ($(this).data('category') !== 'frontend') {
+            //     if ($(this).data('category') !== 'event-one') {
             //         $(this).hide();
             //     }
             // });
@@ -1085,14 +1085,14 @@
             const dataCategory = $(targetElement).attr('data-category');
 
             switch (dataCategory) {
-                case 'fullstack':
+                case 'event-one':
                     vissionContent = eventJanmashtami();
                     break;
-                case 'frontend':
+                case 'event-two':
                     vissionContent = eventDurgaPuja();
                     break;
-                case 'backend':
-                    vissionContent = eventSarawastiPuja();
+                case 'event-three':
+                    vissionContent = eventSaraswatiPuja();
                     break;
                 default:
                     vissionContent = '';
@@ -1240,7 +1240,7 @@
             `;
         }
 
-        function eventSarawastiPuja() {
+        function eventSaraswatiPuja() {
             return `
             <div id="image-container" class="col-span-1 w-full lg:w-1/1 flex justify-center" data-aos="zoom-in" data-aos-duration="1500">
                     <div class="wow slideInLeft w-4/5" data-wow-duration="2s">
