@@ -230,7 +230,7 @@ section {
 */
 
 #events {
-	background: #ffffff1c;
+	background: #EDF2F7;
 }
 
 .event-heading h2 {
@@ -346,6 +346,30 @@ section {
 .conference-details:hover {
 	transform: translateY(-15px);
 	border-radius: 6px;
+}
+
+
+.programs {
+	display: flex;
+	gap: 15px;
+	font-family: "Raleway";
+	font-size: 13px;
+	font-weight: 300;
+	line-height: 28px;
+
+	.program_icon {
+		display: flex;
+		align-items: center;
+	}
+	.program_des span {
+		font-weight: 500;
+	}
+}
+
+.program_date {
+	font-size: 13px;
+	font-weight: 600;
+	padding: 15px 0;
 }
 
 /* ========================================================
@@ -468,6 +492,67 @@ hr {
 						Team Member 
 ==========================================================
 */
+
+
+.member_image{
+	img {
+		width: 190px;
+		height: 190px;
+		border-radius: 100px;
+		object-fit: cover;
+		display: block;
+		margin: 0 auto;
+		border: 1px solid #80808045;
+	}
+	h3 {
+		text-align: center;
+		font-size: 20px;
+		font-weight: 600;
+		padding: 8px 0 2px 0;
+	}
+	h4 {
+		text-align: center;
+		font-size: 16px;
+		font-weight: 300;
+		font-style: italic;
+	}
+}
+.member_image.col-span-1 {
+	padding: 30px 0;
+}
+
+	.card_header  h2 {
+		font-size: 30px;
+		font-family: "Raleway";
+		font-weight: 700;
+		padding-bottom: 20px;
+		position: relative;
+		text-align: center;
+
+		&::after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 50px;
+			height: 3px;
+			background: #f4c613;
+			bottom: 0;
+			left: calc(50% - 25px);
+		}
+	}
+
+.card_body {
+	margin: 50px 0;
+}
+
+/* .members {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 100px;
+} */
+
+  
+/* ===================== */
 
   .member_title {
 	text-align: center;
@@ -628,6 +713,7 @@ hr {
 
 #gallery {
 	border: 1px solid #80808029;
+	background: #EDF2F7;
 }
   
   .gallery_container > a {
