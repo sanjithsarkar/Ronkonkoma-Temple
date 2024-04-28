@@ -255,6 +255,13 @@ section {
 	left: calc(50% - 25px);
 }
 
+.conference {
+	height: 100%;
+	width: 100%;
+	border-radius: 8px;
+	border: 1px solid #8080802e;
+}
+
 .filter-btn,
 .filter-btn1 {
 	padding: 8px 14px;
@@ -276,16 +283,15 @@ section {
 	/* position: relative; */
 	width: 100%;
 	height: 250px;
-	/* Set the height of the container */
 	overflow: hidden;
 }
 
 .event-image img {
 	width: 100%;
-	height: 250px;
+	height: 100%;
+	object-fit: cover;
 	display: block;
 	transition: opacity 0.5s ease;
-	/* Smooth transition effect */
 }
 
 .overlay {
@@ -328,18 +334,29 @@ section {
 	padding-bottom: 3px;
 }
 
-.event-text-content h6 {
+.event-details h6 {
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 20px;
+}
+
+.event_address {
+	font-size: 14px;
+	font-weight: 450;
+	margin-bottom: 4px;
+}
+
+/* .event-text-content h6 {
 	font-size: 14px;
 	max-width: 100%;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	display: block;
-}
+} */
 
-.timing {
+.event_date {
 	display: flex;
-	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
 	background-color: hsla(0, 0%, 50%, .467);

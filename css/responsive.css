@@ -28,6 +28,14 @@
         width: 60% !important;
         height: 76% !important;
     }
+
+    .event-image {
+        height: 200px !important;
+    }
+
+    .content-box-md {
+        margin: 0 5rem !important;
+    }
 }
 
 /* Medium Devices (Landscape Phone & Portrait Tablets) */
@@ -46,14 +54,60 @@
 /* Medium Devices (Landscape Phone & Portrait Tablets) */
 @media (max-width: 639px) {
 
+
     .content-box-md {
         margin: 0 4rem !important;
     }
+
+/*================================================== 
+                Events
+====================================================*/
+
+    /* .conference {
+        width: 6%;
+    } */
+
+    .event-image {
+        position: relative;
+        width: 100%;
+        height: 185px !important;
+        overflow: hidden;
+    }
+
+    .event-title {
+        font-size: 15px !important;
+    }
+
+    .event_address {
+        font-size: 14px;
+    }
+    .event_date {
+        font-size: 14px !important;
+    }
+
+/*================================================== 
+                Members
+====================================================*/
 
     .member_image img {
         width: 54%;
         height: 78% !important;
     }
+}
+
+
+
+.btn-back-to-top {
+	position: fixed;
+	bottom: 20px !important;
+	right: 4px !important;
+	padding: 3px 6px !important;
+	font-size: 5px;
+}
+
+.fa-solid {
+	padding: 27px 0 15px 0;
+	font-size: 22px !important;
 }
 
 /* Medium Devices (Landscape Phone & Portrait Tablets)*/
