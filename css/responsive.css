@@ -3,54 +3,68 @@
 ====================================================*/
 
 /* Large Devices (Desktop & Laptops) */
-/* @media (min-width: 1200px) {
-    #home-heading h1 {
-        color: #fff;
-    }
-} */
+@media (min-width: 1200px) {
+
+}
 
 /* Medium Devices (Landscape Tablets & Medium Desktops) */
-/* @media (min-width: 992px) and (max-width: 1199px) {
-    .slick-next.slick-arrow {
-        background: #bbb;
-        width: 30px;
-        height: 30px;
+
+/*================================================== 
+                Members
+====================================================*/
+@media (min-width: 992px) and (max-width: 1199px) {
+    .content-box-md {
+        margin: 0 6rem !important;
     }
-} */
+    .member_image img {
+        height: 78% !important;
+    }
+}
 
 /* Medium Devices (Portrait Tablets & Small Desktops) */
-/* @media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
 
-    .vission-content-inner {
-        margin: 0 10%;
+    .member_image img {
+        width: 60% !important;
+        height: 76% !important;
     }
-} */
+}
 
 /* Medium Devices (Landscape Phone & Portrait Tablets) */
-/* @media (max-width: 767px) { */
+@media (max-width: 767px) {
 
-    /* ----------------------------
-            About
-    -------------------------------*/
-
-    /* .vission-content {
-        padding-top: 45px;
+    .content-box-md {
+        margin: 0 4rem !important;
     }
 
-    .vission-content-inner {
-        margin: 0 10%;
-    } */
-
-/* --------------------------------
-            Portfolio
------------------------------------*/
-/* #portfolio-content {
-	padding-top: 45px;
-	padding-left: 22px;
+    .member_image img {
+        width: 54%;
+        height: 78% !important;
+    }
 }
 
-.about-content-inner img{
-    min-height: 40% !important;
-    max-height: 50% !important;
+/* Medium Devices (Landscape Phone & Portrait Tablets) */
+@media (max-width: 639px) {
+
+    .content-box-md {
+        margin: 0 4rem !important;
+    }
+
+    .member_image img {
+        width: 54%;
+        height: 78% !important;
+    }
 }
+
+/* Medium Devices (Landscape Phone & Portrait Tablets)*/
+/* @media (max-width: 427px) {
+
+    .content-box-md {
+        margin: 0 4rem !important;
+    }
+
+    .member_image img {
+        width: 54%;
+        height: 78% !important;
+    }
 } */
