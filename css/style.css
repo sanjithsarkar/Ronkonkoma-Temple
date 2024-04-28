@@ -255,6 +255,17 @@ section {
 	left: calc(50% - 25px);
 }
 
+.filter {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 3px 0;
+	gap: 10px;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+}
+
 .conference {
 	height: 100%;
 	width: 100%;
