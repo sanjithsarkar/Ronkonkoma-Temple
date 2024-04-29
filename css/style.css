@@ -271,6 +271,11 @@ section {
 	width: 100%;
 	border-radius: 8px;
 	border: 1px solid #8080802e;
+	cursor: pointer;
+}
+
+.conference:hover {
+	transform: translateY(-12px);
 }
 
 .filter-btn,
@@ -375,12 +380,6 @@ section {
 	padding: 10px 15px;
 	border-radius: 5px;
 }
-
-.conference-details:hover {
-	transform: translateY(-15px);
-	border-radius: 6px;
-}
-
 
 .programs {
 	display: flex;
