@@ -306,7 +306,7 @@
             <div class="vission-content grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 mt-10">
                 <div class="col-span-1 w-full lg:w-1/1 flex justify-start md:justify-center" data-aos="zoom-in" data-aos-duration="1500">
                     <div class="vission_image flex items-center wow slideInLeft w-4/5" data-wow-duration="2s">
-                        <img id="image-content" src="../ronkonkoma/image/temple.jpg" alt=""
+                        <img id="image-content" src="imageUrl(../ronkonkoma/image/temple.jpg)" alt=""
                             class="object-cover mx-auto">
                     </div>
                 </div>
@@ -1266,6 +1266,13 @@
                 });
             }
         });
+
+
+        const baseUrl = window.location.origin;
+
+        function imageUrl(path){
+            return baseUrl + '/' + path;
+        }
     </script>
 
 
