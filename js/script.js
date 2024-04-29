@@ -117,7 +117,7 @@ window.addEventListener('scroll', function() {
     // Define the sections you want to monitor
     var sections = document.querySelectorAll('[data-scroll-section]');
 
-    console.log(sections);
+    // console.log(sections);
   
     sections.forEach(function(section) {
       var top = section.offsetTop;
@@ -142,28 +142,29 @@ window.addEventListener('scroll', function() {
   
   
   /*====================================================
-                 swiper Js
+                 
 ======================================================*/
 
-var swiper = new Swiper('.swiper-container', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
+$(document).ready(function() {
+  // Define the threshold width for mobile resolution (768 pixels is common)
+  const mobileThreshold = 768;
 
-  // Autoplay
-  autoplay: {
-      delay: 7000, // Delay between slides in milliseconds (5 seconds)
-      disableOnInteraction: false, // Continue autoplay even when user interacts with swiper
-  },
+  // Function to show or hide the div based on the viewport width
+  function handleDivDisplay() {
+      if ($(window).width() > mobileThreshold) {
+          // Show the div when viewport width is less than the mobile threshold
+          $('#gallery_slider').show();
+      } else {
+          // Hide the div when viewport width is greater than or equal to the mobile threshold
+          $('#gallery_slider').hide();
+      }
+  }
 
-  // If you need pagination
-  pagination: {
-      el: '.swiper-pagination',
-  },
+  // Initial check when the document is ready
+  handleDivDisplay();
 
-  // Navigation arrows
-  navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-  },
+  // Listen for window resize events and call the function to show or hide the div
+  $(window).resize(function() {
+      handleDivDisplay();
+  });
 });

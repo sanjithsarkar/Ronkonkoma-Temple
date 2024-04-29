@@ -708,10 +708,11 @@ hr {
 }
 
 .gallery_single_image img {
-	width: 40%;
+	width: 33%;
 	border-radius: 6px;
 	border: 1px solid #80808024;
 	padding: 9px;
+	height: 315px;
 }
 
 .slick-slide {
