@@ -659,18 +659,18 @@ hr {
 	grid-auto-flow: dense;
 }
 
-.horizontal {
+/* .horizontal {
 	grid-column: span 2;
-}
+} */
 
-.vertical {
+/* .vertical {
 	grid-row: span 2;
-}
+} */
 
-.big {
+/* .big {
 	grid-column: span 2;
 	grid-row: span 2;
-}
+} */
 
 
 
