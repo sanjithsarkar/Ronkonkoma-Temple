@@ -107,8 +107,8 @@
 
 .btn-back-to-top {
 	position: fixed;
-	bottom: 20px !important;
-	right: 4px !important;
+	/* bottom: 20px !important; */
+	/* right: 4px !important; */
 	padding: 3px 6px !important;
 	font-size: 5px;
 }

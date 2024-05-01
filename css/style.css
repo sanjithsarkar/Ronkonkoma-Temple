@@ -136,7 +136,13 @@ section {
 	-moz-transition-delay: .5s;
 }
 
-.slide-image {
+
+/* ================================================
+                    Image Slider
+===================================================
+*/
+
+.slide_image {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -144,12 +150,23 @@ section {
 	position: relative;
 }
 
-.banner-content {
-	margin-left: 10%;
+.banner_slider_content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner_content_des {
+	width: 60%;
+	height: auto;
+}
+
+.banner_content_des h6{
+	width: 80%;
 }
 
 /* ================================================
-                    particles
+                    Arrow Down
 ===================================================
 */
 
