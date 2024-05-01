@@ -111,13 +111,27 @@ const scroll = new LocomotiveScroll({
                  Menu bar Active class
 ======================================================*/
 
+// Set the initial state with the #slider navigation link active
+$('nav a[href="#slider"]').addClass('active');
+
 window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
+    // console.log('scrollPosition = ',scrollPosition);
+
+    var initialScrollPosition = 310;
+    
+    if (scrollPosition <= initialScrollPosition) {
+        $('nav a[href="#slider"]').addClass('active');
+    } else if(scrollPosition >= initialScrollPosition) {
+        $('nav a[href="#slider"]').removeClass('active');
+    }else{
+      return;
+    }
   
     // Define the sections you want to monitor
     var sections = document.querySelectorAll('[data-scroll-section]');
 
-    // console.log(sections);
+    // console.log('sections = ',sections);
   
     sections.forEach(function(section) {
       var top = section.offsetTop;
@@ -142,7 +156,7 @@ window.addEventListener('scroll', function() {
   
   
   /*====================================================
-                 
+                 gallary image slider
 ======================================================*/
 
 $(document).ready(function() {
