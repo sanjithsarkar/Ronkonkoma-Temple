@@ -87,8 +87,8 @@
                 </div>
 
                 <!-- Desktop menu -->
-                <div class="hidden lg:flex lg:items-center lg:w-auto" id="nav-menu">
-                    <ul class="list-none lg:flex lg:text-sm lg:justify-end">
+                <div class="hidden flex items-center w-auto" id="nav-menu">
+                    <ul class="list-none flex text-sm justify-end">
                         <li>
                             <a href="#slider"
                                 class="nav-link block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
@@ -134,7 +134,7 @@
 
             <!-- Mobile menu -->
             <div class="hidden lg:hidden" id="mobile-nav">
-                <ul class="list-none">
+                <ul class="list-none text-xs">
                     <li>
                         <a href="#slider"
                             class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
@@ -311,9 +311,9 @@
                 <h2>Our Vision</h2>
             </div>
             <div class="vission-content grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 mt-10">
-                <div class="col-span-1 w-full lg:w-1/1 flex justify-start md:justify-center" data-aos="zoom-in"
+                <div class="col-span-1 w-full lg:w-1/1 flex justify-start" data-aos="zoom-in"
                     data-aos-duration="1500">
-                    <div class="vission_image flex items-center wow slideInLeft w-4/5" data-wow-duration="2s">
+                    <div class="vission_image wow slideInLeft sm:w-full md:w-4/5" data-wow-duration="2s">
                         <img id="vission_image" src="image/temple.jpg" alt="" class="object-cover mx-auto">
                     </div>
                 </div>
@@ -389,7 +389,7 @@
             </div>
 
             <div class="w-full mt-4" data-aos="zoom-in" data-aos-duration="1500">
-                <div id="event-view" class="grid sm:grid-cols-1 lg:grid-cols-2 mt-10">
+                <div id="event-view" class="grid sm:grid-cols-1 md:grid-cols-2 mt-10">
                 </div>
                 <ul class="event-content grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <li id="event-one" class="col-span-1 list-group-item conference" data-category="event-one">
@@ -801,8 +801,8 @@
     </section>
 
     <footer class="footer-section bg-gray-800">
-        <div class="hidden lg:flex lg:items-center lg:w-auto" id="nav-menu">
-            <ul class="list-none lg:flex lg:text-sm lg:justify-end">
+        <div class=" flex justify-center items-center w-auto">
+            <ul class="list-none flex text-xs lg:text-sm justify-end items-center">
                 <li>
                     <a href="#slider"
                         class="nav-link block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
@@ -846,7 +846,7 @@
     </footer>
 
     <a href="#slider" id="back-to-top" class="btn btn-sm btn-yellow btn-back-to-top smooth-scroll" title="home"
-        role="button" style="">
+        role="button">
         <i class="fa-solid fa-circle-arrow-up"></i>
     </a>
 
@@ -1020,7 +1020,7 @@
 
         function eventJanmashtami() {
             return `
-            <div id="image-container" class="col-span-1 w-full lg:w-1/1 flex justify-start md:justify-center" data-aos="zoom-in" data-aos-duration="1500">
+            <div id="image-container" class="col-span-1 w-full lg:w-1/1 flex justify-center" data-aos="zoom-in" data-aos-duration="1500">
                     <div class="wow slideInLeft w-4/5" data-wow-duration="2s">
                         <img id="event_image" src="image/krishnaa.jpeg" alt="" class="event_image object-cover mx-auto">
                     </div>
