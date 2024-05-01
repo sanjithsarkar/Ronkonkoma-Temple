@@ -116,7 +116,7 @@ section {
 	/* z-index: -1; */
 	left: 0;
 	right: 100%;
-	bottom: 3px;
+	bottom: 4px;
 	background: #f4c613;
 	height: 3px;
 	-webkit-transition-property: right;
