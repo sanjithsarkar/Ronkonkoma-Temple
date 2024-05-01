@@ -116,9 +116,9 @@ section {
 	/* z-index: -1; */
 	left: 0;
 	right: 100%;
-	bottom: 0;
+	bottom: 3px;
 	background: #f4c613;
-	height: 4px;
+	height: 3px;
 	-webkit-transition-property: right;
 	transition-property: right;
 	-webkit-transition-duration: 0.3s;
