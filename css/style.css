@@ -405,21 +405,37 @@ section {
 	font-size: 13px;
 	font-weight: 300;
 	line-height: 28px;
-
-	.program_icon {
-		display: flex;
-		align-items: center;
-	}
-
-	.program_des span {
-		font-weight: 500;
-	}
 }
 
+.program_icon {
+	display: flex;
+	align-items: center;
+}
+
+.program_des span {
+	font-weight: 500;
+}
+
+.event_dates {
+	padding: 4px 0 12px 0;
+}
 .program_date {
 	font-size: 13px;
 	font-weight: 600;
 	padding: 15px 0;
+}
+
+.event_dates h6 {
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 20px;
+}
+.event_dates span {
+	display: block;
+	padding: 3px 0;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
 }
 
 /* ========================================================
