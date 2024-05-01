@@ -238,11 +238,24 @@ section {
 	line-height: 28px;
 }
 
-#image-content {
+/* Container with a square aspect ratio */
+#vission_image {
+	width: 400px;
+	height: 400px;
+	overflow: hidden;
 	border: 1px solid gray;
 	padding: 5px;
-	border-radius: 6px;
-}
+	border-radius: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  #vission_image img {
+	max-width: 100%;
+	max-height: 100%;
+  }
+  
 
 /* ================================================
                     Events
@@ -312,8 +325,28 @@ section {
 	position: relative;
 }
 
+
+#event_image {
+	width: 400px;
+	height: 400px;
+	overflow: hidden;
+	border: 1px solid gray;
+	padding: 5px;
+	border-radius: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  #event_image img {
+	max-width: 100%;
+	max-height: 100%;
+	transition: opacity 0.5s ease;
+  }
+
+
 .event-image {
-	/* position: relative; */
+	position: relative;
 	width: 100%;
 	height: 250px;
 	overflow: hidden;
