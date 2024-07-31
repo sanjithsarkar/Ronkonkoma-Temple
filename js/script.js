@@ -182,3 +182,164 @@ $(document).ready(function() {
       handleDivDisplay();
   });
 });
+
+
+  /*====================================================
+                 Member js
+======================================================*/
+
+// document.getElementById('readMoreBtn').addEventListener('click', function() {
+//   var members = document.querySelectorAll('.members .member_image');
+//   for (var i = 9; i < members.length; i++) {
+//       members[i].style.display = 'block';
+//   }
+//   this.style.display = 'none'; // Hide the "Read More" button after clicking
+// });
+
+// document.getElementById('readMoreBtn').addEventListener('click', function() {
+//   var members = document.querySelectorAll('.members .member_image');
+//   var visibleCount = 0;
+//   var rowSize = 4; // Assuming 4 members per row
+
+//   // Count currently visible members
+//   for (var i = 0; i < members.length; i++) {
+//       if (members[i].style.display !== 'none') {
+//           visibleCount++;
+//       }
+//   }
+
+//   // Show the next row of members
+//   for (var j = visibleCount; j < visibleCount + rowSize; j++) {
+//       if (members[j]) {
+//           members[j].style.display = 'block';
+//       }
+//   }
+
+//   // Hide the button if all members are visible
+//   if (visibleCount + rowSize >= members.length) {
+//       this.style.display = 'none';
+//   }
+// });
+
+
+// $(document).ready(function() {
+//   $('#readMoreBtn').click(function() {
+//       var members = $('.members .member_image');
+//       var visibleCount = members.filter(':visible').length;
+//       var rowSize = 4; // Assuming 4 members per row
+
+//       // Show the next row of members
+//       members.slice(visibleCount, visibleCount + rowSize).show();
+
+//       // Hide the button if all members are visible
+//       if (visibleCount + rowSize >= members.length) {
+//           $(this).hide();
+//       }
+//   });
+// });
+
+// $(document).ready(function() {
+//   $('#readMoreBtn').click(function() {
+//       var members = $('.members .member_image');
+//       var visibleCount = members.filter(':visible').length;
+//       var rowSize = 4; // Assuming 4 members per row
+
+//       // If all members are currently displayed, hide all except the first two
+//       if (visibleCount === members.length) {
+//           members.slice(4).hide();
+//           $(this).text('Read More');
+//       } else {
+//           // Show the next row of members
+//           members.slice(visibleCount, visibleCount + rowSize).show();
+
+//           // If all members are now displayed, change button text to "Show Less"
+//           if (visibleCount + rowSize >= members.length) {
+//               $(this).text('Show Less');
+//           }
+//       }
+//   });
+// });
+
+// $(document).ready(function() {
+//   $('#readLessBtn').click(function() {
+//       var members = $('.members .member_image');
+//       var visibleCount = members.filter(':visible').length;
+//       var rowSize = 4; // Assuming 4 members per row
+
+//       members.slice(4).hide();
+//       // $(this).text('Read More');
+//   });
+// });
+
+
+// $(document).ready(function() {
+//   var rowSize = 4; // Assuming 4 members per row
+
+//   $('#readMoreBtn').click(function() {
+//       var members = $('.members .member_image');
+//       var visibleCount = members.filter(':visible').length;
+
+//       // Show the next row of members
+//       members.slice(visibleCount, visibleCount + rowSize).show();
+
+//       // If all members are now displayed, change button text to "Show Less"
+//       if (visibleCount + rowSize >= members.length) {
+//           $(this).hide();
+//           $('#readLessBtn').show();
+//       }
+//   });
+
+//   $('#readLessBtn').click(function() {
+//       var members = $('.members .member_image');
+//       var visibleCount = members.filter(':visible').length;
+
+//       // Hide the last row of members
+//       members.slice(visibleCount - rowSize, visibleCount).hide();
+
+//       // If all members are hidden except the first two, hide the "Read Less" button
+//       if (visibleCount - rowSize <= 2) {
+//           $(this).hide();
+//           $('#readMoreBtn').show();
+//       } else {
+//           $('#readMoreBtn').show();
+//       }
+//   });
+
+//   // Initial state: hide the "Read Less" button
+//   $('#readLessBtn').hide();
+// });
+
+$(document).ready(function() {
+  var rowSize = 4; // Assuming 4 members per row
+
+  $('#readMoreBtn').click(function() {
+      var members = $('.members .member_image');
+      var visibleCount = members.filter(':visible').length;
+
+      // Show the next row of members
+      members.slice(visibleCount, visibleCount + rowSize).show();
+
+      // Check if all members are now displayed
+      if (visibleCount + rowSize >= members.length) {
+          $(this).hide();
+      }
+      $('#readLessBtn').show();
+  });
+
+  $('#readLessBtn').click(function() {
+      var members = $('.members .member_image');
+      var visibleCount = members.filter(':visible').length;
+
+      // Hide the last row of members
+      members.slice(visibleCount - rowSize, visibleCount).hide();
+
+      // Check if only the first two members are visible
+      if (visibleCount - rowSize <= 8) {
+          $(this).hide();
+      }
+      $('#readMoreBtn').show();
+  });
+
+  // Initial state: hide the "Read Less" button
+  $('#readLessBtn').hide();
+});

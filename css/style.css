@@ -622,6 +622,11 @@ hr {
 	aspect-ratio: 2/2;
 }
 
+/* Hide all members except the first two */
+.members .member_image:nth-child(n+9) {
+    display: none;
+}
+
 .member_image h3 {
 	text-align: center;
 	font-size: 20px;
