@@ -14,10 +14,6 @@
     .content-box-md {
         margin: 0 6rem !important;
     }
-
-    .member_image img {
-        height: 78% !important;
-    }
 }
 
 /* Medium Devices (Portrait Tablets & Small Desktops) */
@@ -39,11 +35,6 @@
     }
     .banner_image img {
         width: 60% !important;
-    }
-
-    .member_image img {
-        width: 60% !important;
-        height: 76% !important;
     }
 
     #vission_image {
@@ -76,16 +67,6 @@
     .banner_content_des h6 {
         width: 100% !important;
         font-size: 14px !important;
-    }
-
-    .member_image img {
-        width: 60% !important;
-        height: 76% !important;
-    }
-
-    .member_image img {
-        width: 54%;
-        height: 78% !important;
     }
 
     #event_image, #vission_image {
@@ -200,10 +181,6 @@
                 Members
 ====================================================*/
 
-    .member_image img {
-        width: 54%;
-        height: 78% !important;
-    }
 }
 
 
@@ -221,15 +198,10 @@
     font-size: 22px !important;
 }
 
-/* Medium Devices (Landscape Phone & Portrait Tablets)*/
-/* @media (max-width: 427px) {
+/* Medium Devices (Landscape Phone & Portrait Tablets) */
+ @media (max-width: 427px) {
 
     .content-box-md {
         margin: 0 4rem !important;
     }
-
-    .member_image img {
-        width: 54%;
-        height: 78% !important;
-    }
-} */
+}

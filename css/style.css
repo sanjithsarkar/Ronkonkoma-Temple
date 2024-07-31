@@ -613,7 +613,7 @@ hr {
 
 .member_image img {
 	width: 55%;
-	height: 66%;
+	height: auto;
 	border-radius: 50%;
 	object-fit: cover;
 	display: block;
