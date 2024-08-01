@@ -665,6 +665,25 @@ hr {
 	margin: 50px 0;
 }
 
+.member_action_btn {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	gap: 10px;
+}
+
+#readMoreBtn {
+	border: 1px solid #8080802b;
+	padding: 5px 10px;
+	border-radius: 8px;
+}
+#readLessBtn {
+	border: 1px solid #8080802b;
+	padding: 5px 10px;
+	border-radius: 8px;
+	margin-right: 10px;
+}
+
 
 
 /*========================================================
