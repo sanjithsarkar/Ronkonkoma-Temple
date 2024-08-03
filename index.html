@@ -519,10 +519,78 @@
         <div class="content-box-md mx-16 sm:mx-16 md:mx-20 lg:mx-32">
             <div class="card">
                 <div class="card_header">
-                    <h2>Meet Our community</h2>
+                    <h2 id="trust-header">Meet Our Trust Board</h2>
+                    <h2 id="executive-header">Meet Our Executive Committee</h2>
+                </div>
+
+                <div class="member_filter flex justify-center content-center gap-4 mt-3 text-center mt-8 text-white" data-aos="zoom-in" data-aos-duration="1500">
+                    <button class="bg-yellow-700 member-filter-btn" data-member-filter="trust">Board of Trustees</button>
+                    <button class="bg-yellow-700 member-filter-btn" data-member-filter="executive">Executive committee</button>
                 </div>
                 <div class="card_body" data-aos="zoom-in" data-aos-duration="1500">
-                    <div class="members grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3">
+                    <div class="community_members trust_member grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3" data-member-category="trust">
+                        <div class="member_image col-span-1">
+                            <img src="image/member.png" alt="">
+                            <h3>Bidhu Das</h3>
+                            <h4>General member</h4>
+                        </div>
+                        <div class="member_image col-span-1">
+                            <img src="image/member.png" alt="">
+                            <h3>Pulok Das</h3>
+                            <h4>General member</h4>
+                        </div>
+                        <div class="member_image col-span-1">
+                            <img src="image/member.png" alt="">
+                            <h3>Pinaki Das</h3>
+                            <h4>General member</h4>
+                        </div>
+                        <div class="member_image col-span-1">
+                            <img src="image/member.png" alt="">
+                            <h3>Bidhan Datta</h3>
+                            <h4>General member</h4>
+                        </div>
+                        <div class="member_image col-span-1">
+                            <img src="image/member.png" alt="">
+                            <h3>Rajon Shah</h3>
+                            <h4>General member</h4>
+                        </div>
+                        <div class="member_image col-span-1">
+                            <img src="image/member.png" alt="">
+                            <h3>Ankur Shah</h3>
+                            <h4>General member</h4>
+                        </div>
+                        <div class="member_image col-span-1">
+                            <img src="image/member.png" alt="">
+                            <h3>Dollar Gosh</h3>
+                            <h4>General member</h4>
+                        </div>
+                        <div class="member_image col-span-1">
+                            <img src="image/member.png" alt="">
+                            <h3>Prashanta Roy</h3>
+                            <h4>General member</h4>
+                        </div>
+                        <div class="member_image col-span-1">
+                            <img src="image/member.png" alt="">
+                            <h3>Prangopal Das</h3>
+                            <h4>General member</h4>
+                        </div>
+                        <div class="member_image col-span-1">
+                            <img src="image/member.png" alt="">
+                            <h3>Biplob Roy.</h3>
+                            <h4>General member</h4>
+                        </div>
+                        <div class="member_image col-span-1">
+                            <img src="image/member.png" alt="">
+                            <h3>Pradip Das</h3>
+                            <h4>General member</h4>
+                        </div>
+                        <div class="member_image col-span-1">
+                            <img src="image/member.png" alt="">
+                            <h3>Sujit Kumar Das.</h3>
+                            <h4>General member</h4>
+                        </div>
+                    </div>
+                    <div class="community_members executive_members members grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3" data-member-category="executive">
                         <div class="member_image col-span-1">
                             <img src="image/members/Bidyut C Das.png" alt="">
                             <h3>Bidyut C Das</h3>
@@ -641,6 +709,11 @@
                         <div class="member_image col-span-1">
                             <img src="image/member.png" alt="">
                             <h3>Pradip Das</h3>
+                            <h4>General member</h4>
+                        </div>
+                        <div class="member_image col-span-1">
+                            <img src="image/member.png" alt="">
+                            <h3>Sujit Kumar Das.</h3>
                             <h4>General member</h4>
                         </div>
                     </div>
@@ -1314,6 +1387,44 @@
                 });
             }
         });
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Set the initial active button and display the corresponding members
+            var initialCategory = 'trust';
+            $('.member-filter-btn[data-member-filter="' + initialCategory + '"]').addClass('active');
+            displayMemberCategory(initialCategory);
+
+            $('.member_filter').on('click', '.member-filter-btn', function () {
+                var category = $(this).data('member-filter');
+                console.log('category = ',  category)
+                $('.member-filter-btn, .member-filter-btn1').removeClass('active'); // Remove "active" class from all buttons
+                $(this).addClass('active');
+                displayMemberCategory(category);
+            })
+            function displayMemberCategory (category) {
+                $('.community_members').each(function () {
+                    var memberCategory = $(this).data('member-category');
+                    console.log('test = ', memberCategory);
+
+                // Show or hide members based on the category
+                if (memberCategory === category) {
+                    $(this).fadeIn(500);  // 500 milliseconds transition
+                } else {
+                    $(this).fadeOut(500); // 500 milliseconds transition
+                }
+            })
+
+            // Show the appropriate header based on the category
+        if (category === 'trust') {
+            $('#trust-header').show();
+            $('#executive-header').hide();
+        } else if (category === 'executive') {
+            $('#executive-header').show();
+            $('#trust-header').hide();
+        }
+        }
+    })
     </script>
 </body>
 

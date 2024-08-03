@@ -591,7 +591,14 @@ hr {
 						Team Member 
 ==========================================================
 */
-
+	.member-filter-btn {
+		padding: 8px 14px;
+		border-radius: 8px;
+	}
+	.member-filter-btn.active {
+		background: #973c3c;
+		box-shadow: 0 3px 7px rgba(198, 18, 18, 0.8);
+	}
 
 .member_image {
 	padding: 12% 0 10% 0;
