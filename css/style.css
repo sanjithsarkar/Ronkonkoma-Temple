@@ -879,3 +879,24 @@ hr {
 	border-radius: 6px;
 	cursor: pointer;
 }
+
+
+.image_action_btn {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	gap: 10px;
+	padding-top: 10px;
+}
+
+#readMoreImg {
+	border: 1px solid #8080802b;
+	padding: 5px 10px;
+	border-radius: 8px;
+}
+#readLessImg {
+	border: 1px solid #8080802b;
+	padding: 5px 10px;
+	border-radius: 8px;
+	margin-right: 10px;
+}

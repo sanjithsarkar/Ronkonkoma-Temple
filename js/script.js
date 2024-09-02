@@ -188,89 +188,6 @@ $(document).ready(function() {
                  Member js
 ======================================================*/
 
-// document.getElementById('readMoreBtn').addEventListener('click', function() {
-//   var members = document.querySelectorAll('.members .member_image');
-//   for (var i = 9; i < members.length; i++) {
-//       members[i].style.display = 'block';
-//   }
-//   this.style.display = 'none'; // Hide the "Read More" button after clicking
-// });
-
-// document.getElementById('readMoreBtn').addEventListener('click', function() {
-//   var members = document.querySelectorAll('.members .member_image');
-//   var visibleCount = 0;
-//   var rowSize = 4; // Assuming 4 members per row
-
-//   // Count currently visible members
-//   for (var i = 0; i < members.length; i++) {
-//       if (members[i].style.display !== 'none') {
-//           visibleCount++;
-//       }
-//   }
-
-//   // Show the next row of members
-//   for (var j = visibleCount; j < visibleCount + rowSize; j++) {
-//       if (members[j]) {
-//           members[j].style.display = 'block';
-//       }
-//   }
-
-//   // Hide the button if all members are visible
-//   if (visibleCount + rowSize >= members.length) {
-//       this.style.display = 'none';
-//   }
-// });
-
-
-// $(document).ready(function() {
-//   $('#readMoreBtn').click(function() {
-//       var members = $('.members .member_image');
-//       var visibleCount = members.filter(':visible').length;
-//       var rowSize = 4; // Assuming 4 members per row
-
-//       // Show the next row of members
-//       members.slice(visibleCount, visibleCount + rowSize).show();
-
-//       // Hide the button if all members are visible
-//       if (visibleCount + rowSize >= members.length) {
-//           $(this).hide();
-//       }
-//   });
-// });
-
-// $(document).ready(function() {
-//   $('#readMoreBtn').click(function() {
-//       var members = $('.members .member_image');
-//       var visibleCount = members.filter(':visible').length;
-//       var rowSize = 4; // Assuming 4 members per row
-
-//       // If all members are currently displayed, hide all except the first two
-//       if (visibleCount === members.length) {
-//           members.slice(4).hide();
-//           $(this).text('Read More');
-//       } else {
-//           // Show the next row of members
-//           members.slice(visibleCount, visibleCount + rowSize).show();
-
-//           // If all members are now displayed, change button text to "Show Less"
-//           if (visibleCount + rowSize >= members.length) {
-//               $(this).text('Show Less');
-//           }
-//       }
-//   });
-// });
-
-// $(document).ready(function() {
-//   $('#readLessBtn').click(function() {
-//       var members = $('.members .member_image');
-//       var visibleCount = members.filter(':visible').length;
-//       var rowSize = 4; // Assuming 4 members per row
-
-//       members.slice(4).hide();
-//       // $(this).text('Read More');
-//   });
-// });
-
 
 // $(document).ready(function() {
 //   var rowSize = 4; // Assuming 4 members per row
@@ -309,37 +226,242 @@ $(document).ready(function() {
 //   $('#readLessBtn').hide();
 // });
 
+// $(document).ready(function() {
+//   var rowSize = 4; // Assuming 4 members per row
+
+//   $('#readMoreBtn').click(function() {
+//       var members = $('.members .member_image');
+//       var visibleCount = members.filter(':visible').length;
+
+//       // Show the next row of members
+//       members.slice(visibleCount, visibleCount + rowSize).show();
+
+//       // Check if all members are now displayed
+//       if (visibleCount + rowSize >= members.length) {
+//           $(this).hide();
+//       }
+//       $('#readLessBtn').show();
+//   });
+
+//   $('#readLessBtn').click(function() {
+//       var members = $('.members .member_image');
+//       var visibleCount = members.filter(':visible').length;
+
+//       // Hide the last row of members
+//       members.slice(visibleCount - rowSize, visibleCount).hide();
+
+//       // Check if only the first two members are visible
+//       if (visibleCount - rowSize <= 8) {
+//           $(this).hide();
+//       }
+//       $('#readMoreBtn').show();
+//   });
+
+//   // Initial state: hide the "Read Less" button
+//   $('#readLessBtn').hide();
+// });
+
+
+/*====================================================
+                 Member js
+======================================================*/
+
 $(document).ready(function() {
-  var rowSize = 4; // Assuming 4 members per row
+    var rowSize = 4; // Number of items per row
+    var initialRows = 2; // Initially display 2 rows (8 items)
+    var members = $('.members .member_image');
+    
+    // Initially show the first 8 items
+    members.slice(0, initialRows * rowSize).show();
+    
+    // Hide the rest
+    members.slice(initialRows * rowSize).hide();
+    
+    // Handle "Read More" button click
+    $('#readMoreBtn').click(function() {
+        var visibleCount = members.filter(':visible').length;
+        
+        // Show the next row of items
+        members.slice(visibleCount, visibleCount + rowSize).show();
+        
+        // Check if all items are displayed
+        if (visibleCount + rowSize >= members.length) {
+            $(this).hide();
+        }
+        $('#readLessBtn').show();
+    });
 
-  $('#readMoreBtn').click(function() {
-      var members = $('.members .member_image');
-      var visibleCount = members.filter(':visible').length;
+    $('#readLessBtn').click(function() {
+        var visibleCount = members.filter(':visible').length;
+    
+        // Calculate the total number of fully visible rows
+        var rowSizes = visibleCount / rowSize;
+        var fullRows = Math.floor(rowSizes); // Number of fully visible rows
+        var fractionalPart = rowSizes - fullRows; // Fractional part of the last row
+    
+        console.log('rowSizes:', rowSizes, 'fullRows:', fullRows, 'fractionalPart:', fractionalPart);
+    
+        if (fractionalPart > 0) {
+            // Hide the fractional part first
+            var fractionalCount = Math.ceil(fractionalPart * rowSize);
+            members.slice(visibleCount - fractionalCount, visibleCount).hide();
+        } else {
+            // If there is no fractional part, hide a full row
+            members.slice(visibleCount - rowSize, visibleCount).hide();
+        }
+    
+        // Update the visible count after hiding items
+        visibleCount = members.filter(':visible').length;
+    
+        // Check if only the initial rows are visible
+        if (visibleCount <= initialRows * rowSize) {
+            $(this).hide();
+        }
+    
+        $('#readMoreBtn').show();
+    });
 
-      // Show the next row of members
-      members.slice(visibleCount, visibleCount + rowSize).show();
 
-      // Check if all members are now displayed
-      if (visibleCount + rowSize >= members.length) {
-          $(this).hide();
-      }
-      $('#readLessBtn').show();
+
+    /*====================================================
+                 image lightbox js
+======================================================*/
+    
+  
+    // Initial state: hide the "Read Less" button
+    $('#readLessBtn').hide();
   });
 
-  $('#readLessBtn').click(function() {
-      var members = $('.members .member_image');
-      var visibleCount = members.filter(':visible').length;
 
-      // Hide the last row of members
-      members.slice(visibleCount - rowSize, visibleCount).hide();
-
-      // Check if only the first two members are visible
-      if (visibleCount - rowSize <= 8) {
-          $(this).hide();
-      }
-      $('#readMoreBtn').show();
+$(document).ready(function () {
+    (function () {
+        // Cache selectors
+        var $memberButtons = $('.member-filter-btn');
+        var $communityMembers = $('.community_members');
+        var $executiveHeader = $('#executive-header');
+        var $trustHeader = $('#trust-header');
+  
+        // Set the initial active button and display the corresponding members
+        var initialCategory = $memberButtons.data('member-filter');
+        console.log('initialCategory', initialCategory)
+        setActiveCategory(initialCategory);
+  
+        // Event delegation for member filter buttons
+        $('.member_filter').on('click', '.member-filter-btn', function () {
+            console.log('member_filter', $(this).data('member-filter'))
+            var category = $(this).data('member-filter');
+            setActiveCategory(category);
+        });
+  
+        // Function to set the active category and display members
+        function setActiveCategory(category) {
+            // Add 'active' class to the selected button and remove from others
+            $memberButtons.removeClass('active');
+            $memberButtons.filter('[data-member-filter="' + category + '"]').addClass('active');
+  
+            // Display 8 members in two rows for the selected category
+            var count = 0;
+            $communityMembers.each(function () {
+                var $member = $(this);
+                console.log('member', $member)
+                if ($member.data('member-category') === category && count < 8) {
+                    $member.show();
+                    count++;
+                    console.log('member', $member)
+                } else {
+                    $member.hide();
+                }
+            });
+  
+            // Toggle headers based on the category
+            $executiveHeader.toggle(category === 'executive');
+            $trustHeader.toggle(category === 'trust');
+        }
+    })();
   });
 
-  // Initial state: hide the "Read Less" button
-  $('#readLessBtn').hide();
-});
+  $(document).ready(function() {
+      // Select all <a> tags within .gallery_container
+      var $galleryLinks = $('.gallery_container a');
+
+      // Hide all <a> tags beyond the first 8
+      if ($galleryLinks.length > 8) {
+          $galleryLinks.slice(8).hide();
+      }
+  });
+
+$(document).ready(function() {
+    var rowSize = 4; // Number of items per row
+    var initialRows = 2; // Initially display 2 rows (8 items)
+    var members = $('.lightbox');
+    
+    // Initially show the first 8 items
+    members.slice(0, initialRows * rowSize).show();
+    
+    // Hide the rest
+    members.slice(initialRows * rowSize).hide();
+    
+    // Handle "Read More" button click
+    $('#readMoreImg').click(function() {
+        var visibleCount = members.filter(':visible').length;
+        
+        // Show the next row of items
+        members.slice(visibleCount, visibleCount + rowSize).show();
+        
+        // Check if all items are displayed
+        if (visibleCount + rowSize >= members.length - 1) {
+            $(this).hide();
+        }
+        $('#readLessImg').show();
+    });
+  
+    // // Handle "Read Less" button click
+    // $('#readLessImg').click(function() {
+    //     var visibleCount = members.filter(':visible').length;
+        
+    //     // Hide the last row of items
+    //     members.slice(visibleCount - rowSize, visibleCount).hide();
+        
+    //     // Check if only the initial rows are visible
+    //     if (visibleCount - rowSize <= initialRows * rowSize) {
+    //         $(this).hide();
+    //     }
+    //     $('#readMoreImg').show();
+    // });
+
+    $('#readLessImg').click(function() {
+        var visibleCount = members.filter(':visible').length;
+    
+        // Calculate the total number of fully visible rows
+        var rowSizes = visibleCount / rowSize;
+        var fullRows = Math.floor(rowSizes); // Number of fully visible rows
+        var fractionalPart = rowSizes - fullRows; // Fractional part of the last row
+    
+        console.log('rowSizes:', rowSizes, 'fullRows:', fullRows, 'fractionalPart:', fractionalPart);
+    
+        if (fractionalPart > 0) {
+            // Hide the fractional part first
+            var fractionalCount = Math.ceil(fractionalPart * rowSize);
+            members.slice(visibleCount - fractionalCount, visibleCount).hide();
+        } else {
+            // If there is no fractional part, hide a full row
+            members.slice(visibleCount - rowSize, visibleCount).hide();
+        }
+    
+        // Update the visible count after hiding items
+        visibleCount = members.filter(':visible').length;
+    
+        // Check if only the initial rows are visible
+        if (visibleCount <= initialRows * rowSize) {
+            $(this).hide();
+        }
+    
+        $('#readMoreImg').show();
+    });
+    
+  
+    // Initial state: hide the "Read Less" button
+    $('#readLessImg').hide();
+  });
+  
+
