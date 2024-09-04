@@ -600,7 +600,7 @@ hr {
 		box-shadow: 0 3px 7px rgba(198, 18, 18, 0.8);
 	}
 
-.member_image {
+.executive_member_image, .trust_member_image {
 	padding: 12% 0 10% 0;
 	/* padding: 12% 0 14% 0; */
 	border: 2px solid #dfdfdfa3;
@@ -618,7 +618,7 @@ hr {
 	border: 2px solid #cecece8f;
 } */
 
-.member_image img {
+.executive_member_image img, .trust_member_image img {
 	width: 55%;
 	height: auto;
 	border-radius: 50%;
@@ -630,18 +630,20 @@ hr {
 }
 
 /* Hide all members except the first two */
-.members .member_image:nth-child(n+9) {
+/* .members .member_image:nth-child(n+9) {
     display: none;
-}
+} */
 
-.member_image h3 {
+.executive_member_image h3, 
+.trust_member_image h3 {
 	text-align: center;
 	font-size: 20px;
 	font-weight: 600;
 	padding: 8px 0 2px 0;
 }
 
-.member_image h4 {
+.executive_member_image h4,
+.trust_member_image h4{
 	text-align: center;
 	font-size: 16px;
 	font-weight: 300;
