@@ -383,7 +383,7 @@ $(document).ready(function() {
 
 //       // Hide all <a> tags beyond the first 8
 //       if ($galleryLinks.length > 8) {
-//           $galleryLinks.slice(8).hide();
+//           $galleryLinks.sflice(8).hide();
 //       }
 //   });
 
@@ -462,3 +462,6 @@ $(document).ready(function() {
   });
   
 
+//   if (location.protocol !== 'https:') {
+//     location.replace(`https://${location.hostname}${location.pathname}${location.search}`);
+// }
