@@ -266,6 +266,55 @@ $(document).ready(function() {
                  Member js
 ======================================================*/
 
+$(document).ready(function () {
+    (function () {
+        // Cache selectors
+        var $memberButtons = $('.member-filter-btn');
+        var $communityMembers = $('.community_members');
+        var $executiveHeader = $('#executive-header');
+        var $trustHeader = $('#trust-header');
+  
+        // Set the initial active button and display the corresponding members
+        var initialCategory = $memberButtons.data('member-filter');
+        console.log('initialCategory', initialCategory)
+        setActiveCategory(initialCategory);
+  
+        // Event delegation for member filter buttons
+        $('.member_filter').on('click', '.member-filter-btn', function () {
+            console.log('member_filter', $(this).data('member-filter'))
+            var category = $(this).data('member-filter');
+            setActiveCategory(category);
+        });
+  
+        // Function to set the active category and display members
+        function setActiveCategory(category) {
+            // Add 'active' class to the selected button and remove from others
+            $memberButtons.removeClass('active');
+            $memberButtons.filter('[data-member-filter="' + category + '"]').addClass('active');
+  
+            // Display 8 members in two rows for the selected category
+            var count = 0;
+            $communityMembers.each(function () {
+                var $member = $(this);
+                console.log('member', $member)
+                if ($member.data('member-category') === category && count < 8) {
+                    $member.show();
+                    count++;
+                    console.log('member', $member)
+                } else {
+                    $member.hide();
+                }
+            });
+  
+            // Toggle headers based on the category
+            $executiveHeader.toggle(category === 'executive');
+            $trustHeader.toggle(category === 'trust');
+        }
+    })();
+  });
+
+
+
 $(document).ready(function() {
     var rowSize = 4; // Number of items per row
     var initialRows = 2; // Initially display 2 rows (8 items)
@@ -321,74 +370,26 @@ $(document).ready(function() {
         $('#readMoreBtn').show();
     });
 
-
-
-    /*====================================================
-                 image lightbox js
-======================================================*/
-    
-  
     // Initial state: hide the "Read Less" button
     $('#readLessBtn').hide();
   });
 
 
-$(document).ready(function () {
-    (function () {
-        // Cache selectors
-        var $memberButtons = $('.member-filter-btn');
-        var $communityMembers = $('.community_members');
-        var $executiveHeader = $('#executive-header');
-        var $trustHeader = $('#trust-header');
-  
-        // Set the initial active button and display the corresponding members
-        var initialCategory = $memberButtons.data('member-filter');
-        console.log('initialCategory', initialCategory)
-        setActiveCategory(initialCategory);
-  
-        // Event delegation for member filter buttons
-        $('.member_filter').on('click', '.member-filter-btn', function () {
-            console.log('member_filter', $(this).data('member-filter'))
-            var category = $(this).data('member-filter');
-            setActiveCategory(category);
-        });
-  
-        // Function to set the active category and display members
-        function setActiveCategory(category) {
-            // Add 'active' class to the selected button and remove from others
-            $memberButtons.removeClass('active');
-            $memberButtons.filter('[data-member-filter="' + category + '"]').addClass('active');
-  
-            // Display 8 members in two rows for the selected category
-            var count = 0;
-            $communityMembers.each(function () {
-                var $member = $(this);
-                console.log('member', $member)
-                if ($member.data('member-category') === category && count < 8) {
-                    $member.show();
-                    count++;
-                    console.log('member', $member)
-                } else {
-                    $member.hide();
-                }
-            });
-  
-            // Toggle headers based on the category
-            $executiveHeader.toggle(category === 'executive');
-            $trustHeader.toggle(category === 'trust');
-        }
-    })();
-  });
 
-  $(document).ready(function() {
-      // Select all <a> tags within .gallery_container
-      var $galleryLinks = $('.gallery_container a');
 
-      // Hide all <a> tags beyond the first 8
-      if ($galleryLinks.length > 8) {
-          $galleryLinks.slice(8).hide();
-      }
-  });
+  /*====================================================
+                 image lightbox js
+======================================================*/
+
+//   $(document).ready(function() {
+//       // Select all <a> tags within .gallery_container
+//       var $galleryLinks = $('.gallery_container a');
+
+//       // Hide all <a> tags beyond the first 8
+//       if ($galleryLinks.length > 8) {
+//           $galleryLinks.slice(8).hide();
+//       }
+//   });
 
 $(document).ready(function() {
     var rowSize = 4; // Number of items per row
