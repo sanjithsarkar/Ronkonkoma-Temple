@@ -14,11 +14,16 @@
     .content-box-md {
         margin: 0 6rem !important;
     }
+    .member_filter_content {
+        width: 45% !important;
+    }
 }
 
 /* Medium Devices (Portrait Tablets & Small Desktops) */
 @media (min-width: 768px) and (max-width: 991px) {
-
+    .temple_title {
+        font-size: 16px !important;
+    }
     .banner_slider_content {
         justify-content: end !important;
     }
@@ -45,6 +50,10 @@
         height: 300px !important;
     }
 
+    .member_filter_content {
+        width: 55% !important;
+    }
+
     .content-box-md {
         margin: 0 5rem !important;
     }
@@ -69,6 +78,16 @@
         font-size: 14px !important;
     }
 
+    /* =====================================
+                    event 
+    ========================================*/
+    .filter {
+        width: 100% !important;
+        background: none !important;
+    }
+    .filter-btn, .filter-btn1 {
+        background: #dfe8f2d1 !important;
+    }
     #event_image, #vission_image {
         width: 380px;
         height: 300px !important;
@@ -84,6 +103,23 @@
     .event-content {
         padding: 0 10% !important;
     }
+    .member_filter_content {
+        display: flex;
+        justify-content: center;
+        width: 45% !important;
+        flex-direction: column;
+        gap: 10px;
+        background: none !important;
+    }
+    .member-filter-btn {
+        flex: 0;
+        background: #f3f4f5;
+        width: 100%;
+    }
+
+    iframe {
+        height: 300px !important;
+    }
 }
 
 /* Medium Devices (Landscape Phone & Portrait Tablets) */
@@ -94,6 +130,12 @@
         margin: 0 4rem !important;
     }
 
+    .temple_logo_title {
+        margin-left: 30px;
+    }
+    .temple_title {
+        font-size: 14px !important;
+    }
 
     /*================================================== 
                 image-slide
@@ -149,10 +191,14 @@
     /*================================================== 
                 Events
 ====================================================*/
+    .filter {
+        width: 100% !important;
+        background: none !important;
+    }
 
-    /* .conference {
-        width: 6%;
-    } */
+    .filter-btn, .filter-btn1 {
+        background: #dfe8f2d1 !important;
+    }
 
     .event-image {
         position: relative;
@@ -180,11 +226,19 @@
     /*================================================== 
                 Members
 ====================================================*/
-
-}
-
-
-
+    .member_filter_content {
+        display: flex;
+        justify-content: center;
+        width: 45% !important;
+        flex-direction: column;
+        gap: 10px;
+        background: none !important;
+    }
+    .member-filter-btn {
+        flex: 0;
+        background: #f3f4f5;
+        width: 100%;
+    }
 .btn-back-to-top {
     position: fixed;
     /* bottom: 20px !important; */
@@ -198,10 +252,58 @@
     font-size: 22px !important;
 }
 
+iframe {
+	height: 300px !important;
+}
+
+}
+
 /* Medium Devices (Landscape Phone & Portrait Tablets) */
  @media (max-width: 427px) {
 
     .content-box-md {
         margin: 0 4rem !important;
+    }
+
+    /* =====================================
+                    event 
+    ========================================*/
+    .filter {
+        width: 100% !important;
+        background: none !important;
+    }
+
+    .filter-btn, .filter-btn1 {
+        background: #dfe8f2d1 !important;
+    }
+
+    /* =====================================
+                    Member 
+    ========================================*/
+    .member_filter_content {
+        display: flex;
+        justify-content: center;
+        width: 80% !important;
+        flex-direction: column;
+        gap: 10px;
+        background: none !important;
+    }
+    .member-filter-btn {
+        flex: 0;
+        background: #f3f4f5;
+        width: 100%;
+    }
+    .temple_logo_title {
+        margin-left: 30px;
+    }
+    .temple_title {
+        font-size: 14px !important;
+    }
+    .temple_address {
+        padding-top: 20px;
+    }
+
+    iframe {
+        height: 300px !important;
     }
 }

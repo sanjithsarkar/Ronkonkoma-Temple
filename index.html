@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
+    <meta name="keywords" content="Sorbojonin Hindu Parishad in Long Island, new york, Sorbojonin Parishad, 542 Beaver Ln, RONKONKOMA New York, 11779, celebrates Durga Puja, Sri Krishna Janmashtami, Holi, Hindu community in New York, Cultural festivals in Ronkonkoma, Events organize by Sorbojonin Parishad, community, NY, Hindu community events Long Island, Join our vibrant Hindu community for festivities and cultural programs." />
+    <title>Sorbojonin Hindu Parishad - Durga Puja & Hindu Festivals |  Ronkonkoma, Long Island, NY</title>
+    <!-- <script>
         if (window.location.protocol !== 'https:') {
             window.location.href = 'https://' + window.location.hostname + window.location.pathname + window.location.search;
         }
-    </script>
+    </script> -->
     <!-- Include Tailwind CSS via CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.0/dist/tailwind.min.css" rel="stylesheet"> -->
@@ -71,13 +72,14 @@
     </div>
 
     <div class="fixed w-full z-10" data-scroll-section>
-        <nav class="bg-gray-800 p-3">
+        <nav class="nav_menu_header bg-gray-800 p-3">
             <div class="mx-auto flex justify-between items-center">
                 <!-- Logo -->
-                <div class="flex items-center flex-shrink-0 text-white ml-16">
+                <div class="temple_logo_title flex items-center flex-shrink-0 gap-4 text-white ml-16 sm:ml-8">
                     <a href="#slider" class="smooth-scroll">
                         <img src="image/Om_symbol.png" alt="" width="40px">
                     </a>
+                    <span class="temple_title">SORBOJONIN HINDU PARISHAD</span>
                 </div>
 
                 <!-- Mobile menu toggle -->
@@ -93,7 +95,7 @@
 
                 <!-- Desktop menu -->
                 <div class="hidden md:flex md:items-center md:w-auto" id="nav-menu">
-                    <ul class="list-none flex text-base justify-end pr-28">
+                    <ul class="list-none flex text-base justify-end lg:pr-28">
                         <li class="flex justify-center items-center">
                             <a href="#slider"
                                 class="nav-link block lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
@@ -125,9 +127,9 @@
                             </a>
                         </li>
                         <li class="flex justify-center items-center">
-                            <a href="#address"
+                            <a href="#contact"
                                 class="nav-link block lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
-                                Address
+                                Contact
                             </a>
                         </li>
                     </ul>
@@ -169,9 +171,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#address"
+                        <a href="#contact"
                             class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
-                            Address
+                            Contact
                         </a>
                     </li>
                 </ul>
@@ -401,13 +403,16 @@
                 <h2>Upcoming Events</h2>
             </div>
 
-            <div class="filter mt-3 text-center mt-8 text-white" data-aos="zoom-in" data-aos-duration="1500">
-                <button class="bg-yellow-700 filter-btn" data-filter="all">All Events</button>
-                <button class="bg-yellow-700 filter-btn1" data-filter="event-one">Sri Krishna Janmashtami</button>
-                <button class="bg-yellow-700 filter-btn1" data-filter="event-two">Durga Puja</button>
-                <button class="bg-yellow-700 filter-btn1" data-filter="event-three">Saraswati Puja</button>
+            <div class="event_filter_list">
+                <div class="filter mt-3 text-center mt-8 text-white" data-aos="zoom-in" data-aos-duration="1500">
+                    <button class="filter-btn" data-filter="all">All Events</button>
+                    <button class="filter-btn1" data-filter="event-one">Sri Krishna Janmashtami</button>
+                    <button class="filter-btn1" data-filter="event-two">Durga Puja</button>
+                    <button class="filter-btn1" data-filter="event-three">Saraswati Puja</button>
+                </div>
+    
             </div>
-
+            
             <div class="w-full mt-4" data-aos="zoom-in" data-aos-duration="1500">
                 <div id="event-view" class="grid sm:grid-cols-1 md:grid-cols-2 mt-10">
                 </div>
@@ -545,9 +550,11 @@
 
                 <div class="member_filter flex justify-center content-center gap-4 mt-3 text-center mt-8 text-white"
                     data-aos="zoom-in" data-aos-duration="1500">
-                    <button class="bg-yellow-700 member-filter-btn" data-member-filter="executive">Executive
-                        Committee</button>
-                    <button class="bg-yellow-700 member-filter-btn" data-member-filter="trust">Board of Trust</button>
+                    <div class="member_filter_content ">
+                        <button class="member-filter-btn" data-member-filter="executive">Executive
+                            Committee</button>
+                        <button class="member-filter-btn" data-member-filter="trust">Board of Trust</button>
+                    </div>
                 </div>
                 <div class="card_body" data-aos="zoom-in" data-aos-duration="1500">
                     <div class="community_members executive_members members grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3"
@@ -1007,7 +1014,7 @@
         </div>
     </section>
 
-    <section id="gallery_slider">
+    <!-- <section id="gallery_slider">
         <div class="content-box-md">
             <div class="gallery_title_h2 text-center">
                 <h2>Photo Gallery</h2>
@@ -1080,15 +1087,48 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <section id="address" class="address_section" data-scroll-section>
-        <div class="content-box-md">
+    <section id="contact" class="contact_section" data-scroll-section>
+        <div class="content-box-md mx-32">
             <div class="gallery_title_h2 text-center">
-                <h2>Address</h2>
+                <h2>Contact</h2>
             </div>
-            <div class="temple_address">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.8952827954868!2d-73.13684372392458!3d40.80829487137926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e837a004d217ad%3A0x1728e7dc98f95538!2s542%20Beaver%20Ln%2C%20Ronkonkoma%2C%20NY%2011779%2C%20USA!5e0!3m2!1sen!2sbd!4v1725300871886!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="contact_info grid sm:grid-cols-1 md:grid-cols-2 w-full">
+                <div class="contact_info_item col-span-1 w-full sm:w-1/1">
+                    <div class="contact_header">
+                        <h2>Contact Info</h2>
+                    </div>
+                    <div class="contact_body flex content-center gap-3 pt-2">
+                        <div class="contact_info_icon">
+                            <!-- <i class="fa fa-map-marker base-color"></i> -->
+                            <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.6177 20.367C11.1841 20.773 10.6044 21 10.0011 21C9.39785 21 8.81818 20.773 8.38449 20.367C4.41302 16.626 -0.909237 12.4469 1.68627 6.37966C3.08963 3.09916 6.45834 1 10.0011 1C13.5439 1 16.9126 3.09916 18.316 6.37966C20.9082 12.4393 15.599 16.6389 11.6177 20.367Z" stroke="#141B34" stroke-width="1.5"/>
+                                <path d="M13.5 10C13.5 11.933 11.933 13.5 10 13.5C8.067 13.5 6.5 11.933 6.5 10C6.5 8.067 8.067 6.5 10 6.5C11.933 6.5 13.5 8.067 13.5 10Z" stroke="#141B34" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <div class="contact_info_text">
+                            <p>Address: 542 Beaver Ln, Ronkonkoma, NY 11779, USA</p>
+                        </div>
+                    </div>
+
+                    <div class="temple_opening my-5">
+                        <div class="temple_opening_header">
+                            <h2>Temple Opening Times</h2>
+                        </div>
+                        <div class="temple_opening_content">
+                            <strong>Monday - Friday</strong>
+                            <p>08:00 am - 12:00 pm</p>
+                            <p>05:00 pm - 08:30 pm</p>
+                            <strong>Saturday-Sunday</strong>
+                            <p>08:00 am - 07:00 pm</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="temple_address col-span-1 w-full sm:w-1/1">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.8952827954868!2d-73.13684372392458!3d40.80829487137926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e837a004d217ad%3A0x1728e7dc98f95538!2s542%20Beaver%20Ln%2C%20Ronkonkoma%2C%20NY%2011779%2C%20USA!5e0!3m2!1sen!2sbd!4v1725300871886!5m2!1sen!2sbd" width="100%" height="450" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
     </section>
@@ -1502,13 +1542,13 @@
                         <div class="vission-content wow slideInRight" data-wow-duration="2s">
                             <div class="vission-content-inner lg:text-left">
 
-                                <h2 class="text-xl font-semibold mb-3">Sri Krishna Janmashtami</h2>
+                                <h2 class="text-xl font-semibold mb-3">Saraswati Puja</h2>
 
                                 <p class="text-base font-normal mb-3">
-                                    Sri Krishna Janmashtami is a Hindu festival that celebrates the birth of Lord Krishna. The date of Janmashtami varies each year according to the Hindu lunar calendar. The festival is observed on the eighth day (Ashtami) of the Krishna Paksha (dark fortnight) in the month of Bhadrapada, which usually falls in August or September on the Gregorian calendar...
+                                    Saraswati Puja in 2024, also known as Vasant Panchami, will be celebrated on February 14, 2024. This festival is dedicated to Saraswati, the Hindu goddess of knowledge, music, art, and wisdom. It marks the onset of spring and is considered an auspicious day for beginning new educational pursuits, particularly for young children who are often introduced to reading and writing on this day.
                                 </p>
                                 <h3 class="vission-purpose pb-2">Program:</h3>
-                                <p class="text-base font-normal mb-3">The celebration of Janmashtami typically includes various religious and cultural events:</p>
+                                <p class="text-base font-normal mb-3">The celebration of Saraswati Puja typically includes various religious and cultural events:</p>
                                 <ul class="space-y-1 text-gray-500 list-inside">
                                     <li class="flex items-center gap-4 text-black">
                                         <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"

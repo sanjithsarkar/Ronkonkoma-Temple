@@ -18,6 +18,9 @@
 ===================================================
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
 :root {
 	--dark: #edecec;
 	--gap: 15px;
@@ -37,7 +40,8 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+span {
 	font-family: "Raleway", sans-serif;
 }
 
@@ -97,6 +101,17 @@ section {
                     Header 
 ===================================================
 */
+
+/* .nav_menu_header {
+	background-color: #d87826;
+} */
+.temple_title {
+color: #fff;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 20px;
+}
 
 #nav-menu ul li a.nav-link {
 	position: relative;
@@ -195,9 +210,9 @@ section {
 ===================================================
 */
 
-#about {
-	background: #f4f4f4;
-}
+/* #vission {
+	background: #f7f4e7 !important;
+} */
 
 .vission_title h2 {
 	font-size: 30px;
@@ -285,7 +300,12 @@ section {
 	left: calc(50% - 25px);
 }
 
-.filter {
+.event_filter_list {
+	display: flex;
+	justify-content: center;
+}
+
+/* .filter {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -294,6 +314,19 @@ section {
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 20px;
+} */
+
+.filter {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 5px 5px;
+	gap: 10px;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+	border-radius: 8px;
+	background: #dfe8f2d1;
 }
 
 .conference {
@@ -308,18 +341,38 @@ section {
 	transform: translateY(-12px);
 }
 
-.filter-btn,
+.filter-btn, .filter-btn1 {
+	height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px 14px;
+	border-radius: 8px;
+	color: #000;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.filter-btn.active, .filter-btn1.active {
+	background: #f9fcfdc9 !important;
+	color: #344767;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}	
+
+/* .filter-btn,
 .filter-btn1 {
 	padding: 8px 14px;
 	border-radius: 6px;
-	/* Adjusted border-radius for both classes */
-}
-
+	background: #fff;
+	color: #344767;
+} */
+/* 
 .filter-btn.active,
 .filter-btn1.active {
-	background: #973c3c;
-	box-shadow: 0 3px 7px rgba(198, 18, 18, 0.8);
-}
+	background: #f3f4f5;
+	color: #344767;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+} */
 
 .conference-details {
 	position: relative;
@@ -591,14 +644,50 @@ hr {
 						Team Member 
 ==========================================================
 */
-	.member-filter-btn {
+	/* .member-filter-btn {
 		padding: 8px 14px;
 		border-radius: 8px;
 	}
 	.member-filter-btn.active {
 		background: #973c3c;
 		box-shadow: 0 3px 7px rgba(198, 18, 18, 0.8);
+	} */
+
+	.member_filter {
+		display: flex;
+		justify-content: center; /* Centers the buttons horizontally */
+		align-items: center; /* Centers the buttons vertically */
 	}
+	
+	.member_filter_content {
+		display: flex;
+		justify-content: center;
+		width: 31%;
+		background: #f3f4f5;
+		border-radius: 8px;
+		padding: 5px 5px;
+	}
+	
+	.member-filter-btn {
+		flex: 1;
+		padding: 5px 0px;
+		text-align: center;
+		color: #344767;
+		border: none;
+		border-radius: 8px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 15px;
+		font-weight: 600;
+	}
+	
+	.member-filter-btn.active {
+		background-color: #FFF;
+		box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+	}
+	
+	
 
 .executive_member_image, .trust_member_image {
 	padding: 12% 0 10% 0;
@@ -907,6 +996,34 @@ hr {
 Address Section
 */
 
-#address {
+#contact {
 	background: #EDF2F7;
+}
+
+.contact_header, .temple_opening_header{
+	color: #2F3448;
+
+/* Semi Bold/H3-Semi Bold */
+font-family: Inter;
+font-size: 22px;
+font-style: normal;
+font-weight: 600;
+line-height: 28px; /* 155.556% */
+}
+.contact_info_text {
+	color: var(--Text-Mid, #565865);
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px; /* 153.846% */
+}
+
+.temple_opening_header{
+	color: #2F3448;
+	font-family: Inter;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 28px;
+	padding-bottom: 5px;
 }
