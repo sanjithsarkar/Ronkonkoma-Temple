@@ -31,6 +31,10 @@
 picture {
 	display: block;
 	width: 100%;
+}
+
+.gallery_container picture,
+.event-image picture {
 	height: 100%;
 }
 
@@ -697,8 +701,7 @@ hr {
 	
 
 .executive_member_image, .trust_member_image {
-	padding: 12% 0 10% 0;
-	/* padding: 12% 0 14% 0; */
+	padding: 12% 0 14% 0;
 	border: 2px solid #dfdfdfa3;
 	margin: 3%;
 	border-radius: 5%;
