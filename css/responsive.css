@@ -1,120 +1,68 @@
-/*================================================== 
-                Bootstrap 5 Media Queries
-====================================================*/
+/* ================================================
+   Responsive Styles
+===================================================*/
 
-/* Large Devices (Desktop & Laptops) */
-@media (min-width: 1200px) {}
-
-/* Medium Devices (Landscape Tablets & Medium Desktops) */
-
-/*================================================== 
-                Members
-====================================================*/
-@media (min-width: 992px) and (max-width: 1199px) {
-    .content-box-md {
-        margin: 0 6rem !important;
+/* Tablet */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 2.4rem;
     }
-    .member_filter_content {
-        width: 45% !important;
+
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    .about-main-image {
+        height: 350px;
     }
 }
 
-/* Medium Devices (Portrait Tablets & Small Desktops) */
-@media (min-width: 768px) and (max-width: 991px) {
-    .temple_title {
-        font-size: 16px !important;
-    }
-    .banner_slider_content {
-        justify-content: end !important;
-    }
-    .banner_content_des {
-        width: 60% !important;
-    }
-    .banner_content_des h1 {
-        font-size: 28px !important;
+/* Mobile Landscape */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
     }
 
-    .banner_content_des h6 {
-        width: 100% !important;
-        font-size: 14px !important;
-    }
-    .banner_image img {
-        width: 60% !important;
+    .hero-subtitle {
+        font-size: 0.95rem;
     }
 
-    #vission_image {
-        height: 300px !important;
+    .section-title {
+        font-size: 1.8rem;
     }
 
-    #event_image {
-        height: 300px !important;
+    .section-padding {
+        padding: 50px 0;
     }
 
-    .member_filter_content {
-        width: 55% !important;
+    .about-main-image {
+        height: 280px;
     }
 
-    .content-box-md {
-        margin: 0 5rem !important;
-    }
-}
-
-/* Medium Devices (Landscape Phone & Portrait Tablets) */
-@media (max-width: 767px) {
-
-    .content-box-md {
-        margin: 0 4rem !important;
+    .section-title-gradient {
+        font-size: 2.2rem;
     }
 
-    .banner_content_des {
-        width: 58% !important;
-    }
-    .banner_content_des h1 {
-        font-size: 28px !important;
-    }
-
-    .banner_content_des h6 {
-        width: 100% !important;
-        font-size: 14px !important;
-    }
-
-    /* =====================================
-                    event 
-    ========================================*/
-    .filter {
-        width: 100% !important;
-        background: none !important;
-    }
-    .filter-btn, .filter-btn1 {
-        background: #dfe8f2d1 !important;
-    }
-    #event_image, #vission_image {
-        width: 380px;
-        height: 300px !important;
-    }
-
-    .vission-content {
-        padding-top: 30px !important;
-    }
-    .vission-content-inner {
-        padding: 0 10% !important;
-    }
-
-    .event-content {
-        padding: 0 10% !important;
-    }
-    .member_filter_content {
-        display: flex;
+    .event-filter-tabs {
         justify-content: center;
-        width: 45% !important;
-        flex-direction: column;
-        gap: 10px;
-        background: none !important;
     }
-    .member-filter-btn {
-        flex: 0;
-        background: #f3f4f5;
-        width: 100%;
+
+    .filter-btn,
+    .filter-btn1 {
+        font-size: 13px;
+        padding: 6px 14px;
+    }
+
+    .member-card picture,
+    .member-card picture img,
+    .executive_member_image picture img,
+    .trust_member_image picture img {
+        width: 80px;
+        height: 80px;
+    }
+
+    :root {
+        --width: 180px;
     }
 
     iframe {
@@ -122,188 +70,54 @@
     }
 }
 
-/* Medium Devices (Landscape Phone & Portrait Tablets) */
-@media (max-width: 639px) {
-
-
-    .content-box-md {
-        margin: 0 4rem !important;
+/* Mobile Portrait */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.6rem;
     }
 
-    .temple_logo_title {
-        margin-left: 30px;
-    }
-    .temple_title {
-        font-size: 14px !important;
+    .section-title-gradient {
+        font-size: 1.8rem;
     }
 
-    /*================================================== 
-                image-slide
-====================================================*/
-
-    .banner_slider_content {
-        flex-direction: column !important;
+    .hero-subtitle {
+        font-size: 0.85rem;
     }
 
-    .banner_content_des {
-        width: 68% !important;
+    .hero-subtitle br {
+        display: none;
     }
 
-    .banner_content_des h1 {
-        font-size: 22px !important;
+    .section-title {
+        font-size: 1.5rem;
     }
 
-    .banner_content_des h6 {
-        width: 100% !important;
-        font-size: 13px !important;
+    .section-padding {
+        padding: 40px 0;
     }
 
-    .banner_image img {
-        width: 70%;
-        padding: 50px 0 0 0;
+    .about-main-image {
+        height: 220px;
     }
 
-    #event_image, #vission_image {
-        height: 350px !important;
+    .event-card-image {
+        height: 180px;
     }
 
-    .vission-content {
-        padding-top: 30px !important;
+    :root {
+        --width: 140px;
+        --gap: 8px;
     }
 
-    .vission-content-inner {
-        padding: 0 !important;
+    .member-card {
+        padding: 16px 8px;
     }
 
-    .event-content {
-        padding: 0 !important;
+    .member-card h3 {
+        font-size: 13px;
     }
 
-
-    /*================================================== 
-                Vission
-====================================================*/
-
-    .vission-content {
-        padding-top: 15px !important;
-    }
-
-    /*================================================== 
-                Events
-====================================================*/
-    .filter {
-        width: 100% !important;
-        background: none !important;
-    }
-
-    .filter-btn, .filter-btn1 {
-        background: #dfe8f2d1 !important;
-    }
-
-    .event-image {
-        position: relative;
-        width: 100%;
-        height: 185px !important;
-        overflow: hidden;
-    }
-
-    #event_image, #vission_image {
-        height: 210px !important;
-    }
-
-    .event-title {
-        font-size: 15px !important;
-    }
-
-    .event_address {
-        font-size: 14px;
-    }
-
-    .event_date {
-        font-size: 14px !important;
-    }
-
-    /*================================================== 
-                Members
-====================================================*/
-    .member_filter_content {
-        display: flex;
-        justify-content: center;
-        width: 45% !important;
-        flex-direction: column;
-        gap: 10px;
-        background: none !important;
-    }
-    .member-filter-btn {
-        flex: 0;
-        background: #f3f4f5;
-        width: 100%;
-    }
-.btn-back-to-top {
-    position: fixed;
-    /* bottom: 20px !important; */
-    /* right: 4px !important; */
-    padding: 3px 6px !important;
-    font-size: 5px;
-}
-
-.fa-solid {
-    padding: 27px 0 15px 0;
-    font-size: 22px !important;
-}
-
-iframe {
-	height: 300px !important;
-}
-
-}
-
-/* Medium Devices (Landscape Phone & Portrait Tablets) */
- @media (max-width: 427px) {
-
-    .content-box-md {
-        margin: 0 4rem !important;
-    }
-
-    /* =====================================
-                    event 
-    ========================================*/
-    .filter {
-        width: 100% !important;
-        background: none !important;
-    }
-
-    .filter-btn, .filter-btn1 {
-        background: #dfe8f2d1 !important;
-    }
-
-    /* =====================================
-                    Member 
-    ========================================*/
-    .member_filter_content {
-        display: flex;
-        justify-content: center;
-        width: 80% !important;
-        flex-direction: column;
-        gap: 10px;
-        background: none !important;
-    }
-    .member-filter-btn {
-        flex: 0;
-        background: #f3f4f5;
-        width: 100%;
-    }
-    .temple_logo_title {
-        margin-left: 30px;
-    }
-    .temple_title {
-        font-size: 14px !important;
-    }
-    .temple_address {
-        padding-top: 20px;
-    }
-
-    iframe {
-        height: 300px !important;
+    .member-card h4 {
+        font-size: 11px;
     }
 }

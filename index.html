@@ -5,391 +5,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Sorbojonin Hindu Parishad in Long Island, new york, Sorbojonin Parishad, 542 Beaver Ln, RONKONKOMA New York, 11779, celebrates Durga Puja, Sri Krishna Janmashtami, Holi, Hindu community in New York, Cultural festivals in Ronkonkoma, Events organize by Sorbojonin Parishad, community, NY, Hindu community events Long Island, Join our vibrant Hindu community for festivities and cultural programs." />
-    <title>Sorbojonin Hindu Parishad - Durga Puja & Hindu Festivals |  Ronkonkoma, Long Island, NY</title>
-    <!-- <script>
-        if (window.location.protocol !== 'https:') {
-            window.location.href = 'https://' + window.location.hostname + window.location.pathname + window.location.search;
-        }
-    </script> -->
-    <!-- Include Tailwind CSS via CDN -->
+    <link rel="icon" href="image/Om_symbol.png" type="image/png">
+    <title>Sorbojonin Hindu Parishad - Durga Puja & Hindu Festivals | Ronkonkoma, Long Island, NY</title>
+
+    <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.0/dist/tailwind.min.css" rel="stylesheet"> -->
 
-    <!----------------------------------- Goolge Fonts ----------------------------------------->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <!----------------------------------- Bootstrap ----------------------------------------->
-    <!-- <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css"> -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <!----------------------------------- Font Awesome ----------------------------------------->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="css/font-awesome/css/all.min.css">
 
-    <!----------------------------------- Responsive CSS ----------------------------------------->
-    <link rel="stylesheet" href="css/responsive.css">
-
-    <!----------------------------------- Style CSS ----------------------------------------->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!----------------------------------- Animate CSS ----------------------------------------->
-    <link rel="stylesheet" href="css/animate/animate.css">
-
-    <!--------------------------  AOS css  -------------------->
-    <!-- <link rel="stylesheet" href="{{ asset('css/aos/aos.css') }}"> -->
+    <!-- AOS CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.css" />
 
-    <!------------------------------------------------- Jquery js --------------------------------------------->
-    <!-- <script src="js/jquery.js"></script> -->
-
-    <!----------------------------------- WOW ----------------------------------------->
-    <script src="js/wow/wow.min.js"></script>
-
-    <!----------------------------------- Type-it js ----------------------------------------->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/5.0.2/typeit.min.js"></script>
-
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
-
+    <!-- Lightbox CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
 
-    <!-- Include Slick CSS -->
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" rel="stylesheet"> -->
-    <!-- Slick CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css" />
-
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
-<body class="scroll-spy" data-target="#nav-menu">
-    <div id="preloader" class="fixed top-0 bottom-0 left-0 right-0 bg-white z-50 flex justify-center items-center"
-        data-scroll-container>
-
-        <div id="status" class="w-16 h-16 bg-center bg-no-repeat">
-
-        </div>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status"></div>
     </div>
 
-    <div class="fixed w-full z-10" data-scroll-section>
-        <nav class="nav_menu_header bg-gray-800 p-3">
-            <div class="mx-auto flex justify-between items-center">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
-                <div class="temple_logo_title flex items-center flex-shrink-0 gap-4 text-white ml-16 sm:ml-8">
-                    <a href="#slider" class="smooth-scroll">
-                        <img src="image/Om_symbol.png" alt="" width="40px">
-                    </a>
-                    <span class="temple_title">SORBOJONIN HINDU PARISHAD</span>
+                <a href="#hero" class="flex items-center gap-3 smooth-scroll">
+                    <picture>
+                        <source srcset="image/Om_symbol.webp" type="image/webp">
+                        <img src="image/Om_symbol.png" alt="Om Symbol" width="36" height="36">
+                    </picture>
+                    <span class="nav-brand-text">Sorbojonin Hindu Parishad</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-1">
+                    <a href="#hero" class="nav-link smooth-scroll">Home</a>
+                    <a href="#about" class="nav-link smooth-scroll">About</a>
+                    <a href="#events" class="nav-link smooth-scroll">Events</a>
+                    <a href="#gallery" class="nav-link smooth-scroll">Gallery</a>
+                    <a href="#members" class="nav-link smooth-scroll">Committee</a>
+                    <a href="#contact" class="nav-link smooth-scroll">Contact</a>
                 </div>
 
-                <!-- Mobile menu toggle -->
-                <div class="block md:hidden">
-                    <button id="nav-toggle"
-                        class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white">
-                        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <title>Menu</title>
-                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                        </svg>
-                    </button>
-                </div>
-
-                <!-- Desktop menu -->
-                <div class="hidden md:flex md:items-center md:w-auto" id="nav-menu">
-                    <ul class="list-none flex text-base justify-end lg:pr-28">
-                        <li class="flex justify-center items-center">
-                            <a href="#slider"
-                                class="nav-link block lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
-                                Home
-                            </a>
-                        </li>
-                        <li class="flex justify-center items-center">
-                            <a href="#vission"
-                                class="nav-link block lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
-                                Vission
-                            </a>
-                        </li>
-                        <li class="flex justify-center items-center">
-                            <a href="#events"
-                                class="nav-link block lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
-                                Events
-                            </a>
-                        </li>
-                        <li class="flex justify-center items-center">
-                            <a href="#members"
-                                class="nav-link block lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
-                                Members
-                            </a>
-                        </li>
-                        <li class="flex justify-center items-center">
-                            <a href="#gallery"
-                                class="nav-link block lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
-                                Gallery
-                            </a>
-                        </li>
-                        <li class="flex justify-center items-center">
-                            <a href="#contact"
-                                class="nav-link block lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
-                                Contact
-                            </a>
-                        </li>
-                    </ul>
-                    <div>
-                    </div>
-                </div>
-
+                <!-- Mobile Menu Toggle -->
+                <button id="nav-toggle" class="md:hidden text-white p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
             </div>
 
-            <!-- Mobile menu -->
-            <div class="hidden lg:hidden" id="mobile-nav">
-                <ul class="list-none text-xs">
-                    <li>
-                        <a href="#slider"
-                            class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
-                            Home</a>
-                    </li>
-                    <li>
-                        <a href="#vission"
-                            class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
-                            Vission</a>
-                    </li>
-                    <li>
-                        <a href="#events"
-                            class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
-                            Events
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#members"
-                            class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
-                            Members
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#gallery"
-                            class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
-                            Gallery
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#contact"
-                            class="block mt-1 px-2 py-1 text-white font-semibold rounded hover:bg-gray-600">
-                            Contact
-                        </a>
-                    </li>
-                </ul>
+            <!-- Mobile Menu -->
+            <div id="mobile-nav" class="hidden md:hidden pb-4">
+                <a href="#hero" class="block py-2 text-white hover:text-orange-400 smooth-scroll">Home</a>
+                <a href="#about" class="block py-2 text-white hover:text-orange-400 smooth-scroll">About</a>
+                <a href="#events" class="block py-2 text-white hover:text-orange-400 smooth-scroll">Events</a>
+                <a href="#gallery" class="block py-2 text-white hover:text-orange-400 smooth-scroll">Gallery</a>
+                <a href="#members" class="block py-2 text-white hover:text-orange-400 smooth-scroll">Committee</a>
+                <a href="#contact" class="block py-2 text-white hover:text-orange-400 smooth-scroll">Contact</a>
             </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
 
-
-    <section id="slider" class="lg:h-screen lg:h-auto relative z-0" data-scroll-section>
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="relative">
-                        <div class="slide_image text-white bg-cover bg-center h-full"
-                            style="background-image: url(image/1.jpg);">
-                        </div>
-                        <div class="absolute inset-0 bg-black opacity-50"></div>
-                        <div class="absolute banner_slider_container inset-0 text-white flex flex-col justify-center">
-                            <div class="grid grid-cols-1 flex flex-col justify-start">
-                                <div class="banner_slider_content col-span-1 mt-0 w-full">
-                                    <div class="banner_content_des">
-                                        <h3 class="mb-6 md:text-3xl font-medium"><span id="type-it">
-                                                वसुधैव कुटुम्बकम्(Vasudhaiva Kutumbakam)</span>
-                                        </h3>
-                                        <h1 class="text-3xl text-2xl font-normal mb-2">Some Important Life Lessons From
-                                            Gita
-                                        </h1>
-                                        <h6 class="text-sm md:text-base">We are a Hindu that belives in Lord Rama and
-                                            Vishnu
-                                            Deva the followers and We are a Hindu that belives in Lord Rama and Vishnu
-                                            Deva.
-                                            This is where you should start.</h6>
-                                    </div>
-
-                                    <div class="banner_image flex flex-col justify-start items-center">
-                                        <img src="image/lotus.png" alt="" class="max-w-full h-auto">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="swiper-slide">
-                    <div class="relative">
-                        <div class="slide_image text-white bg-cover bg-center h-full"
-                            style="background-image: url(image/2.jpg);">
-                            <div class="absolute inset-0 bg-black opacity-50"></div>
-                            <div
-                                class="absolute banner_slider_container inset-0 text-white flex flex-col justify-center">
-                                <div class="grid grid-cols-1 flex flex-col justify-start">
-                                    <div class="banner_slider_content col-span-1 mt-0 w-full">
-                                        <div class="banner_content_des">
-                                            <h3 class="mb-6 md:text-3xl font-medium"><span id="type-it">
-                                                    वसुधैव कुटुम्बकम्(Vasudhaiva Kutumbakam)</span>
-                                            </h3>
-                                            <h1 class="text-3xl text-2xl font-normal mb-2">Some Important Life Lessons
-                                                From Gita
-                                            </h1>
-                                            <h6 class="text-sm md:text-base">We are a Hindu that belives in Lord Rama
-                                                and Vishnu
-                                                Deva the followers and We are a Hindu that belives in Lord Rama and
-                                                Vishnu Deva.
-                                                This is where you should start.</h6>
-                                        </div>
-
-                                        <div class="banner_image flex flex-col justify-start items-center">
-                                            <img src="image/lotus.png" alt="" class="max-w-full h-auto">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="relative">
-                        <div class="slide_image text-white bg-cover bg-center h-full"
-                            style="background-image: url(image/3.jpg);">
-                            <div class="absolute inset-0 bg-black opacity-40"></div> <!-- Overlay div -->
-                            <div
-                                class="absolute banner_slider_container inset-0 text-white flex flex-col justify-center">
-                                <div class="grid grid-cols-1 flex flex-col justify-start">
-                                    <div class="banner_slider_content col-span-1 mt-0 w-full">
-                                        <div class="banner_content_des">
-                                            <h3 class="mb-6 md:text-3xl font-medium"><span id="type-it">
-                                                    वसुधैव कुटुम्बकम्(Vasudhaiva Kutumbakam)</span>
-                                            </h3>
-                                            <h1 class="text-3xl text-2xl font-normal mb-2">Some Important Life Lessons
-                                                From Gita
-                                            </h1>
-                                            <h6 class="text-sm md:text-base">We are a Hindu that belives in Lord Rama
-                                                and Vishnu
-                                                Deva the followers and We are a Hindu that belives in Lord Rama and
-                                                Vishnu Deva.
-                                                This is where you should start.</h6>
-                                        </div>
-
-                                        <div class="banner_image flex flex-col justify-start items-center">
-                                            <img src="image/lotus.png" alt="" class="max-w-full h-auto">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="relative">
-                        <div class="slide_image text-white bg-cover bg-center h-full"
-                            style="background-image: url(image/4.jpg);">
-                        </div>
-                        <div class="absolute inset-0 bg-black opacity-50"></div>
-                        <div class="absolute banner_slider_container inset-0 text-white flex flex-col justify-center">
-                            <div class="grid grid-cols-1 flex flex-col justify-start">
-                                <div class="banner_slider_content col-span-1 mt-0 w-full">
-                                    <div class="banner_content_des">
-                                        <h3 class="mb-6 md:text-3xl font-medium"><span id="type-it">
-                                                वसुधैव कुटुम्बकम्(Vasudhaiva Kutumbakam)</span>
-                                        </h3>
-                                        <h1 class="text-3xl text-2xl font-normal mb-2">Some Important Life Lessons From
-                                            Gita
-                                        </h1>
-                                        <h6 class="text-sm md:text-base">We are a Hindu that belives in Lord Rama and
-                                            Vishnu
-                                            Deva the followers and We are a Hindu that belives in Lord Rama and Vishnu
-                                            Deva.
-                                            This is where you should start.</h6>
-                                    </div>
-
-                                    <div class="banner_image flex flex-col justify-start items-center">
-                                        <img src="image/lotus.png" alt="" class="max-w-full h-auto">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Add more slides as needed -->
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section relative">
+        <div class="hero-bg" style="background-image: url('image/1.webp');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title" data-aos="fade-up" data-aos-duration="1000">
+                Welcome to <span class="text-orange-500">Sorbojonin Hindu Parishad</span>
+            </h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                A sacred sanctuary for spiritual growth, community connection,<br>and divine celebration
+            </p>
+            <a href="#events" class="hero-btn smooth-scroll" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                Explore Events <svg class="w-4 h-4 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
             </div>
-            <!-- Add pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- Add navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
         </div>
     </section>
 
-
-    <section id="vission" data-scroll-section>
-        <div class="content-box-md mx-32">
-            <div class="vission_title text-center">
-                <h2>Our Vision</h2>
+    <!-- About / Vision Section -->
+    <section id="about" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="section-title" data-aos="fade-up">Our Vision</h2>
             </div>
-            <div class="vission-content grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 mt-10">
-                <div class="col-span-1 w-full lg:w-1/1 flex justify-start" data-aos="zoom-in" data-aos-duration="1500">
-                    <div class="vission_image wow slideInLeft sm:w-full md:w-4/5" data-wow-duration="2s">
-                        <img id="vission_image" src="image/temple.jpg" alt="" class="object-cover mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="about-image-wrapper">
+                        <picture>
+                            <source srcset="image/temple.webp" type="image/webp">
+                            <img src="image/temple.jpg" alt="Temple" loading="lazy" class="about-main-image">
+                        </picture>
                     </div>
                 </div>
-
-                <div class="col-span-1 w-full lg:w-1/1 lg:flex flex-col justify-center " data-aos="zoom-in"
-                    data-aos-duration="1500">
-                    <div class="w-full lg:w-4/5">
-                        <div class="vission-content wow slideInRight" data-wow-duration="2s">
-                            <div class="vission-content-inner lg:text-left">
-                                <h2 class="text-xl font-semibold mb-3">Our Vision</h2>
-                                <p class="text-base font-normal mb-3">To establish a world-class institution dedicated
-                                    to the spiritual, cultural, social and educational development of our community
-                                    through the teachings and practice of the timeless traditions and philosophies of
-                                    Sanatan Dharma..</p>
-                                <h3 class="vission-purpose pb-2">OUR PURPOSE:</h3>
-                                <ul class="max-w-md space-y-1 text-gray-500 list-inside">
-                                    <li class="flex items-center gap-4 text-black">
-                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                                        </svg>
-                                        To promote the teachings and practice of Sanatan Dharma in a safe and
-                                        comfortable environment that is conducive to learning.
-                                    </li>
-                                    <li class="flex items-center gap-4 text-black">
-                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                                        </svg>
-                                        To upkeep, promote and celebrate our religion, culture and tradition through
-                                        appropriate forms of worship, music, dance and arts.
-                                    </li>
-                                    <li class="flex items-center gap-4 text-black">
-                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                                        </svg>
-                                        To educate and enlighten the youths of our society so that they can achieve
-                                        their full potential, both spiritual and academic.
-                                    </li>
-                                    <li class="flex items-center gap-4 text-black">
-                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                                        </svg>
-                                        To be a recognized and leading institution in our community that promotes peace,
-                                        harmony, and respect for people of different cultures, religions and faiths.
-                                    </li>
-                                </ul>
+                <div data-aos="fade-left" data-aos-duration="1000">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Building Bridges, Nurturing Souls</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Our temple stands as a beacon of spiritual enlightenment, dedicated to preserving ancient traditions while embracing the modern world. We are committed to creating a welcoming space where devotees can find peace, community, and divine connection.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <div class="about-check-icon">
+                                <svg class="w-5 h-5 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
                             </div>
+                            <p class="text-gray-700">Fostering spiritual growth and inner peace</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="about-check-icon">
+                                <svg class="w-5 h-5 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <p class="text-gray-700">Building a strong, united community</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="about-check-icon">
+                                <svg class="w-5 h-5 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <p class="text-gray-700">Preserving Hindu cultural heritage in Long Island</p>
                         </div>
                     </div>
                 </div>
@@ -397,907 +151,512 @@
         </div>
     </section>
 
-    <section id="events" data-scroll-section>
-        <div class="content-box-md mx-32">
-            <div class="event-heading text-center">
-                <h2>Upcoming Events</h2>
+    <!-- Events Section -->
+    <section id="events" class="section-padding section-bg-warm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="section-title" data-aos="fade-up">Upcoming Events</h2>
             </div>
 
-            <div class="event_filter_list">
-                <div class="filter mt-3 text-center mt-8 text-white" data-aos="zoom-in" data-aos-duration="1500">
-                    <button class="filter-btn" data-filter="all">All Events</button>
+            <!-- Event Filter -->
+            <div class="flex justify-center mb-10" data-aos="fade-up" data-aos-delay="100">
+                <div class="event-filter-tabs">
+                    <button class="filter-btn active" data-filter="all">All Events</button>
                     <button class="filter-btn1" data-filter="event-one">Sri Krishna Janmashtami</button>
                     <button class="filter-btn1" data-filter="event-two">Durga Puja</button>
                     <button class="filter-btn1" data-filter="event-three">Saraswati Puja</button>
                 </div>
-    
             </div>
-            
-            <div class="w-full mt-4" data-aos="zoom-in" data-aos-duration="1500">
-                <div id="event-view" class="grid sm:grid-cols-1 md:grid-cols-2 mt-10">
-                </div>
-                <ul class="event-content grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <li id="event-one" class="col-span-1 list-group-item conference" data-category="event-one">
-                        <div class="conference-details">
-                            <div class="event-image">
-                                <img src="image/krishna.jpeg" alt="" class="rounded">
-                                <div class="overlay"></div>
+
+            <!-- Event View (dynamic content) -->
+            <div id="event-view" class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8"></div>
+
+            <!-- Event Cards -->
+            <ul class="event-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Krishna Janmashtami -->
+                <li id="event-one" class="list-group-item conference" data-category="event-one" data-aos="fade-up" data-aos-delay="100">
+                    <div class="event-card">
+                        <div class="event-card-image">
+                            <picture>
+                                <source srcset="image/krishna.webp" type="image/webp">
+                                <img src="image/krishna.jpeg" alt="Krishna Janmashtami" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="event-card-body">
+                            <h3 class="event-card-title">Sri Krishna Janmashtami</h3>
+                            <p class="event-card-desc">In 2024, Sri Krishna Janmashtami will be observed on Monday, August 26th.</p>
+                            <div class="event-card-meta">
+                                <span><svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg> August 26, 2024</span>
+                                <span><svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> 11:00 AM - 9:00 PM</span>
                             </div>
+                            <button class="event-card-btn">Learn More</button>
+                        </div>
+                    </div>
+                </li>
 
-                            <div class="event-text-content">
-                                <div class="event-title">
-                                    <h3>Sri Krishna Janmashtami </h3>
-                                </div>
-                                <div class="event-details">
-                                    <h6>In 2024, Sri Krishna Janmashtami will be observed on Monday, August 26th.</h6>
-                                </div>
-                                <div class="event_address">
-                                    <span>Ronkonkoma, New York, USA</span>
-                                </div>
-                                <div class="event_date flex justify-between">
-                                    <div class="flex items-center gap-2"><svg stroke="currentColor" fill="currentColor"
-                                            stroke-width="0" version="1.1" viewBox="0 0 16 16" height="1em" width="1em"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M5 6h2v2h-2zM8 6h2v2h-2zM11 6h2v2h-2zM2 12h2v2h-2zM5 12h2v2h-2zM8 12h2v2h-2zM5 9h2v2h-2zM8 9h2v2h-2zM11 9h2v2h-2zM2 9h2v2h-2zM13 0v1h-2v-1h-7v1h-2v-1h-2v16h15v-16h-2zM14 15h-13v-11h13v11z">
-                                            </path>
-                                        </svg><span>2023-02-25</span></div>
-                                    <div class="flex items-center gap-2"><svg stroke="currentColor" fill="currentColor"
-                                            stroke-width="0" version="1.1" viewBox="0 0 16 16" height="1em" width="1em"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M10.293 11.707l-3.293-3.293v-4.414h2v3.586l2.707 2.707zM8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zM8 14c-3.314 0-6-2.686-6-6s2.686-6 6-6c3.314 0 6 2.686 6 6s-2.686 6-6 6z">
-                                            </path>
-                                        </svg><span>14:44</span></div>
-                                </div>
+                <!-- Durga Puja -->
+                <li id="event-two" class="list-group-item conference" data-category="event-two" data-aos="fade-up" data-aos-delay="200">
+                    <div class="event-card">
+                        <div class="event-card-image">
+                            <picture>
+                                <source srcset="image/durga.webp" type="image/webp">
+                                <img src="image/durga.jpeg" alt="Durga Puja" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="event-card-body">
+                            <h3 class="event-card-title">Durga Puja</h3>
+                            <p class="event-card-desc">In 2024, Durga Puja will be celebrated from October 10th to October 14th.</p>
+                            <div class="event-card-meta">
+                                <span><svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg> October 8-12, 2024</span>
+                                <span><svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> 8:00 AM - 10:00 PM</span>
                             </div>
+                            <button class="event-card-btn">Learn More</button>
                         </div>
+                    </div>
+                </li>
 
-                    </li>
-
-                    <li id="event-two" class="col-span-1 list-group-item conference" data-category="event-two">
-                        <div class="conference-details">
-                            <div class="conference-details">
-                                <div class="event-image">
-                                    <img src="image/durga.jpeg" alt="" class="rounded">
-                                    <div class="overlay"></div>
-                                </div>
-
-                                <div class="event-text-content">
-                                    <div class="event-title">
-                                        <h3>Durga Puja</h3>
-                                    </div>
-                                    <div class="event-details">
-                                        <h6>
-                                            In 2024, Durga Puja will be celebrated from October 10th to October 14th.
-                                        </h6>
-                                    </div>
-                                    <div class="event_address">
-                                        <span>Ronkonkoma, New York, USA</span>
-                                    </div>
-                                    <div class="event_date flex justify-between">
-                                        <div class="flex items-center gap-2"><svg stroke="currentColor"
-                                                fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 16 16"
-                                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M5 6h2v2h-2zM8 6h2v2h-2zM11 6h2v2h-2zM2 12h2v2h-2zM5 12h2v2h-2zM8 12h2v2h-2zM5 9h2v2h-2zM8 9h2v2h-2zM11 9h2v2h-2zM2 9h2v2h-2zM13 0v1h-2v-1h-7v1h-2v-1h-2v16h15v-16h-2zM14 15h-13v-11h13v11z">
-                                                </path>
-                                            </svg><span>2023-02-25</span></div>
-                                        <div class="flex items-center gap-2"><svg stroke="currentColor"
-                                                fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 16 16"
-                                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M10.293 11.707l-3.293-3.293v-4.414h2v3.586l2.707 2.707zM8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zM8 14c-3.314 0-6-2.686-6-6s2.686-6 6-6c3.314 0 6 2.686 6 6s-2.686 6-6 6z">
-                                                </path>
-                                            </svg><span>14:44</span></div>
-                                    </div>
-                                </div>
+                <!-- Saraswati Puja -->
+                <li id="event-three" class="list-group-item conference" data-category="event-three" data-aos="fade-up" data-aos-delay="300">
+                    <div class="event-card">
+                        <div class="event-card-image">
+                            <picture>
+                                <source srcset="image/saraswati-devi.webp" type="image/webp">
+                                <img src="image/saraswati-devi.png" alt="Saraswati Puja" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="event-card-body">
+                            <h3 class="event-card-title">Saraswati Puja</h3>
+                            <p class="event-card-desc">Saraswati Puja, also known as Vasant Panchami, celebrates the goddess of knowledge and wisdom.</p>
+                            <div class="event-card-meta">
+                                <span><svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg> February 14, 2024</span>
+                                <span><svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> 8:00 AM - 10:00 PM</span>
                             </div>
-                        </div>
-                    </li>
-
-                    <li id="event-three" class="col-span-1 list-group-item conference" data-category="event-three">
-                        <div class="conference-details">
-                            <div class="conference-details">
-                                <div class="event-image">
-                                    <img src="image/saraswati-devi.png" alt="" class="rounded">
-                                    <div class="overlay"></div>
-                                </div>
-
-                                <div class="event-text-content">
-                                    <div class="event-title">
-                                        <h3>Sri Krishna Janmashtami </h3>
-                                    </div>
-                                    <div class="event-details">
-                                        <h6>In 2024, Sri Krishna Janmashtami will be observed on Monday, August 26th.
-                                        </h6>
-                                    </div>
-                                    <div class="event_address">
-                                        <span>Ronkonkoma, New York, USA</span>
-                                    </div>
-                                    <div class="event_date flex justify-between">
-                                        <div class="flex items-center gap-2"><svg stroke="currentColor"
-                                                fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 16 16"
-                                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M5 6h2v2h-2zM8 6h2v2h-2zM11 6h2v2h-2zM2 12h2v2h-2zM5 12h2v2h-2zM8 12h2v2h-2zM5 9h2v2h-2zM8 9h2v2h-2zM11 9h2v2h-2zM2 9h2v2h-2zM13 0v1h-2v-1h-7v1h-2v-1h-2v16h15v-16h-2zM14 15h-13v-11h13v11z">
-                                                </path>
-                                            </svg><span>2023-02-25</span></div>
-                                        <div class="flex items-center gap-2"><svg stroke="currentColor"
-                                                fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 16 16"
-                                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M10.293 11.707l-3.293-3.293v-4.414h2v3.586l2.707 2.707zM8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zM8 14c-3.314 0-6-2.686-6-6s2.686-6 6-6c3.314 0 6 2.686 6 6s-2.686 6-6 6z">
-                                                </path>
-                                            </svg><span>14:44</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="members" data-scroll-section>
-        <div class="content-box-md mx-16 sm:mx-16 md:mx-20 lg:mx-32">
-            <div class="card">
-                <div class="card_header">
-                    <h2 id="executive-header">Meet Our Executive Committee</h2>
-                    <h2 id="trust-header">Meet Our Trust Board</h2>
-                </div>
-
-                <div class="member_filter flex justify-center content-center gap-4 mt-3 text-center mt-8 text-white"
-                    data-aos="zoom-in" data-aos-duration="1500">
-                    <div class="member_filter_content ">
-                        <button class="member-filter-btn" data-member-filter="executive">Executive
-                            Committee</button>
-                        <button class="member-filter-btn" data-member-filter="trust">Board of Trust</button>
-                    </div>
-                </div>
-                <div class="card_body" data-aos="zoom-in" data-aos-duration="1500">
-                    <div class="community_members executive_members members grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3"
-                        data-member-category="executive">
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/members/Bidyut C Das.png" alt="">
-                            <h3>Bidyut C Das</h3>
-                            <h4>Prisident</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/members/Gopesh_R_dash.jpg" alt="">
-                            <h3>Gopesh R Das</h3>
-                            <h4>Vice- President</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/members/Dilip_das.jpg" alt="">
-                            <h3>Dilip Das</h3>
-                            <h4>Vice- President</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/members/Pankoj_das.jpg" alt="">
-                            <h3>Pankoj Das</h3>
-                            <h4>General Secretary</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Biswomoni Sarkar</h3>
-                            <h4>Assistant General Secretary</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/members/bijoy_s.jpeg" alt="">
-                            <h3>Bijoy C. Sarkar</h3>
-                            <h4>Organizing Secretary </h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Bidhan Paul</h3>
-                            <h4>Assistant organizing Secretary</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/members/Arup Kumar Dey.jpeg" alt="">
-                            <h3>Arup Kumar Dey</h3>
-                            <h4>Treasure</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Dipak Talukder</h3>
-                            <h4>Assistant Treasure</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Rabandu K Das</h3>
-                            <h4>Cultural and Communication affairs</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/members/liton_sarkar.jpeg" alt="">
-                            <h3>Liton C Sarkar</h3>
-                            <h4>Assistant Communication affairs</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Shipra Das</h3>
-                            <h4>Women Communication affairs Secretary </h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Shipon Das</h3>
-                            <h4>Assistant Women Communication affairs Secretary</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Bidhu Das</h3>
-                            <h4>General member</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Pulok Das</h3>
-                            <h4>General member</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Pinaki Das</h3>
-                            <h4>General member</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/members/bidan_datta.jpeg" alt="">
-                            <h3>Bidhan Datta</h3>
-                            <h4>General member</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Rajon Shah</h3>
-                            <h4>General member</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Ankur Shah</h3>
-                            <h4>General member</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Dollar Gosh</h3>
-                            <h4>General member</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Prashanta Roy</h3>
-                            <h4>General member</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Prangopal Das</h3>
-                            <h4>General member</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Biplob Roy</h3>
-                            <h4>General member</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Pradip Das</h3>
-                            <h4>General member</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Vikash Nag</h3>
-                            <h4>General member</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Shukla Das</h3>
-                            <h4>General member</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Prabir Dey</h3>
-                            <h4>General member</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Indramohon Biswas</h3>
-                            <h4>General member</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Nandan Mitra</h3>
-                            <h4>General member</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Farnandu Das</h3>
-                            <h4>General member</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Shankor Sarkar</h3>
-                            <h4>General member</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Indrojit</h3>
-                            <h4>General member</h4>
-                        </div>
-                        <div class="executive_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Sujit Kumar Das</h3>
-                            <h4>General member</h4>
+                            <button class="event-card-btn">Learn More</button>
                         </div>
                     </div>
-                    <div class="community_members trust_members members grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3"
-                        data-member-category="trust">
-                        <div class="trust_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Bidhan Datta</h3>
-                            <h4>Chairperson</h4>
-                        </div>
-                        <div class="trust_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Madhob Sarkar</h3>
-                            <h4>Member</h4>
-                        </div>
-                        <div class="trust_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Shamal Kanti Das</h3>
-                            <h4>Member</h4>
-                        </div>
-                        <div class="trust_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Sujit Kumar Das</h3>
-                            <h4>Member</h4>
-                        </div>
-                        <div class="trust_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Bidhu Das</h3>
-                            <h4>Member</h4>
-                        </div>
-                        <div class="trust_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3> Indra Mohon Biswas</h3>
-                            <h4>Member</h4>
-                        </div>
-                        <div class="trust_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Pran Gopal Das</h3>
-                            <h4>Member</h4>
-                        </div>
-                        <div class="trust_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Pulok Talukder</h3>
-                            <h4>Member</h4>
-                        </div>
-                        <div class="trust_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Supriti Rani Roy</h3>
-                            <h4>Member</h4>
-                        </div>
-                        <div class="trust_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Nottan Datta</h3>
-                            <h4>Member</h4>
-                        </div>
-                        <div class="trust_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Pradip Das</h3>
-                            <h4>General member</h4>
-                        </div>
-                        <div class="trust_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Lipi sarkar</h3>
-                            <h4>Member</h4>
-                        </div>
-                        <div class="trust_member_image col-span-1">
-                            <img src="image/member.png" alt="">
-                            <h3>Papia Chowdhury</h3>
-                            <h4>Member</h4>
-                        </div>
-                    </div>
-                    <div class="member_action_btn">
-                        <button id="readMoreBtn">Read More</button>
-                        <button id="readLessBtn">Less More</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="gallery" data-scroll-section>
-        <div class="content-box-md mx-32">
-            <p class="gallery_title">
-                Photo Gallery
-            </p>
-            <div class="gallery_container" data-image-gallery="lightbox" data-aos="zoom-in" data-aos-duration="1500">
-                <!-- <a href="https://static.pexels.com/photos/356056/pexels-photo-356056.jpeg"
-                    data-lightbox="homePortfolio">
-                    <img src="https://static.pexels.com/photos/356056/pexels-photo-356056.jpeg" alt="">
-                </a>
-
-                <a href="https://source.unsplash.com/600x800/?sig=12" data-lightbox="homePortfolio" class="vertical">
-                    <img src="https://source.unsplash.com/600x800/?sig=12" />
-                </a>
-
-                <a href="https://source.unsplash.com/800x600/?sig=71" data-lightbox="homePortfolio" class="horizontal">
-                    <img src="https://source.unsplash.com/800x600/?sig=71" />
-                </a>
-
-                <a href="https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg"
-                    data-lightbox="homePortfolio">
-                    <img src="https://static.pexels.com/photos/160107/pexels-photo-160107.jpeg" alt="">
-                </a>
-
-                <a href="https://source.unsplash.com/600x600/?sig=32" data-lightbox="homePortfolio">
-                    <img src="https://source.unsplash.com/600x600/?sig=32" />
-                </a>
-
-                <a href="https://source.unsplash.com/800x800/?sig=7" data-lightbox="homePortfolio" class="big">
-                    <img src="https://source.unsplash.com/800x800/?sig=7" />
-                </a>
-
-                <a href="https://source.unsplash.com/600x600/?sig=111" data-lightbox="homePortfolio">
-                    <img src="https://source.unsplash.com/600x600/?sig=111" />
-                </a>
-
-                <a href="https://source.unsplash.com/600x800/?sig=94" data-lightbox="homePortfolio" class="vertical">
-                    <img src="https://source.unsplash.com/600x800/?sig=94" />
-                </a>
-
-                <a href="https://static.pexels.com/photos/373076/pexels-photo-373076.jpeg"
-                    data-lightbox="homePortfolio">
-                    <img src="https://static.pexels.com/photos/373076/pexels-photo-373076.jpeg" alt="">
-                </a>
-
-                <a href="https://source.unsplash.com/800x600/?sig=68" data-lightbox="homePortfolio" class="horizontal">
-                    <img src="https://source.unsplash.com/800x600/?sig=68" />
-                </a>
-
-                <a href="https://source.unsplash.com/600x600/?sig=24" data-lightbox="homePortfolio">
-                    <img src="https://source.unsplash.com/600x600/?sig=24" />
-                </a>
-
-                <a href="https://source.unsplash.com/800x800/?sig=55" data-lightbox="homePortfolio" class="big">
-                    <img src="https://source.unsplash.com/800x800/?sig=55" />
-                </a>
-
-                <a href="https://source.unsplash.com/600x600/?sig=56" data-lightbox="homePortfolio">
-                    <img src="https://source.unsplash.com/600x600/?sig=56" />
-                </a>
-
-                <a href="https://source.unsplash.com/800x600/?sig=186" data-lightbox="homePortfolio" class="horizontal">
-                    <img src="https://source.unsplash.com/800x600/?sig=186" />
-                </a>
-
-                <a href="https://source.unsplash.com/600x600/?sig=117" data-lightbox="homePortfolio">
-                    <img src="https://source.unsplash.com/600x600/?sig=117" />
-                </a> -->
-
-                <!-- <a href="https://source.unsplash.com/800x600/?sig=68" data-lightbox="homePortfolio" class="horizontal">
-                    <img src="https://source.unsplash.com/800x600/?sig=68" />
-                </a> -->
-                <a class="lightbox" href="./image/gallery/2.jpg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=250"
-                    data-lightbox="homePortfolio" class="horizontal">
-                    <img src="./image/gallery/2.jpg" alt="No Image"></a>
-
-                <a class="lightbox" href="./image/gallery/3.jpg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=250"
-                    data-lightbox="homePortfolio" class="horizontal">
-                    <img src="./image/gallery/3.jpg" alt="No Image"></a>
-
-                <a class="lightbox" href="./image/gallery/4.jpg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=250"
-                    data-lightbox="homePortfolio" class="horizontal">
-                    <img src="./image/gallery/4.jpg" alt="No Image"></a>
-
-                <a class="lightbox" href="./image/gallery/1.jpg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=250"
-                    data-lightbox="homePortfolio" class="horizontal">
-                    <img src="./image/gallery/1.jpg" alt="No Image"></a>
-                
-                <a class="lightbox" href="./image/gallery/5.jpg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=250"
-                    data-lightbox="homePortfolio" class="horizontal">
-                    <img src="./image/gallery/5.jpg" alt="No Image"></a>
-
-                <a class="lightbox" href="./image/gallery/6.jpg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=250"
-                    data-lightbox="homePortfolio" class="horizontal">
-                    <img src="./image/gallery/6.jpg" alt="No Image"></a>
-
-                <a class="lightbox" href="./image/gallery/7.jpg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=250"
-                    data-lightbox="homePortfolio" class="horizontal">
-                    <img src="./image/gallery/7.jpg" alt="No Image"></a>
-
-                <a class="lightbox" href="./image/gallery/8.jpg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=250"
-                    data-lightbox="homePortfolio" class="horizontal">
-                    <img src="./image/gallery/8.jpg" alt="No Image"></a>
-                
-                    <a class="lightbox" href="./image/gallery/2.jpg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=250"
-                    data-lightbox="homePortfolio" class="horizontal">
-                    <img src="./image/gallery/2.jpg" alt="No Image"></a>
-
-                <a class="lightbox" href="./image/gallery/3.jpg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=250"
-                    data-lightbox="homePortfolio" class="horizontal">
-                    <img src="./image/gallery/3.jpg" alt="No Image"></a>
-
-                <a class="lightbox" href="./image/gallery/4.jpg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=250"
-                    data-lightbox="homePortfolio" class="horizontal">
-                    <img src="./image/gallery/4.jpg" alt="No Image"></a>
-
-                <a class="lightbox" href="./image/gallery/1.jpg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=250"
-                    data-lightbox="homePortfolio" class="horizontal">
-                    <img src="./image/gallery/1.jpg" alt="No Image"></a>
-                
-                    <a class="lightbox" href="./image/gallery/5.jpg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=250"
-                    data-lightbox="homePortfolio" class="horizontal">
-                    <img src="./image/gallery/5.jpg" alt="No Image"></a>
-
-                <a class="lightbox" href="./image/gallery/6.jpg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=250"
-                    data-lightbox="homePortfolio" class="horizontal">
-                    <img src="./image/gallery/6.jpg" alt="No Image"></a>
-
-                <a class="lightbox" href="./image/gallery/7.jpg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=250"
-                    data-lightbox="homePortfolio" class="horizontal">
-                    <img src="./image/gallery/7.jpg" alt="No Image"></a>
-
-                <a class="lightbox" href="./image/gallery/8.jpg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=250"
-                    data-lightbox="homePortfolio" class="horizontal">
-                    <img src="./image/gallery/8.jpg" alt="No Image"></a>
-
-                <!-- <a class="lightbox" href="https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=250"
-                    data-lightbox="homePortfolio" class="horizontal"><img
-                        src="https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=250"
-                        alt="Mountain reflection on lake"></a>
-                <a class="lightbox" href="https://images.pexels.com/photos/302804/pexels-photo-302804.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    data-lightbox="homePortfolio" class="horizontal"><img
-                        src="https://images.pexels.com/photos/302804/pexels-photo-302804.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                        alt="sun coming through trees"></a>
-                <a class="lightbox" href="https://images.pexels.com/photos/4827/nature-forest-trees-fog.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    data-lightbox="homePortfolio" class="horizontal"><img
-                        src="https://images.pexels.com/photos/4827/nature-forest-trees-fog.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                        alt="fog rolling over pine trees"></a>
-                <a class="lightbox" href="https://images.pexels.com/photos/206673/pexels-photo-206673.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    data-lightbox="homePortfolio" class="horizontal"><img
-                        src="https://images.pexels.com/photos/206673/pexels-photo-206673.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                        alt="country house in the woods"></a>
-                <a class="lightbox" href="https://images.pexels.com/photos/443446/pexels-photo-443446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    data-lightbox="homePortfolio" class="horizontal"><img
-                        src="https://images.pexels.com/photos/443446/pexels-photo-443446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                        alt="lake view between two trees with mountain in the background"></a>
-                <a class="lightbox" href="https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    data-lightbox="homePortfolio" class="horizontal"><img
-                        src="https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                        alt="forest with a focus on an old oak tree"></a>
-                <a class="lightbox" href="https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    data-lightbox="homePortfolio" class="horizontal"><img
-                        src="https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                        alt="lake in a valley"></a>
-                <a class="lightbox" href="https://images.pexels.com/photos/129105/pexels-photo-129105.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    data-lightbox="homePortfolio" class="horizontal"><img
-                        src="https://images.pexels.com/photos/129105/pexels-photo-129105.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                        alt="tree top view looking out over forest"></a>
-                <a class="lightbox" href="https://images.pexels.com/photos/131723/pexels-photo-131723.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    data-lightbox="homePortfolio" class="horizontal"><img
-                        src="https://images.pexels.com/photos/131723/pexels-photo-131723.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                        alt="sun shining through trees"></a>
-                <a class="lightbox" href="https://images.pexels.com/photos/225203/pexels-photo-225203.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    data-lightbox="homePortfolio" class="horizontal"><img
-                        src="https://images.pexels.com/photos/225203/pexels-photo-225203.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                        alt="island on a lake"></a>
-                <a class="lightbox" href="https://images.pexels.com/photos/460621/pexels-photo-460621.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    data-lightbox="homePortfolio" class="horizontal"><img
-                        src="https://images.pexels.com/photos/460621/pexels-photo-460621.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                        alt="waterfall surrounded by green trees"></a>
-                <a class="lightbox" href="https://images.pexels.com/photos/145685/pexels-photo-145685.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    data-lightbox="homePortfolio" class="horizontal"><img
-                        src="https://images.pexels.com/photos/145685/pexels-photo-145685.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                        alt="beautiful garden in back yard"></a>
-                <a class="lightbox" href="https://images.pexels.com/photos/131723/pexels-photo-131723.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    data-lightbox="homePortfolio" class="horizontal"><img
-                        src="https://images.pexels.com/photos/131723/pexels-photo-131723.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                        alt="sun shining through trees"></a>
-                <a class="lightbox" href="https://images.pexels.com/photos/225203/pexels-photo-225203.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    data-lightbox="homePortfolio" class="horizontal"><img
-                        src="https://images.pexels.com/photos/225203/pexels-photo-225203.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                        alt="island on a lake"></a>
-                <a class="lightbox" href="https://images.pexels.com/photos/460621/pexels-photo-460621.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    data-lightbox="homePortfolio" class="horizontal"><img
-                        src="https://images.pexels.com/photos/460621/pexels-photo-460621.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                        alt="waterfall surrounded by green trees"></a>
-                <a class="lightbox" href="https://images.pexels.com/photos/145685/pexels-photo-145685.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    data-lightbox="homePortfolio" class="horizontal"><img
-                        src="https://images.pexels.com/photos/145685/pexels-photo-145685.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                        alt="beautiful garden in back yard"></a>
-                <a class="lightbox" href="https://images.pexels.com/photos/145685/pexels-photo-145685.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                data-lightbox="homePortfolio" class="horizontal"><img
-                    src="https://images.pexels.com/photos/145685/pexels-photo-145685.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    alt="beautiful garden in back yard"></a> -->
-            </div>
-            <div class="image_action_btn">
-                <button id="readMoreImg">Read More</button>
-                <button id="readLessImg">Less More</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- <section id="gallery_slider">
-        <div class="content-box-md">
-            <div class="gallery_title_h2 text-center">
-                <h2>Photo Gallery</h2>
-            </div>
-            <div class="main" data-aos="zoom-in" data-aos-duration="1500">
-                <div class="slider slider-for flex justify-center items-center">
-                    <div class="gallery_single_image">
-                        <img src="./image/gallery/5.jpg" alt="">
-                    </div>
-                    <div class="gallery_single_image">
-                        <img src="./image/gallery/2.jpg" alt="">
-                    </div>
-                    <div class="gallery_single_image">
-                        <img src="./image/gallery/3.jpg" alt="">
-                    </div>
-                    <div class="gallery_single_image">
-                        <img src="./image/gallery/4.jpg" alt="">
-                    </div>
-                    <div class="gallery_single_image">
-                        <img src="./image/gallery/5.jpg" alt="">
-                    </div>
-                    <div class="gallery_single_image">
-                        <img src="./image/gallery/2.jpg" alt="">
-                    </div>
-                    <div class="gallery_single_image">
-                        <img src="./image/gallery/7.jpg" alt="">
-                    </div>
-                    <div class="gallery_single_image">
-                        <img src="./image/gallery/8.jpg" alt="">
-                    </div>
-                    <div class="gallery_single_image">
-                        <img src="./image/gallery/5.jpg" alt="">
-                    </div>
-                    <div class="gallery_single_image">
-                        <img src="./image/gallery/2.jpg" alt="">
-                    </div>
-
-                </div>
-                <div class="slider slider-nav mt-5">
-                    <div class="slider_image">
-                        <img src="./image/gallery/5.jpg" alt="">
-                    </div>
-                    <div class="slider_image">
-                        <img src="./image/gallery/2.jpg" alt="">
-                    </div>
-                    <div class="slider_image">
-                        <img src="./image/gallery/3.jpg" alt="">
-                    </div>
-                    <div class="slider_image">
-                        <img src="./image/gallery/4.jpg" alt="">
-                    </div>
-                    <div class="slider_image">
-                        <img src="./image/gallery/5.jpg" alt="">
-                    </div>
-                    <div class="slider_image">
-                        <img src="./image/gallery/2.jpg" alt="">
-                    </div>
-                    <div class="slider_image">
-                        <img src="./image/gallery/7.jpg" alt="">
-                    </div>
-                    <div class="slider_image">
-                        <img src="./image/gallery/8.jpg" alt="">
-                    </div>
-                    <div class="slider_image">
-                        <img src="./image/gallery/5.jpg" alt="">
-                    </div>
-                    <div class="slider_image">
-                        <img src="./image/gallery/2.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <section id="contact" class="contact_section" data-scroll-section>
-        <div class="content-box-md mx-32">
-            <div class="gallery_title_h2 text-center">
-                <h2>Contact</h2>
-            </div>
-            <div class="contact_info grid sm:grid-cols-1 md:grid-cols-2 w-full">
-                <div class="contact_info_item col-span-1 w-full sm:w-1/1">
-                    <div class="contact_header">
-                        <h2>Contact Info</h2>
-                    </div>
-                    <div class="contact_body flex content-center gap-3 pt-2">
-                        <div class="contact_info_icon">
-                            <!-- <i class="fa fa-map-marker base-color"></i> -->
-                            <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M11.6177 20.367C11.1841 20.773 10.6044 21 10.0011 21C9.39785 21 8.81818 20.773 8.38449 20.367C4.41302 16.626 -0.909237 12.4469 1.68627 6.37966C3.08963 3.09916 6.45834 1 10.0011 1C13.5439 1 16.9126 3.09916 18.316 6.37966C20.9082 12.4393 15.599 16.6389 11.6177 20.367Z" stroke="#141B34" stroke-width="1.5"/>
-                                <path d="M13.5 10C13.5 11.933 11.933 13.5 10 13.5C8.067 13.5 6.5 11.933 6.5 10C6.5 8.067 8.067 6.5 10 6.5C11.933 6.5 13.5 8.067 13.5 10Z" stroke="#141B34" stroke-width="1.5"/>
-                            </svg>
-                        </div>
-                        <div class="contact_info_text">
-                            <p>Address: 542 Beaver Ln, Ronkonkoma, NY 11779, USA</p>
-                        </div>
-                    </div>
-
-                    <div class="temple_opening my-5">
-                        <div class="temple_opening_header">
-                            <h2>Temple Opening Times</h2>
-                        </div>
-                        <div class="temple_opening_content">
-                            <strong>Monday - Friday</strong>
-                            <p>08:00 am - 12:00 pm</p>
-                            <p>05:00 pm - 08:30 pm</p>
-                            <strong>Saturday-Sunday</strong>
-                            <p>08:00 am - 07:00 pm</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="temple_address col-span-1 w-full sm:w-1/1">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.8952827954868!2d-73.13684372392458!3d40.80829487137926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e837a004d217ad%3A0x1728e7dc98f95538!2s542%20Beaver%20Ln%2C%20Ronkonkoma%2C%20NY%2011779%2C%20USA!5e0!3m2!1sen!2sbd!4v1725300871886!5m2!1sen!2sbd" width="100%" height="450" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer-section bg-gray-800">
-        <div class=" flex justify-center items-center w-auto">
-            <ul class="list-none flex text-xs lg:text-sm justify-end items-center">
-                <li>
-                    <a href="#slider"
-                        class="nav-link block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="#vission"
-                        class="nav-link block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
-                        Vission
-                    </a>
-                </li>
-                <li>
-                    <a href="#events"
-                        class="nav-link block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
-                        Events
-                    </a>
-                </li>
-                <li>
-                    <a href="#members"
-                        class="nav-link block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
-                        Members
-                    </a>
-                </li>
-                <li>
-                    <a href="#gallery"
-                        class="nav-link block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
-                        Gallery
-                    </a>
-                </li>
-                <li>
-                    <a href="#contact"
-                        class="nav-link block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 smooth-scroll">
-                        Contact
-                    </a>
                 </li>
             </ul>
-            <div>
+        </div>
+    </section>
+
+    <!-- Committee Section -->
+    <section id="members" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-4">
+                <h2 class="section-title" data-aos="fade-up">Our Executive Committee</h2>
+                <p class="text-gray-500 mt-2" data-aos="fade-up" data-aos-delay="100">Dedicated leaders guiding our temple community with wisdom, devotion, and compassion</p>
+            </div>
+
+            <!-- Member Filter -->
+            <div class="member_filter flex justify-center mb-10" data-aos="fade-up" data-aos-delay="150">
+                <div class="member_filter_content event-filter-tabs">
+                    <button class="member-filter-btn filter-btn active" data-member-filter="executive">Executive Committee</button>
+                    <button class="member-filter-btn filter-btn" data-member-filter="trust">Board of Trust</button>
+                </div>
+            </div>
+
+            <!-- Executive Members -->
+            <div class="community_members executive_members members grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" data-member-category="executive" data-aos="fade-up" data-aos-delay="200">
+                <div class="executive_member_image member-card">
+                    <picture><source srcset="image/members/Bidyut C Das.webp" type="image/webp"><img src="image/members/Bidyut C Das.png" alt="Bidyut C Das" loading="lazy"></picture>
+                    <h3>Bidyut C Das</h3>
+                    <h4>President</h4>
+                </div>
+                <div class="executive_member_image member-card">
+                    <picture><source srcset="image/members/Gopesh_R_dash.webp" type="image/webp"><img src="image/members/Gopesh_R_dash.jpg" alt="Gopesh R Das" loading="lazy"></picture>
+                    <h3>Gopesh R Das</h3>
+                    <h4>Vice- President</h4>
+                </div>
+                <div class="executive_member_image member-card">
+                    <picture><source srcset="image/members/Dilip_das.webp" type="image/webp"><img src="image/members/Dilip_das.jpg" alt="Dilip Das" loading="lazy"></picture>
+                    <h3>Dilip Das</h3>
+                    <h4>Vice- President</h4>
+                </div>
+                <div class="executive_member_image member-card">
+                    <picture><source srcset="image/members/Pankoj_das.webp" type="image/webp"><img src="image/members/Pankoj_das.jpg" alt="Pankoj Das" loading="lazy"></picture>
+                    <h3>Pankoj Das</h3>
+                    <h4>General Secretary</h4>
+                </div>
+                <div class="executive_member_image member-card">
+                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Biswomoni Sarkar" loading="lazy"></picture>
+                    <h3>Biswomoni Sarkar</h3>
+                    <h4>Assistant General Secretary</h4>
+                </div>
+                <div class="executive_member_image member-card">
+                    <picture><source srcset="image/members/bijoy_s.webp" type="image/webp"><img src="image/members/bijoy_s.jpg" alt="Bijoy C. Sarkar" loading="lazy"></picture>
+                    <h3>Bijoy C. Sarkar</h3>
+                    <h4>Organizing Secretary</h4>
+                </div>
+                <div class="executive_member_image member-card">
+                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Bidhan Paul" loading="lazy"></picture>
+                    <h3>Bidhan Paul</h3>
+                    <h4>Assistant organizing Secretary</h4>
+                </div>
+                <div class="executive_member_image member-card">
+                    <picture><source srcset="image/members/Arup Kumar Dey.webp" type="image/webp"><img src="image/members/Arup Kumar Dey.jpg" alt="Arup Kumar Dey" loading="lazy"></picture>
+                    <h3>Arup Kumar Dey</h3>
+                    <h4>Treasure</h4>
+                </div>
+                <div class="executive_member_image member-card">
+                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <h3>Subroto Sarkar</h3>
+                    <h4>Joint Treasure</h4>
+                </div>
+                <div class="executive_member_image member-card">
+                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <h3>Subroto Sarkar</h3>
+                    <h4>Joint Treasure</h4>
+                </div>
+                <div class="executive_member_image member-card">
+                    <picture><source srcset="image/members/liton_sarkar.webp" type="image/webp"><img src="image/members/liton_sarkar.jpg" alt="Liton Sarkar" loading="lazy"></picture>
+                    <h3>Liton Sarkar</h3>
+                    <h4>Cultural Secretary</h4>
+                </div>
+                <div class="executive_member_image member-card">
+                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <h3>Sanjit Sarkar</h3>
+                    <h4>Media & IT Secretary</h4>
+                </div>
+                <div class="executive_member_image member-card">
+                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <h3>Pronab Dey</h3>
+                    <h4>Executive Member</h4>
+                </div>
+                <div class="executive_member_image member-card">
+                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <h3>Provash Dey</h3>
+                    <h4>Executive Member</h4>
+                </div>
+                <div class="executive_member_image member-card">
+                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <h3>Mongol Das</h3>
+                    <h4>Executive Member</h4>
+                </div>
+                <div class="executive_member_image member-card">
+                    <picture><source srcset="image/members/bidan_datta.webp" type="image/webp"><img src="image/members/bidan_datta.jpg" alt="Bidan Datta" loading="lazy"></picture>
+                    <h3>Bidan Datta</h3>
+                    <h4>Executive Member</h4>
+                </div>
+                <div class="executive_member_image member-card">
+                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <h3>Rabindra Das</h3>
+                    <h4>Executive Member</h4>
+                </div>
+                <div class="executive_member_image member-card">
+                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <h3>Gopal Dey</h3>
+                    <h4>Executive Member</h4>
+                </div>
+                <div class="executive_member_image member-card">
+                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <h3>Kishore Sikder</h3>
+                    <h4>Executive Member</h4>
+                </div>
+                <div class="executive_member_image member-card">
+                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <h3>Sunil Banik</h3>
+                    <h4>Executive Member</h4>
+                </div>
+                <div class="executive_member_image member-card">
+                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <h3>Nikhil Das</h3>
+                    <h4>Executive Member</h4>
+                </div>
+                <div class="executive_member_image member-card">
+                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <h3>Ronjon Sarkar</h3>
+                    <h4>Executive Member</h4>
+                </div>
+                <div class="executive_member_image member-card">
+                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <h3>Mithu Talukder</h3>
+                    <h4>Executive Member</h4>
+                </div>
+                <div class="executive_member_image member-card">
+                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <h3>Ratan Roy</h3>
+                    <h4>Executive Member</h4>
+                </div>
+            </div>
+
+            <!-- Trust Members -->
+            <div class="community_members trust_members members grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" data-member-category="trust" style="display:none;" data-aos="fade-up">
+                <div class="trust_member_image member-card">
+                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <h3>Trust Member 1</h3>
+                    <h4>Trustee</h4>
+                </div>
+                <div class="trust_member_image member-card">
+                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <h3>Trust Member 2</h3>
+                    <h4>Trustee</h4>
+                </div>
+                <div class="trust_member_image member-card">
+                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <h3>Trust Member 3</h3>
+                    <h4>Trustee</h4>
+                </div>
+                <div class="trust_member_image member-card">
+                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <h3>Trust Member 4</h3>
+                    <h4>Trustee</h4>
+                </div>
+                <div class="trust_member_image member-card">
+                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <h3>Trust Member 5</h3>
+                    <h4>Trustee</h4>
+                </div>
+                <div class="trust_member_image member-card">
+                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <h3>Trust Member 6</h3>
+                    <h4>Trustee</h4>
+                </div>
+                <div class="trust_member_image member-card">
+                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <h3>Trust Member 7</h3>
+                    <h4>Trustee</h4>
+                </div>
+                <div class="trust_member_image member-card">
+                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <h3>Trust Member 8</h3>
+                    <h4>Trustee</h4>
+                </div>
+            </div>
+
+            <div class="member_action_btn mt-6">
+                <button id="readMoreBtn" class="read-more-btn">Read More</button>
+                <button id="readLessBtn" class="read-more-btn" style="display:none;">Show Less</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section-padding bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="section-title text-white" data-aos="fade-up">Photo Gallery</h2>
+            </div>
+            <div class="gallery_container" data-aos="fade-up" data-aos-duration="1000">
+                <a class="lightbox" href="./image/gallery/2.jpg" data-lightbox="homePortfolio">
+                    <picture><source srcset="./image/gallery/2.webp" type="image/webp"><img src="./image/gallery/2.jpg" alt="Gallery Image" loading="lazy"></picture></a>
+
+                <a class="lightbox" href="./image/gallery/3.jpg" data-lightbox="homePortfolio">
+                    <picture><source srcset="./image/gallery/3.webp" type="image/webp"><img src="./image/gallery/3.jpg" alt="Gallery Image" loading="lazy"></picture></a>
+
+                <a class="lightbox" href="./image/gallery/4.jpg" data-lightbox="homePortfolio">
+                    <picture><source srcset="./image/gallery/4.webp" type="image/webp"><img src="./image/gallery/4.jpg" alt="Gallery Image" loading="lazy"></picture></a>
+
+                <a class="lightbox" href="./image/gallery/1.jpg" data-lightbox="homePortfolio">
+                    <picture><source srcset="./image/gallery/1.webp" type="image/webp"><img src="./image/gallery/1.jpg" alt="Gallery Image" loading="lazy"></picture></a>
+
+                <a class="lightbox" href="./image/gallery/5.jpg" data-lightbox="homePortfolio">
+                    <picture><source srcset="./image/gallery/5.webp" type="image/webp"><img src="./image/gallery/5.jpg" alt="Gallery Image" loading="lazy"></picture></a>
+
+                <a class="lightbox" href="./image/gallery/6.jpg" data-lightbox="homePortfolio">
+                    <picture><source srcset="./image/gallery/6.webp" type="image/webp"><img src="./image/gallery/6.jpg" alt="Gallery Image" loading="lazy"></picture></a>
+
+                <a class="lightbox" href="./image/gallery/7.jpg" data-lightbox="homePortfolio">
+                    <picture><source srcset="./image/gallery/7.webp" type="image/webp"><img src="./image/gallery/7.jpg" alt="Gallery Image" loading="lazy"></picture></a>
+
+                <a class="lightbox" href="./image/gallery/8.jpg" data-lightbox="homePortfolio">
+                    <picture><source srcset="./image/gallery/8.webp" type="image/webp"><img src="./image/gallery/8.jpg" alt="Gallery Image" loading="lazy"></picture></a>
+
+                <a class="lightbox" href="./image/gallery/2.jpg" data-lightbox="homePortfolio">
+                    <picture><source srcset="./image/gallery/2.webp" type="image/webp"><img src="./image/gallery/2.jpg" alt="Gallery Image" loading="lazy"></picture></a>
+
+                <a class="lightbox" href="./image/gallery/3.jpg" data-lightbox="homePortfolio">
+                    <picture><source srcset="./image/gallery/3.webp" type="image/webp"><img src="./image/gallery/3.jpg" alt="Gallery Image" loading="lazy"></picture></a>
+
+                <a class="lightbox" href="./image/gallery/4.jpg" data-lightbox="homePortfolio">
+                    <picture><source srcset="./image/gallery/4.webp" type="image/webp"><img src="./image/gallery/4.jpg" alt="Gallery Image" loading="lazy"></picture></a>
+
+                <a class="lightbox" href="./image/gallery/1.jpg" data-lightbox="homePortfolio">
+                    <picture><source srcset="./image/gallery/1.webp" type="image/webp"><img src="./image/gallery/1.jpg" alt="Gallery Image" loading="lazy"></picture></a>
+
+                <a class="lightbox" href="./image/gallery/5.jpg" data-lightbox="homePortfolio">
+                    <picture><source srcset="./image/gallery/5.webp" type="image/webp"><img src="./image/gallery/5.jpg" alt="Gallery Image" loading="lazy"></picture></a>
+
+                <a class="lightbox" href="./image/gallery/6.jpg" data-lightbox="homePortfolio">
+                    <picture><source srcset="./image/gallery/6.webp" type="image/webp"><img src="./image/gallery/6.jpg" alt="Gallery Image" loading="lazy"></picture></a>
+
+                <a class="lightbox" href="./image/gallery/7.jpg" data-lightbox="homePortfolio">
+                    <picture><source srcset="./image/gallery/7.webp" type="image/webp"><img src="./image/gallery/7.jpg" alt="Gallery Image" loading="lazy"></picture></a>
+
+                <a class="lightbox" href="./image/gallery/8.jpg" data-lightbox="homePortfolio">
+                    <picture><source srcset="./image/gallery/8.webp" type="image/webp"><img src="./image/gallery/8.jpg" alt="Gallery Image" loading="lazy"></picture></a>
+            </div>
+            <div class="image_action_btn flex justify-center mt-8 gap-4">
+                <button id="readMoreImg" class="read-more-btn btn-light">View More</button>
+                <button id="readLessImg" class="read-more-btn btn-light" style="display:none;">Show Less</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding section-bg-lavender">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="section-badge" data-aos="fade-up">Get In Touch</span>
+                <h2 class="section-title-gradient" data-aos="fade-up" data-aos-delay="100">Visit <span>Our Temple</span></h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Info Cards -->
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-8">Contact Information</h3>
+
+                    <!-- Address Card -->
+                    <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="contact-card-icon">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-lg mb-1">Address</h4>
+                            <p class="text-gray-600">Sorbojonin Hindu Parishad</p>
+                            <p class="text-gray-600">542 Beaver Ln, Ronkonkoma, NY 11779</p>
+                        </div>
+                    </div>
+
+                    <!-- Phone Card -->
+                    <!-- <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="contact-card-icon">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-lg mb-1">Phone</h4>
+                            <p class="text-gray-600">+1 (555) 123-4567</p>
+                            <p class="text-gray-600">+1 (555) 987-6543</p>
+                        </div>
+                    </div> -->
+
+                    <!-- Email Card -->
+                    <!-- <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="contact-card-icon">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-lg mb-1">Email</h4>
+                            <p class="text-gray-600">info@sorbojoninhinduparishad.org</p>
+                            <p class="text-gray-600">donations@sorbojoninhinduparishad.org</p>
+                        </div>
+                    </div> -->
+
+                    <!-- Temple Hours Card -->
+                    <div class="contact-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="contact-card-icon">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-lg mb-1">Temple Hours</h4>
+                            <p class="text-gray-600">Daily: 6:00 AM - 9:00 PM</p>
+                            <p class="text-gray-600">Friday: 6:00 AM - 10:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div data-aos="fade-left" class="flex items-start">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.8952827954868!2d-73.13684372392458!3d40.80829487137926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e837a004d217ad%3A0x1728e7dc98f95538!2s542%20Beaver%20Ln%2C%20Ronkonkoma%2C%20NY%2011779%2C%20USA!5e0!3m2!1sen!2sbd!4v1725300871886!5m2!1sen!2sbd"
+                        class="w-full rounded-2xl shadow-lg" height="100%" style="border:0; min-height: 500px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="footer-grid">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-start gap-4 mb-4">
+                        <picture class="footer-logo">
+                            <source srcset="image/Om_symbol.webp" type="image/webp">
+                            <img src="image/Om_symbol.png" alt="Om" width="44" height="44">
+                        </picture>
+                        <span class="footer-brand">Sorbojonin<br>Hindu Parishad</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed italic">A sacred space for spiritual growth and community connection.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#hero" class="hover:text-orange-400 transition smooth-scroll">Home</a></li>
+                        <li><a href="#about" class="hover:text-orange-400 transition smooth-scroll">About</a></li>
+                        <li><a href="#events" class="hover:text-orange-400 transition smooth-scroll">Events</a></li>
+                        <li><a href="#gallery" class="hover:text-orange-400 transition smooth-scroll">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>Daily Prayers</li>
+                        <li>Religious Ceremonies</li>
+                        <li>Festival Celebrations</li>
+                        <li>Community Events</li>
+                    </ul>
+                </div>
+
+                <!-- Connect -->
+                <div>
+                    <h4 class="font-semibold mb-4">Connect With Us</h4>
+                    <p class="text-gray-400 text-sm mb-4">Stay updated with our latest events and announcements.</p>
+                    <div class="flex gap-3">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 py-6 text-center text-gray-500 text-sm">
+                &copy; 2026 Sorbojonin Hindu Parishad. All rights reserved. | Built with devotion and love
             </div>
         </div>
     </footer>
 
-    <a href="#slider" id="back-to-top" class="btn btn-sm btn-yellow btn-back-to-top smooth-scroll" title="home"
-        role="button">
-        <i class="fa-solid fa-circle-arrow-up"></i>
+    <!-- Back to Top -->
+    <a href="#hero" id="back-to-top" class="back-to-top smooth-scroll" title="Back to top">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
     </a>
 
-
-
-    <!--------------------------- Photo Gallery js ------------------------>
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox-plus-jquery.min.js"></script>
-
-    <!---------------------------  AOS --------------------------->
     <script src="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.js"></script>
-
-    <!----------------------------------- Script js ----------------------------------------->
     <script src="js/script.js"></script>
 
-    <!----------------------------------- Swiper js ----------------------------------------->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Slick JS -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
-
     <script>
-        var swiper = new Swiper('.swiper-container', {
-            // Optional parameters
-            direction: 'horizontal',
-            loop: true,
-
-            // Autoplay
-            autoplay: {
-                delay: 1000000, // Delay between slides in milliseconds (5 seconds)
-                disableOnInteraction: false, // Continue autoplay even when user interacts with swiper
-            },
-
-            // If you need pagination
-            pagination: {
-                el: '.swiper-pagination',
-            },
-
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-    </script>
-
-    <script>
-        $('.slider-for').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            fade: true,
-            asNavFor: '.slider-nav',
-        });
-        $('.slider-nav').slick({
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            asNavFor: '.slider-for',
-            dots: true,
-            centerMode: true,
-            focusOnSelect: true,
-            prevArrow: '<button type="button" class="slick-prev">Previous</button>',
-            nextArrow: '<button type="button" class="slick-next">Next</button>',
-            draggable: true,
-            pauseOnFocus: true,
-            waitForAnimate: true,
-            centerMode: true,
-            infinite: true,
-            autoplay: true,
-            autoplaySpeed: 2000,
-        });
-    </script>
-
-    <script>
-        // Toggle mobile menu visibility
+        // Mobile nav toggle
         document.getElementById('nav-toggle').addEventListener('click', function () {
-            var mobileNav = document.getElementById('mobile-nav');
-            mobileNav.classList.toggle('hidden');
+            document.getElementById('mobile-nav').classList.toggle('hidden');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function () {
+            var navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
         });
     </script>
 
-    <!-- <script>
-        $(document).ready(function () {
-            // Set event-one filter button as active by default
-            $('.filter-btn[data-filter="event-one"]').addClass('active');
-
-
-
-            // Show only conferences with the "event-one" category initially
-            // $('.conference').each(function() {
-            //     if ($(this).data('category') !== 'event-one') {
-            //         $(this).hide();
-            //     }
-            // });
-
-            // Filter conferences based on the selected category
-            $('.filter-btn').click(function () {
-                // $('#event-view').hide();
-                var category = $(this).data('filter');
-                $('.filter-btn').removeClass('active');
-                $(this).addClass('active');
-
-                // Show/hide conferences based on the selected category
-                $('.conference').each(function () {
-                    var conferenceCategory = $(this).data('category');
-                    if (category === 'all') {
-                        $(this).show();
-                    } else if (conferenceCategory === category) {
-                        $(this).show(vissionContent());
-                    }
-                    else {
-                        $(this).hide();
-                    }
-                });
-            });
-        });
-    </script> -->
+    <!-- Event filter & detail scripts -->
     <script>
         $(document).ready(function () {
             $('.filter-btn[data-filter="all"]').addClass('active');
@@ -1305,18 +664,13 @@
                 var category = $(this).data('filter');
                 $('.filter-btn, .filter-btn1').removeClass('active');
                 $(this).addClass('active');
-
-                // Show/hide conferences based on the selected category
                 $('.conference').each(function () {
-                    // var conferenceCategory = $(this).data('category');
                     if (category === 'all') {
                         $(this).show();
                     } else {
                         $(this).hide();
                     }
                 });
-
-                // Clear the event view
                 $('#event-view').html('');
             });
 
@@ -1328,300 +682,98 @@
         });
 
         function vissionContent(targetElement) {
-            console.log('targetElement = ', targetElement)
-            let vissionContent = '';
-
+            let content = '';
             const dataCategory = $(targetElement).attr('data-category');
-
             switch (dataCategory) {
-                case 'event-one':
-                    vissionContent = eventJanmashtami();
-                    break;
-                case 'event-two':
-                    vissionContent = eventDurgaPuja();
-                    break;
-                case 'event-three':
-                    vissionContent = eventSaraswatiPuja();
-                    break;
-                default:
-                    vissionContent = '';
+                case 'event-one': content = eventJanmashtami(); break;
+                case 'event-two': content = eventDurgaPuja(); break;
+                case 'event-three': content = eventSaraswatiPuja(); break;
             }
-
-
-            $('#event-view').html(vissionContent);
+            $('#event-view').html(content);
         }
 
         function eventJanmashtami() {
             return `
-            <div id="image-container" class="col-span-1 w-full lg:w-1/1 flex justify-center" data-aos="zoom-in" data-aos-duration="1500">
-                    <div class="wow slideInLeft w-4/5" data-wow-duration="2s">
-                        <img id="event_image" src="image/krishnaa.jpeg" alt="" class="event_image object-cover mx-auto">
-                    </div>
+            <div class="lg:flex justify-center" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="w-full lg:w-4/5">
+                    <picture><source srcset="image/krishnaa.webp" type="image/webp"><img src="image/krishnaa.jpeg" alt="Krishna Janmashtami" loading="lazy" class="rounded-xl w-full h-80 object-cover"></picture>
                 </div>
-                <div id="text-container" class="col-span-1 w-full lg:w-1/1 lg:flex flex-col justify-center " data-aos="zoom-in" data-aos-duration="1500">
-                    <div class="w-full lg:w-4/5">
-                        <div class="vission-content wow slideInRight" data-wow-duration="2s">
-                            <div class="vission-content-inner lg:text-left">
-
-                                <h2 class="text-xl font-semibold mb-3">Sri Krishna Janmashtami</h2>
-
-                                <p class="text-base font-normal">
-                                    Sri Krishna Janmashtami is a Hindu festival that celebrates the birth of Lord Krishna. The date of Janmashtami varies each year according to the Hindu lunar calendar. The festival is observed on the eighth day (Ashtami) of the Krishna Paksha (dark fortnight) in the month of Bhadrapada, which usually falls in August or September on the Gregorian calendar...
-                                </p>
-                                <h6 class="program_date">In 2024, Sri Krishna Janmashtami will be observed on Monday, August 26th.</h6>
-                                <h3 class="vission-purpose pb-2">Program:</h3>
-                                <p class="text-base font-normal mb-3">The celebration of Janmashtami typically includes various religious and cultural events:</p>
-                                <div class="programs">
-                                    <div class="program_icon">
-                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                                        </svg>    
-                                    </div>
-                                    <div class="program_des">
-                                        <span class="program_title">Fasting:</span>
-                                        Many devotees observe a fast throughout the day, breaking it at midnight, the time when Lord Krishna is believed to have been born.
-                                    </div>
-                                </div>
-
-                                <div class="programs">
-                                    <div class="program_icon">
-                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                                        </svg>    
-                                    </div>
-                                    <div class="program_des">
-                                        <span class="program_title">Reading and Reciting Stories of Krishna:</span>
-                                        Temples and homes often organize readings of sacred texts like the Bhagavad Gita and Bhagavata Purana.
-                                    </div>
-                                </div>
-
-                                <div class="programs">
-                                    <div class="program_icon">
-                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                                        </svg>    
-                                    </div>
-                                    <div class="program_des">
-                                        <span class="program_title">Bhajans and Kirtans:</span>
-                                        Devotees sing devotional songs in praise of Lord Krishna.
-                                    </div>
-                                </div>
-
-                                <div class="programs">
-                                    <div class="program_icon">
-                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                                        </svg>    
-                                    </div>
-                                    <div class="program_des">
-                                        <span class="program_title">Puja and Rituals:</span>
-                                        Pujas and rituals are performed in temples
-                                    </div>
-                                </div>
-
-                                <div class="programs">
-                                    <div class="program_icon">
-                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                                        </svg>    
-                                    </div>
-                                    <div class="program_des">
-                                        <span class="program_title"> Krishna Lila:</span>
-                                        Plays depicting episodes from Lord Krishna's life, called Krishna Lila, are enacted.
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="lg:flex flex-col justify-center" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="w-full lg:w-4/5">
+                    <h2 class="text-2xl font-bold mb-3">Sri Krishna Janmashtami</h2>
+                    <p class="text-gray-600 mb-4">Sri Krishna Janmashtami is a Hindu festival that celebrates the birth of Lord Krishna. The festival is observed on the eighth day (Ashtami) of the Krishna Paksha in the month of Bhadrapada.</p>
+                    <h6 class="font-semibold text-orange-600 mb-3">In 2024, Sri Krishna Janmashtami will be observed on Monday, August 26th.</h6>
+                    <h3 class="font-bold mb-2">Program:</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex gap-2"><span class="text-orange-500 mt-1"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg></span><span><strong>Fasting:</strong> Many devotees observe a fast throughout the day.</span></li>
+                        <li class="flex gap-2"><span class="text-orange-500 mt-1"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg></span><span><strong>Bhajans and Kirtans:</strong> Devotional songs in praise of Lord Krishna.</span></li>
+                        <li class="flex gap-2"><span class="text-orange-500 mt-1"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg></span><span><strong>Puja and Rituals:</strong> Performed in temples and homes.</span></li>
+                    </ul>
                 </div>
-
-            `;
+            </div>`;
         }
 
         function eventDurgaPuja() {
             return `
-            <div id="image-container" class="col-span-1 w-full lg:w-1/1 flex justify-center" data-aos="zoom-in" data-aos-duration="1500">
-                    <div class="wow slideInLeft w-4/5" data-wow-duration="2s">
-                        <img id="event_image" src="image/Durga_puja.jpeg" alt="" class="event_image object-cover mx-auto">
-                    </div>
+            <div class="lg:flex justify-center" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="w-full lg:w-4/5">
+                    <picture><source srcset="image/Durga_puja.webp" type="image/webp"><img src="image/Durga_puja.jpg" alt="Durga Puja" loading="lazy" class="rounded-xl w-full h-80 object-cover"></picture>
                 </div>
-                <div id="text-container" class="col-span-1 w-full lg:w-1/1 lg:flex flex-col justify-center " data-aos="zoom-in" data-aos-duration="1500">
-                    <div class="w-full lg:w-5/6">
-                        <div class="vission-content wow slideInRight" data-wow-duration="2s">
-                            <div class="vission-content-inner lg:text-left">
-
-                                <h2 class="text-xl font-semibold mb-3">Durga Puja</h2>
-
-                                <p class="text-base font-normal mb-3">
-                                    Durga Puja, one of the most significant festivals celebrated in India and by Hindu communities worldwide, honors the goddess Durga. The festival marks the victory of Durga over the demon king Mahishasura. Typically, the festival lasts for five days and is filled with various cultural events and rituals. The festival usually takes place in the month of Ashwin according to the Hindu lunar calendar, which generally falls in September or October.
-                                </p>
-
-                                <div class="event_dates">
-                                    <h6>
-                                        In 2024, Durga Puja will be celebrated from October 10th to October 14th.The five days of Durga Puja are:  
-                                    </h6>
-                                    <span>Sasthi: October 9, 2024</span>
-                                    <span>Saptami: October 10, 2024</span>
-                                    <span>Ashtami: October 11, 2024</span>
-                                    <span>Navami: October 12, 2024</span>
-                                    <span>Dashami: October 13, 2024</span>
-                                
-                                </div>
-                                <h3 class="vission-purpose pb-2">Program and Rituals:</h3>
-                                <p class="text-base font-normal mb-3">Durga Puja is marked by a variety of rituals and cultural programs. The key events during the festival include:</p>
-                                <ul class="space-y-1 text-gray-500 list-inside">
-                                    <li class="flex items-center gap-4 text-black">
-                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                                        </svg>
-                                        Maha Shashti(Mahalaya): This day marks the beginning of the festival, with the unveiling of the idols of Durga and her children (Lakshmi, Saraswati, Kartikeya, and Ganesha). Various rituals such as Kalash Sthapana and Bodhan are performed.
-                                    </li>
-                                    <li class="flex items-center gap-4 text-black">
-                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                                        </svg>
-                                        Maha Saptami: The sixth day is when the idol of the goddess is formally placed in a pandal (marquee), and devotees begin worshiping her.
-                                    </li>
-                                    <li class="flex items-center gap-4 text-black">
-                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                                        </svg>
-                                        Ashtami: This is the most important day of the festival, known for the Kumari Puja (worship of a young girl as a manifestation of the goddess), and Sandhi Puja (performed at the juncture of Ashtami and Navami).
-                                    </li>
-                                    <li class="flex items-center gap-4 text-black">
-                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                                        </svg>
-                                        Navami: The main puja for the goddess takes place on this day, with cultural events, competitions, and processions.
-                                    </li>
-                                    <li class="flex items-center gap-4 text-black">
-                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                                        </svg>
-                                        Dashami: The final day of Durga Puja, also known as Vijaya Dashami. It marks the emotional farewell of the goddess Durga. People also engage in Bijoya greetings, exchanging blessings and sweets.Sindoor Khela (a ritual where married women apply sindoor to each other) is a common tradition.
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="lg:flex flex-col justify-center" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="w-full lg:w-5/6">
+                    <h2 class="text-2xl font-bold mb-3">Durga Puja</h2>
+                    <p class="text-gray-600 mb-4">Durga Puja honors the goddess Durga and marks the victory over the demon king Mahishasura. The festival lasts for five days with various cultural events and rituals.</p>
+                    <h6 class="font-semibold text-orange-600 mb-3">In 2024, Durga Puja: October 10-14</h6>
+                    <ul class="space-y-1 text-gray-600 text-sm">
+                        <li>Sasthi: October 9, 2024</li>
+                        <li>Saptami: October 10, 2024</li>
+                        <li>Ashtami: October 11, 2024</li>
+                        <li>Navami: October 12, 2024</li>
+                        <li>Dashami: October 13, 2024</li>
+                    </ul>
                 </div>
-
-            `;
+            </div>`;
         }
 
         function eventSaraswatiPuja() {
             return `
-            <div id="image-container" class="col-span-1 w-full lg:w-1/1 flex justify-center" data-aos="zoom-in" data-aos-duration="1500">
-                    <div class="wow slideInLeft w-4/5" data-wow-duration="2s">
-                        <img id="event_image" src="image/saraswati-devi.png" alt="" class="event_image object-cover mx-auto">
-                    </div>
+            <div class="lg:flex justify-center" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="w-full lg:w-4/5">
+                    <picture><source srcset="image/saraswati-devi.webp" type="image/webp"><img src="image/saraswati-devi.png" alt="Saraswati Puja" loading="lazy" class="rounded-xl w-full h-80 object-cover"></picture>
                 </div>
-                <div id="text-container" class="col-span-1 w-full lg:w-1/1 lg:flex flex-col justify-center " data-aos="zoom-in" data-aos-duration="1500">
-                    <div class="w-full lg:w-4/5">
-                        <div class="vission-content wow slideInRight" data-wow-duration="2s">
-                            <div class="vission-content-inner lg:text-left">
-
-                                <h2 class="text-xl font-semibold mb-3">Saraswati Puja</h2>
-
-                                <p class="text-base font-normal mb-3">
-                                    Saraswati Puja in 2024, also known as Vasant Panchami, will be celebrated on February 14, 2024. This festival is dedicated to Saraswati, the Hindu goddess of knowledge, music, art, and wisdom. It marks the onset of spring and is considered an auspicious day for beginning new educational pursuits, particularly for young children who are often introduced to reading and writing on this day.
-                                </p>
-                                <h3 class="vission-purpose pb-2">Program:</h3>
-                                <p class="text-base font-normal mb-3">The celebration of Saraswati Puja typically includes various religious and cultural events:</p>
-                                <ul class="space-y-1 text-gray-500 list-inside">
-                                    <li class="flex items-center gap-4 text-black">
-                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                                        </svg>
-                                        Fasting: Many devotees observe a fast throughout the day, breaking it at midnight, the time when Lord Krishna is believed to have been born.
-                                    </li>
-                                    <li class="flex items-center gap-4 text-black">
-                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                                        </svg>
-                                        Reading and Reciting Stories of Krishna:Temples and homes often organize readings of sacred texts like the Bhagavad Gita and Bhagavata Purana.
-                                    </li>
-                                    <li class="flex items-center gap-4 text-black">
-                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                                        </svg>
-                                        Bhajans and Kirtans:Devotees sing devotional songs in praise of Lord Krishna.
-                                    </li>
-                                    <li class="flex items-center gap-4 text-black">
-                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                                        </svg>
-                                        Puja and Rituals:Pujas and rituals are performed in temples
-                                    </li>
-                                    <li class="flex items-center gap-4 text-black">
-                                        <svg class="w-3.5 h-3.5 me-2 text-black flex-shrink-0" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path
-                                                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                                        </svg>
-                                        Krishna Lila: Plays depicting episodes from Lord Krishna's life, called Krishna Lila, are enacted.
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="lg:flex flex-col justify-center" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="w-full lg:w-4/5">
+                    <h2 class="text-2xl font-bold mb-3">Saraswati Puja</h2>
+                    <p class="text-gray-600 mb-4">Saraswati Puja, also known as Vasant Panchami, is dedicated to Saraswati, the Hindu goddess of knowledge, music, art, and wisdom. It marks the onset of spring.</p>
+                    <h6 class="font-semibold text-orange-600 mb-3">In 2024, celebrated on February 14th.</h6>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex gap-2"><span class="text-orange-500 mt-1"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg></span><span><strong>Puja:</strong> Worship of Goddess Saraswati with flowers and offerings.</span></li>
+                        <li class="flex gap-2"><span class="text-orange-500 mt-1"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg></span><span><strong>Cultural Programs:</strong> Music, dance and art performances.</span></li>
+                    </ul>
                 </div>
-
-            `;
+            </div>`;
         }
     </script>
 
     <script>
         $(document).ready(function () {
-            $('.filter').on('click', '.filter-btn1', function () {
+            $('.event-filter-tabs').on('click', '.filter-btn1', function () {
                 var category = $(this).data('filter');
-                $('.filter-btn, .filter-btn1').removeClass('active'); // Remove "active" class from both types of buttons
+                $('.filter-btn, .filter-btn1').removeClass('active');
                 $(this).addClass('active');
-
-                displaySingleCategory(category);
-            });
-
-            function displaySingleCategory(category) {
-                // Show/hide conferences based on the selected category
                 $('.conference').each(function () {
                     var conferenceCategory = $(this).data('category');
                     if (conferenceCategory === category) {
-                        $('[data-category]').hide(); // Hide conferences with different category
+                        $('[data-category]').hide();
                         vissionContent($(this));
                     } else {
                         $(this).hide();
                     }
                 });
-            }
+            });
         });
     </script>
 </body>
