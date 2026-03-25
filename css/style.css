@@ -621,22 +621,31 @@ section {
    Events Section
 ===================================================*/
 #events .event-filter-tabs {
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    background: var(--gray-100);
-    padding: 6px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    background: var(--warm-bg);
+    padding: 8px;
     border-radius: 12px;
+    /* box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04); */
+    border: 1px solid #F9731624;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#events .event-filter-tabs::-webkit-scrollbar {
+    display: none;
 }
 
 #events .event-filter-tabs .filter-btn,
 #events .event-filter-tabs .filter-btn1 {
-    padding: 8px 20px;
-    border-radius: 8px;
+    padding: 8px 16px;
+    border-radius: 10px;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--gray-600);
-    border: none;
+    border: 1px solid transparent;
     cursor: pointer;
     transition: all 0.2s ease;
     background: transparent;
@@ -644,14 +653,22 @@ section {
 
 #events .event-filter-tabs .filter-btn.active,
 #events .event-filter-tabs .filter-btn1.active {
-    background: #fff;
-    color: var(--gray-900);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    background: var(--orange);
+    color: #fff;
+    border-color: rgba(249, 115, 22, 0.35);
+    box-shadow: 0 14px 30px rgba(249, 115, 22, 0.22);
 }
 
 #events .event-filter-tabs .filter-btn:hover,
 #events .event-filter-tabs .filter-btn1:hover {
     color: var(--gray-900);
+    background: rgba(249, 115, 22, 0.10);
+}
+
+#events .event-filter-tabs .filter-btn:focus-visible,
+#events .event-filter-tabs .filter-btn1:focus-visible {
+    outline: 2px solid rgba(249, 115, 22, 0.55);
+    outline-offset: 2px;
 }
 
 /* ================================================

@@ -130,6 +130,7 @@
 
     .event-filter-tabs {
         justify-content: center;
+        flex-direction: column;
     }
 
     .filter-btn,
