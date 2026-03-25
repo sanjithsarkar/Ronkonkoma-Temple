@@ -2,10 +2,50 @@
    Responsive Styles
 ===================================================*/
 
+/* Large Desktop */
+@media (max-width: 1280px) {
+    .hero-title {
+        font-size: 2.6rem;
+    }
+
+    .hero-collage {
+        max-width: 420px;
+    }
+}
+
 /* Tablet */
 @media (max-width: 1024px) {
+    .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
     .hero-title {
         font-size: 2.4rem;
+    }
+
+    .hero-subtitle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-stats {
+        justify-content: center;
+    }
+
+    .hero-right {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-collage {
+        max-width: 400px;
+        margin: 0 auto;
     }
 
     .section-padding {
@@ -15,10 +55,34 @@
     .about-main-image {
         height: 350px;
     }
+
+    .about-image-accent {
+        width: 140px;
+        height: 140px;
+        bottom: -20px;
+        right: -10px;
+    }
+
+    .section-title-gradient {
+        font-size: 2.4rem;
+    }
 }
 
 /* Mobile Landscape */
 @media (max-width: 768px) {
+    .top-bar {
+        height: 32px;
+        font-size: 12px;
+    }
+
+    #navbar {
+        top: 32px !important;
+    }
+
+    .hero-section {
+        padding-top: 100px;
+    }
+
     .hero-title {
         font-size: 2rem;
     }
@@ -27,8 +91,26 @@
         font-size: 0.95rem;
     }
 
+    .hero-stat-number {
+        font-size: 1.5rem;
+    }
+
+    .hero-collage-card-1,
+    .hero-collage-card-2 {
+        height: 170px;
+    }
+
+    .hero-collage-card-3,
+    .hero-collage-card-4 {
+        height: 160px;
+    }
+
     .section-title {
         font-size: 1.8rem;
+    }
+
+    .section-title-gradient {
+        font-size: 2rem;
     }
 
     .section-padding {
@@ -39,8 +121,11 @@
         height: 280px;
     }
 
-    .section-title-gradient {
-        font-size: 2.2rem;
+    .about-image-accent {
+        width: 120px;
+        height: 120px;
+        bottom: -16px;
+        right: -8px;
     }
 
     .event-filter-tabs {
@@ -65,19 +150,41 @@
         --width: 180px;
     }
 
-    iframe {
-        height: 300px !important;
+    .vision-card {
+        padding: 24px 20px;
+    }
+
+    .contact-form {
+        padding: 24px;
+    }
+
+    .newsletter-input {
+        min-width: 200px;
+    }
+
+    .gallery-filter-btn {
+        padding: 6px 14px;
+        font-size: 13px;
     }
 }
 
 /* Mobile Portrait */
 @media (max-width: 480px) {
-    .hero-title {
-        font-size: 1.6rem;
+    .top-bar-phone {
+        font-size: 11px;
     }
 
-    .section-title-gradient {
-        font-size: 1.8rem;
+    .top-bar-donate {
+        font-size: 11px;
+    }
+
+    .hero-section {
+        padding-top: 90px;
+        padding-bottom: 40px;
+    }
+
+    .hero-title {
+        font-size: 1.6rem;
     }
 
     .hero-subtitle {
@@ -86,6 +193,50 @@
 
     .hero-subtitle br {
         display: none;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-btn,
+    .hero-btn-outline {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+
+    .hero-stats {
+        gap: 16px;
+    }
+
+    .hero-stat-number {
+        font-size: 1.3rem;
+    }
+
+    .hero-stat-label {
+        font-size: 11px;
+    }
+
+    .hero-collage {
+        gap: 10px;
+        max-width: 300px;
+    }
+
+    .hero-collage-card-1,
+    .hero-collage-card-2 {
+        height: 140px;
+    }
+
+    .hero-collage-card-3,
+    .hero-collage-card-4 {
+        height: 130px;
+    }
+
+    .section-title-gradient {
+        font-size: 1.8rem;
     }
 
     .section-title {
@@ -98,6 +249,13 @@
 
     .about-main-image {
         height: 220px;
+    }
+
+    .about-image-accent {
+        width: 100px;
+        height: 100px;
+        bottom: -12px;
+        right: -6px;
     }
 
     .event-card-image {
@@ -119,5 +277,29 @@
 
     .member-card h4 {
         font-size: 11px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .newsletter-input {
+        min-width: 160px;
+        padding: 10px 14px;
+    }
+
+    .newsletter-btn {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
+    .nav-donate-btn {
+        padding: 6px 14px;
+        font-size: 13px;
+    }
+
+    .gallery-filter-btn {
+        padding: 5px 12px;
+        font-size: 12px;
     }
 }
