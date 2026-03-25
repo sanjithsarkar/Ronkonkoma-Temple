@@ -620,7 +620,7 @@ section {
 /* ================================================
    Events Section
 ===================================================*/
-.event-filter-tabs {
+#events .event-filter-tabs {
     display: inline-flex;
     flex-wrap: wrap;
     gap: 8px;
@@ -629,8 +629,8 @@ section {
     border-radius: 12px;
 }
 
-.filter-btn,
-.filter-btn1 {
+#events .event-filter-tabs .filter-btn,
+#events .event-filter-tabs .filter-btn1 {
     padding: 8px 20px;
     border-radius: 8px;
     font-size: 14px;
@@ -642,16 +642,53 @@ section {
     background: transparent;
 }
 
-.filter-btn.active,
-.filter-btn1.active {
+#events .event-filter-tabs .filter-btn.active,
+#events .event-filter-tabs .filter-btn1.active {
     background: #fff;
     color: var(--gray-900);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-.filter-btn:hover,
-.filter-btn1:hover {
+#events .event-filter-tabs .filter-btn:hover,
+#events .event-filter-tabs .filter-btn1:hover {
     color: var(--gray-900);
+}
+
+/* ================================================
+   Member Filter Tabs (unique from events)
+===================================================*/
+#members .member-filter-tabs {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: var(--warm-bg);
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
+}
+
+#members .member-filter-tabs .member-filter-btn {
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--gray-600);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    background: transparent;
+}
+
+#members .member-filter-tabs .member-filter-btn.active {
+    background: var(--orange);
+    color: #fff;
+    border-color: rgba(249, 115, 22, 0.35);
+    box-shadow: 0 14px 30px rgba(249, 115, 22, 0.22);
+}
+
+#members .member-filter-tabs .member-filter-btn:hover {
+    color: var(--gray-900);
+    background: rgba(249, 115, 22, 0.10);
 }
 
 /* Event Cards */

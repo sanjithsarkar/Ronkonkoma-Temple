@@ -54,7 +54,7 @@
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center gap-1">
                     <a href="#hero" class="nav-link smooth-scroll">Home</a>
-                    <a href="#about" class="nav-link smooth-scroll">Vission</a>
+                    <a href="#about" class="nav-link smooth-scroll">Vision</a>
                     <a href="#events" class="nav-link smooth-scroll">Events</a>
                     <a href="#members" class="nav-link smooth-scroll">Committee</a>
                     <a href="#gallery" class="nav-link smooth-scroll">Gallery</a>
@@ -73,7 +73,7 @@
             <!-- Mobile Menu -->
             <div id="mobile-nav" class="hidden md:hidden mobile-nav" role="menu" aria-label="Mobile navigation">
                 <a href="#hero" class="mobile-nav-link smooth-scroll" role="menuitem">Home</a>
-                <a href="#about" class="mobile-nav-link smooth-scroll" role="menuitem">Vission</a>
+                <a href="#about" class="mobile-nav-link smooth-scroll" role="menuitem">Vision</a>
                 <a href="#events" class="mobile-nav-link smooth-scroll" role="menuitem">Events</a>
                 <a href="#members" class="mobile-nav-link smooth-scroll" role="menuitem">Committee</a>
                 <a href="#gallery" class="mobile-nav-link smooth-scroll" role="menuitem">Gallery</a>
@@ -206,16 +206,11 @@
                             <img src="image/temple.jpg" alt="Temple" loading="lazy" class="about-main-image">
                         </picture>
                     </div>
-                    <div class="about-image-accent">
-                        <picture>
-                            <source srcset="image/durga.webp" type="image/webp">
-                            <img src="image/durga.jpeg" alt="Durga" loading="lazy" class="about-accent-image">
-                        </picture>
-                    </div>
                 </div>
                 <div data-aos="fade-left" data-aos-duration="1000">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Why Choose Us?</h3>
-                    <p class="text-gray-500 mb-8">Our temple stands as a beacon of spiritual enlightenment, dedicated to preserving ancient traditions while embracing the modern world.</p>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Our Vision</h3>
+                    <p class="text-gray-500 mb-8">
+                        Our Vision To establish a world-class institution dedicated to the spiritual, cultural, social and educational development of our community through the teachings and practice of the timeless traditions and philosophies of Sanatan Dharma.</p>
                     <div class="space-y-5">
                         <div class="flex items-start gap-4">
                             <div class="about-check-icon">
@@ -367,9 +362,9 @@
 
             <!-- Member Filter -->
             <div class="member_filter flex justify-center mb-10 mt-8" data-aos="fade-up" data-aos-delay="150">
-                <div class="member_filter_content event-filter-tabs">
-                    <button class="member-filter-btn filter-btn active" data-member-filter="executive">Executive Committee</button>
-                    <button class="member-filter-btn filter-btn" data-member-filter="trust">Board of Trust</button>
+                <div class="member_filter_content member-filter-tabs">
+                    <button class="member-filter-btn active" data-member-filter="executive">Executive Committee</button>
+                    <button class="member-filter-btn" data-member-filter="trust">Board of Trust</button>
                 </div>
             </div>
 
@@ -848,12 +843,12 @@
     <!-- Event filter & detail scripts -->
     <script>
         $(document).ready(function () {
-            $('.filter-btn[data-filter="all"]').addClass('active');
-            $('.filter-btn').click(function () {
+            $('#events .filter-btn[data-filter="all"]').addClass('active');
+            $('#events .filter-btn').click(function () {
                 var category = $(this).data('filter');
-                $('.filter-btn, .filter-btn1').removeClass('active');
+                $('#events .filter-btn, #events .filter-btn1').removeClass('active');
                 $(this).addClass('active');
-                $('.conference').each(function () {
+                $('#events .conference').each(function () {
                     if (category === 'all') {
                         $(this).show();
                     } else {
@@ -866,11 +861,11 @@
             $('.list-group-item').click(function () {
                 const targetElement = $(this);
                 $('.list-group-item').hide();
-                vissionContent(targetElement);
+                VisionContent(targetElement);
             });
         });
 
-        function vissionContent(targetElement) {
+        function VisionContent(targetElement) {
             let content = '';
             const dataCategory = $(targetElement).attr('data-category');
             switch (dataCategory) {
@@ -949,15 +944,15 @@
 
     <script>
         $(document).ready(function () {
-            $('.event-filter-tabs').on('click', '.filter-btn1', function () {
+            $('#events .event-filter-tabs').on('click', '.filter-btn1', function () {
                 var category = $(this).data('filter');
-                $('.filter-btn, .filter-btn1').removeClass('active');
+                $('#events .filter-btn, #events .filter-btn1').removeClass('active');
                 $(this).addClass('active');
-                $('.conference').each(function () {
+                $('#events .conference').each(function () {
                     var conferenceCategory = $(this).data('category');
                     if (conferenceCategory === category) {
-                        $('[data-category]').hide();
-                        vissionContent($(this));
+                        $('#events [data-category]').hide();
+                        VisionContent($(this));
                     } else {
                         $(this).hide();
                     }
