@@ -63,7 +63,7 @@
                 </div>
 
                 <!-- Mobile Menu Toggle -->
-                <button id="nav-toggle" class="md:hidden text-gray-900 p-2">
+                <button id="nav-toggle" class="md:hidden text-gray-900 p-2" aria-label="Toggle navigation" aria-controls="mobile-nav" aria-expanded="false">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
@@ -71,13 +71,13 @@
             </div>
 
             <!-- Mobile Menu -->
-            <div id="mobile-nav" class="hidden md:hidden pb-4">
-                <a href="#hero" class="block py-2 text-white hover:text-orange-400 smooth-scroll">Home</a>
-                <a href="#about" class="block py-2 text-white hover:text-orange-400 smooth-scroll">Vission</a>
-                <a href="#events" class="block py-2 text-white hover:text-orange-400 smooth-scroll">Events</a>
-                <a href="#members" class="block py-2 text-white hover:text-orange-400 smooth-scroll">Committee</a>
-                <a href="#gallery" class="block py-2 text-white hover:text-orange-400 smooth-scroll">Gallery</a>
-                <a href="#contact" class="block py-2 text-white hover:text-orange-400 smooth-scroll">Contact</a>
+            <div id="mobile-nav" class="hidden md:hidden mobile-nav" role="menu" aria-label="Mobile navigation">
+                <a href="#hero" class="mobile-nav-link smooth-scroll" role="menuitem">Home</a>
+                <a href="#about" class="mobile-nav-link smooth-scroll" role="menuitem">Vission</a>
+                <a href="#events" class="mobile-nav-link smooth-scroll" role="menuitem">Events</a>
+                <a href="#members" class="mobile-nav-link smooth-scroll" role="menuitem">Committee</a>
+                <a href="#gallery" class="mobile-nav-link smooth-scroll" role="menuitem">Gallery</a>
+                <a href="#contact" class="mobile-nav-link smooth-scroll" role="menuitem">Contact</a>
                 <!-- <a href="#contact" class="inline-block mt-2 px-5 py-2 bg-orange-500 text-white rounded-lg font-semibold text-sm smooth-scroll">Donate Now</a> -->
             </div>
         </div>
@@ -808,9 +808,29 @@
 
     <script>
         // Mobile nav toggle
-        document.getElementById('nav-toggle').addEventListener('click', function () {
-            document.getElementById('mobile-nav').classList.toggle('hidden');
-        });
+        var navToggle = document.getElementById('nav-toggle');
+        var mobileNav = document.getElementById('mobile-nav');
+
+        if (navToggle && mobileNav) {
+            navToggle.addEventListener('click', function (event) {
+                event.stopPropagation();
+                mobileNav.classList.toggle('hidden');
+                var isOpen = !mobileNav.classList.contains('hidden');
+                navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+
+            document.addEventListener('click', function (event) {
+                if (mobileNav.classList.contains('hidden')) return;
+
+                var clickedInsideNav = mobileNav.contains(event.target);
+                var clickedToggle = navToggle.contains(event.target);
+
+                if (clickedInsideNav || clickedToggle) return;
+
+                mobileNav.classList.add('hidden');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        }
 
         // Navbar scroll effect - also adjusts top position based on top bar visibility
         window.addEventListener('scroll', function () {

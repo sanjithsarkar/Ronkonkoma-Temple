@@ -213,6 +213,47 @@ section {
 }
 
 /* ================================================
+   Mobile Navigation Dropdown
+===================================================*/
+#mobile-nav.mobile-nav {
+    background: #ffffff;
+    border-top: 1px solid rgba(17, 24, 39, 0.06);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 10px 0;
+    margin-top: -2px;
+}
+
+.mobile-nav-link {
+    display: block;
+    width: calc(100% - 24px);
+    margin: 0 auto;
+    padding: 12px 14px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--gray-900);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.mobile-nav-link:hover {
+    background: rgba(249, 115, 22, 0.12);
+    color: var(--orange);
+    transform: translateY(-1px);
+}
+
+.mobile-nav-link:focus-visible {
+    outline: 2px solid rgba(249, 115, 22, 0.5);
+    outline-offset: 2px;
+}
+
+.mobile-nav-link.active {
+    background: rgba(249, 115, 22, 0.12);
+    color: var(--orange);
+}
+
+/* ================================================
    Hero Section
 ===================================================*/
 .hero-section {

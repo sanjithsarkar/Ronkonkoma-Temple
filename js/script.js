@@ -18,6 +18,11 @@ $(function () {
         }, 800);
         // Close mobile nav
         $('#mobile-nav').addClass('hidden');
+        // Keep aria state in sync with the visual state
+        var navToggle = document.getElementById('nav-toggle');
+        if (navToggle) {
+            navToggle.setAttribute('aria-expanded', 'false');
+        }
     });
 });
 
@@ -61,15 +66,15 @@ window.addEventListener('scroll', function () {
         var top = section.offsetTop;
         var bottom = top + section.offsetHeight;
         var id = section.getAttribute('id');
-        var navLink = document.querySelector('nav a[href="#' + id + '"]');
+        var navLinks = document.querySelectorAll('nav a[href="#' + id + '"]');
 
-        if (navLink) {
+        navLinks.forEach(function (navLink) {
             if (scrollPosition >= top && scrollPosition < bottom) {
                 navLink.classList.add('active');
             } else {
                 navLink.classList.remove('active');
             }
-        }
+        });
     });
 });
 
