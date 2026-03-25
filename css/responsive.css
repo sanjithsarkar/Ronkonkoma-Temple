@@ -75,6 +75,11 @@
         font-size: 12px;
     }
 
+    /* Hide hero scroll indicator on mobile/tablet portrait */
+    .scroll-indicator--hero {
+        display: none !important;
+    }
+
     /* #navbar {
         top: 32px !important;
     } */
