@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Sorbojonin Hindu Parishad in Long Island, new york, Sorbojonin Parishad, 542 Beaver Ln, RONKONKOMA New York, 11779, celebrates Durga Puja, Sri Krishna Janmashtami, Holi, Hindu community in New York, Cultural festivals in Ronkonkoma, Events organize by Sorbojonin Parishad, community, NY, Hindu community events Long Island, Join our vibrant Hindu community for festivities and cultural programs." />
+    <meta name="keywords"
+        content="Sorbojonin Hindu Parishad in Long Island, new york, Sorbojonin Parishad, 542 Beaver Ln, RONKONKOMA New York, 11779, celebrates Durga Puja, Sri Krishna Janmashtami, Holi, Hindu community in New York, Cultural festivals in Ronkonkoma, Events organize by Sorbojonin Parishad, community, NY, Hindu community events Long Island, Join our vibrant Hindu community for festivities and cultural programs." />
     <link rel="icon" href="image/OM.svg" type="image/svg+xml">
     <title>Sorbojonin Hindu Parishad - Durga Puja & Hindu Festivals | Ronkonkoma, Long Island, NY</title>
 
@@ -12,7 +13,9 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Raleway:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="css/font-awesome/css/all.min.css">
@@ -47,8 +50,15 @@
                     <span class="nav-brand-text">Sorbojonin Hindu Parishad</span>
                 </a> -->
                 <a href="#hero" class="flex items-center gap-3 smooth-scroll">
-                    <img src="image/OM.svg" alt="Om Symbol" width="36" height="36">
-                    <span class="nav-brand-text">Sorbojonin Hindu Parishad</span>
+                    <!-- <img src="image/OM.svg" alt="Om Symbol" width="36" height="36"> -->
+                    <!-- SVG file এ circle টা transparent রাখুন -->
+                    <div class="om-wrap">
+                        <img src="image/OM.svg" alt="Om Symbol" width="25" height="25" class="om-img">
+                    </div>
+                    <div class="nav-brand-text">
+                        <span class="nav-brand-text_title">Sorbojonin</span>
+                        <span class="nav-brand-text_title_last">Hindu Parishad</span>
+                    </div>
                 </a>
 
                 <!-- Desktop Menu -->
@@ -63,9 +73,11 @@
                 </div>
 
                 <!-- Mobile Menu Toggle -->
-                <button id="nav-toggle" class="md:hidden text-gray-900 p-2" aria-label="Toggle navigation" aria-controls="mobile-nav" aria-expanded="false">
+                <button id="nav-toggle" class="md:hidden text-gray-900 p-2" aria-label="Toggle navigation"
+                    aria-controls="mobile-nav" aria-expanded="false">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
             </div>
@@ -89,21 +101,33 @@
             <!-- Left Content -->
             <div class="hero-left" data-aos="fade-right" data-aos-duration="1000">
                 <span class="hero-badge">
-                    <svg class="w-4 h-4 mr-2 inline" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-4 h-4 mr-2 inline" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
                     Established 2000 | Serving with devotion
                 </span>
                 <h1 class="hero-title">
                     Welcome to <span class="text-orange-500">Sorbojonin Hindu Parishad</span>
                 </h1>
                 <p class="hero-subtitle">
-                    A sacred sanctuary for spiritual growth, community connection, and divine celebration in Ronkonkoma, Long Island.
+                    A sacred sanctuary for spiritual growth, community connection, and divine celebration in Ronkonkoma,
+                    Long Island.
                 </p>
                 <div class="hero-buttons">
                     <a href="#events" class="hero-btn smooth-scroll">
-                        Explore Events <svg class="w-4 h-4 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        Explore Events <svg class="w-4 h-4 ml-2 inline" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
                     </a>
                     <a href="#contact" class="hero-btn-outline smooth-scroll">
-                        Visit Us <svg class="w-4 h-4 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        Visit Us <svg class="w-4 h-4 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
                     </a>
                 </div>
                 <div class="hero-stats">
@@ -168,32 +192,46 @@
             <!-- Section Header -->
             <div class="text-center mb-16">
                 <span class="section-badge" data-aos="fade-up">Our Sacred Mission</span>
-                <h2 class="section-title-gradient" data-aos="fade-up" data-aos-delay="100">Vision & <span>Values</span></h2>
-                <p class="text-gray-500 mt-4 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">Nurturing spiritual growth and preserving our rich cultural heritage for generations to come.</p>
+                <h2 class="section-title-gradient" data-aos="fade-up" data-aos-delay="100">Vision & <span>Values</span>
+                </h2>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">Nurturing
+                    spiritual growth and preserving our rich cultural heritage for generations to come.</p>
             </div>
 
             <!-- 3 Icon Cards -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20" data-aos="fade-up" data-aos-delay="200">
                 <div class="vision-card">
                     <div class="vision-card-icon">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">Spiritual Growth</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">Fostering inner peace and spiritual enlightenment through daily prayers, meditation, and sacred rituals.</p>
+                    <p class="text-gray-500 text-sm leading-relaxed">Fostering inner peace and spiritual enlightenment
+                        through daily prayers, meditation, and sacred rituals.</p>
                 </div>
                 <div class="vision-card">
                     <div class="vision-card-icon">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">Cultural Heritage</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">Preserving ancient Hindu traditions, arts, and wisdom while embracing the modern world we live in.</p>
+                    <p class="text-gray-500 text-sm leading-relaxed">Preserving ancient Hindu traditions, arts, and
+                        wisdom while embracing the modern world we live in.</p>
                 </div>
                 <div class="vision-card">
                     <div class="vision-card-icon">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">Community Service</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">Building a strong, united community through service, charitable initiatives, and inclusive gatherings.</p>
+                    <p class="text-gray-500 text-sm leading-relaxed">Building a strong, united community through
+                        service, charitable initiatives, and inclusive gatherings.</p>
                 </div>
             </div>
 
@@ -210,50 +248,64 @@
                 <div data-aos="fade-left" data-aos-duration="1000">
                     <h3 class="text-2xl font-bold text-gray-900 mb-2">Our Vision</h3>
                     <p class="text-gray-500 mb-8">
-                        Our Vision To establish a world-class institution dedicated to the spiritual, cultural, social and educational development of our community through the teachings and practice of the timeless traditions and philosophies of Sanatan Dharma.</p>
+                        Our Vision To establish a world-class institution dedicated to the spiritual, cultural, social
+                        and educational development of our community through the teachings and practice of the timeless
+                        traditions and philosophies of Sanatan Dharma.</p>
                     <div class="space-y-5">
                         <div class="flex items-start gap-4">
                             <div class="about-check-icon">
                                 <svg class="w-5 h-5 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd" />
                                 </svg>
                             </div>
                             <div>
                                 <h4 class="font-semibold text-gray-900 mb-1">Daily Rituals</h4>
-                                <p class="text-gray-500 text-sm">Morning and evening aarti, abhishek, and prasad distribution every day.</p>
+                                <p class="text-gray-500 text-sm">Morning and evening aarti, abhishek, and prasad
+                                    distribution every day.</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
                             <div class="about-check-icon">
                                 <svg class="w-5 h-5 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd" />
                                 </svg>
                             </div>
                             <div>
                                 <h4 class="font-semibold text-gray-900 mb-1">Vedic Learning</h4>
-                                <p class="text-gray-500 text-sm">Classes on scriptures, Sanskrit, and philosophical teachings for all ages.</p>
+                                <p class="text-gray-500 text-sm">Classes on scriptures, Sanskrit, and philosophical
+                                    teachings for all ages.</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
                             <div class="about-check-icon">
                                 <svg class="w-5 h-5 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd" />
                                 </svg>
                             </div>
                             <div>
                                 <h4 class="font-semibold text-gray-900 mb-1">Grand Festivals</h4>
-                                <p class="text-gray-500 text-sm">Elaborate celebrations of Durga Puja, Janmashtami, and other major festivals.</p>
+                                <p class="text-gray-500 text-sm">Elaborate celebrations of Durga Puja, Janmashtami, and
+                                    other major festivals.</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
                             <div class="about-check-icon">
                                 <svg class="w-5 h-5 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd" />
                                 </svg>
                             </div>
                             <div>
                                 <h4 class="font-semibold text-gray-900 mb-1">Visual Arts</h4>
-                                <p class="text-gray-500 text-sm">Cultural programs featuring music, dance, drama, and visual art showcases.</p>
+                                <p class="text-gray-500 text-sm">Cultural programs featuring music, dance, drama, and
+                                    visual art showcases.</p>
                             </div>
                         </div>
                     </div>
@@ -267,7 +319,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <span class="section-badge" data-aos="fade-up">Upcoming Events</span>
-                <h2 class="section-title-gradient" data-aos="fade-up" data-aos-delay="100">Sacred <span>Celebrations</span></h2>
+                <h2 class="section-title-gradient" data-aos="fade-up" data-aos-delay="100">Sacred
+                    <span>Celebrations</span></h2>
             </div>
 
             <!-- Event Filter -->
@@ -286,7 +339,8 @@
             <!-- Event Cards -->
             <ul class="event-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Krishna Janmashtami -->
-                <li id="event-one" class="list-group-item conference" data-category="event-one" data-aos="fade-up" data-aos-delay="100">
+                <li id="event-one" class="list-group-item conference" data-category="event-one" data-aos="fade-up"
+                    data-aos-delay="100">
                     <div class="event-card">
                         <div class="event-card-image">
                             <picture>
@@ -296,10 +350,19 @@
                         </div>
                         <div class="event-card-body">
                             <h3 class="event-card-title">Sri Krishna Janmashtami</h3>
-                            <p class="event-card-desc">In 2026, Sri Krishna Janmashtami will be observed on Monday, August 26th.</p>
+                            <p class="event-card-desc">In 2026, Sri Krishna Janmashtami will be observed on Monday,
+                                August 26th.</p>
                             <div class="event-card-meta">
-                                <span><svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg> August 26, 2026</span>
-                                <span><svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> 11:00 AM - 9:00 PM</span>
+                                <span><svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg> August 26, 2026</span>
+                                <span><svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg> 11:00 AM - 9:00 PM</span>
                             </div>
                             <button class="event-card-btn">More Details</button>
                         </div>
@@ -307,7 +370,8 @@
                 </li>
 
                 <!-- Durga Puja -->
-                <li id="event-two" class="list-group-item conference" data-category="event-two" data-aos="fade-up" data-aos-delay="200">
+                <li id="event-two" class="list-group-item conference" data-category="event-two" data-aos="fade-up"
+                    data-aos-delay="200">
                     <div class="event-card">
                         <div class="event-card-image">
                             <picture>
@@ -317,10 +381,19 @@
                         </div>
                         <div class="event-card-body">
                             <h3 class="event-card-title">Durga Puja</h3>
-                            <p class="event-card-desc">In 2026, Durga Puja will be celebrated from October 10th to October 14th.</p>
+                            <p class="event-card-desc">In 2026, Durga Puja will be celebrated from October 10th to
+                                October 14th.</p>
                             <div class="event-card-meta">
-                                <span><svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg> October 8-12, 2026</span>
-                                <span><svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> 8:00 AM - 10:00 PM</span>
+                                <span><svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg> October 8-12, 2026</span>
+                                <span><svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg> 8:00 AM - 10:00 PM</span>
                             </div>
                             <button class="event-card-btn">More Details</button>
                         </div>
@@ -328,7 +401,8 @@
                 </li>
 
                 <!-- Saraswati Puja -->
-                <li id="event-three" class="list-group-item conference" data-category="event-three" data-aos="fade-up" data-aos-delay="300">
+                <li id="event-three" class="list-group-item conference" data-category="event-three" data-aos="fade-up"
+                    data-aos-delay="300">
                     <div class="event-card">
                         <div class="event-card-image">
                             <picture>
@@ -338,10 +412,19 @@
                         </div>
                         <div class="event-card-body">
                             <h3 class="event-card-title">Saraswati Puja</h3>
-                            <p class="event-card-desc">Saraswati Puja, also known as Vasant Panchami, celebrates the goddess of knowledge and wisdom.</p>
+                            <p class="event-card-desc">Saraswati Puja, also known as Vasant Panchami, celebrates the
+                                goddess of knowledge and wisdom.</p>
                             <div class="event-card-meta">
-                                <span><svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg> February 14, 2026</span>
-                                <span><svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> 8:00 AM - 10:00 PM</span>
+                                <span><svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg> February 14, 2026</span>
+                                <span><svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg> 8:00 AM - 10:00 PM</span>
                             </div>
                             <button class="event-card-btn">More Details</button>
                         </div>
@@ -352,12 +435,14 @@
     </section>
 
     <!-- Executive Committee Section -->
-    <section id="members" class="section-padding bg-white">
+    <section id="members" class="section-padding">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-4">
                 <span class="section-badge" data-aos="fade-up">Our Leadership</span>
-                <h2 class="section-title-gradient" data-aos="fade-up" data-aos-delay="100">Executive <span>Committee</span></h2>
-                <p class="text-gray-500 mt-4 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="150">Dedicated leaders guiding our temple community with wisdom, devotion, and compassion</p>
+                <h2 class="section-title-gradient" data-aos="fade-up" data-aos-delay="100">Executive
+                    <span>Committee</span></h2>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="150">Dedicated
+                    leaders guiding our temple community with wisdom, devotion, and compassion</p>
             </div>
 
             <!-- Member Filter -->
@@ -369,168 +454,266 @@
             </div>
 
             <!-- Executive Members -->
-            <div class="community_members executive_members members grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" data-member-category="executive" data-aos="fade-up" data-aos-delay="200">
+            <div class="community_members executive_members members grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+                data-member-category="executive" data-aos="fade-up" data-aos-delay="200">
                 <div class="executive_member_image member-card">
-                    <picture><source srcset="image/members/Bidyut C Das.webp" type="image/webp"><img src="image/members/Bidyut C Das.png" alt="Bidyut C Das" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/members/Bidyut C Das.webp" type="image/webp"><img
+                            src="image/members/Bidyut C Das.png" alt="Bidyut C Das" loading="lazy">
+                    </picture>
                     <h3>Bidyut C Das</h3>
                     <h4>President</h4>
                 </div>
                 <div class="executive_member_image member-card">
-                    <picture><source srcset="image/members/Gopesh_R_dash.webp" type="image/webp"><img src="image/members/Gopesh_R_dash.jpg" alt="Gopesh R Das" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/members/Gopesh_R_dash.webp" type="image/webp"><img
+                            src="image/members/Gopesh_R_dash.jpg" alt="Gopesh R Das" loading="lazy">
+                    </picture>
                     <h3>Gopesh R Das</h3>
                     <h4>Vice- President</h4>
                 </div>
                 <div class="executive_member_image member-card">
-                    <picture><source srcset="image/members/Dilip_das.webp" type="image/webp"><img src="image/members/Dilip_das.jpg" alt="Dilip Das" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/members/Dilip_das.webp" type="image/webp"><img
+                            src="image/members/Dilip_das.jpg" alt="Dilip Das" loading="lazy">
+                    </picture>
                     <h3>Dilip Das</h3>
                     <h4>Vice- President</h4>
                 </div>
                 <div class="executive_member_image member-card">
-                    <picture><source srcset="image/members/Pankoj_das.webp" type="image/webp"><img src="image/members/Pankoj_das.jpg" alt="Pankoj Das" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/members/Pankoj_das.webp" type="image/webp"><img
+                            src="image/members/Pankoj_das.jpg" alt="Pankoj Das" loading="lazy">
+                    </picture>
                     <h3>Pankoj Das</h3>
                     <h4>General Secretary</h4>
                 </div>
                 <div class="executive_member_image member-card">
-                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Biswomoni Sarkar" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/member.webp" type="image/webp"><img src="image/member.png"
+                            alt="Biswomoni Sarkar" loading="lazy">
+                    </picture>
                     <h3>Biswomoni Sarkar</h3>
                     <h4>Assistant General Secretary</h4>
                 </div>
                 <div class="executive_member_image member-card">
-                    <picture><source srcset="image/members/bijoy_s.webp" type="image/webp"><img src="image/members/bijoy_s.jpg" alt="Bijoy C. Sarkar" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/members/bijoy_s.webp" type="image/webp"><img
+                            src="image/members/bijoy_s.jpg" alt="Bijoy C. Sarkar" loading="lazy">
+                    </picture>
                     <h3>Bijoy C. Sarkar</h3>
                     <h4>Organizing Secretary</h4>
                 </div>
                 <div class="executive_member_image member-card">
-                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Bidhan Paul" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/member.webp" type="image/webp"><img src="image/member.png"
+                            alt="Bidhan Paul" loading="lazy">
+                    </picture>
                     <h3>Bidhan Paul</h3>
                     <h4>Assistant organizing Secretary</h4>
                 </div>
                 <div class="executive_member_image member-card">
-                    <picture><source srcset="image/members/Arup Kumar Dey.webp" type="image/webp"><img src="image/members/Arup Kumar Dey.jpg" alt="Arup Kumar Dey" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/members/Arup Kumar Dey.webp" type="image/webp"><img
+                            src="image/members/Arup Kumar Dey.jpg" alt="Arup Kumar Dey" loading="lazy">
+                    </picture>
                     <h3>Arup Kumar Dey</h3>
                     <h4>Treasure</h4>
                 </div>
                 <div class="executive_member_image member-card">
-                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member"
+                            loading="lazy">
+                    </picture>
                     <h3>Subroto Sarkar</h3>
                     <h4>Joint Treasure</h4>
                 </div>
                 <div class="executive_member_image member-card">
-                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member"
+                            loading="lazy">
+                    </picture>
                     <h3>Subroto Sarkar</h3>
                     <h4>Joint Treasure</h4>
                 </div>
                 <div class="executive_member_image member-card">
-                    <picture><source srcset="image/members/liton_sarkar.webp" type="image/webp"><img src="image/members/liton_sarkar.jpg" alt="Liton Sarkar" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/members/liton_sarkar.webp" type="image/webp"><img
+                            src="image/members/liton_sarkar.jpg" alt="Liton Sarkar" loading="lazy">
+                    </picture>
                     <h3>Liton Sarkar</h3>
                     <h4>Cultural Secretary</h4>
                 </div>
                 <div class="executive_member_image member-card">
-                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member"
+                            loading="lazy">
+                    </picture>
                     <h3>Sanjit Sarkar</h3>
                     <h4>Media & IT Secretary</h4>
                 </div>
                 <div class="executive_member_image member-card">
-                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member"
+                            loading="lazy">
+                    </picture>
                     <h3>Pronab Dey</h3>
                     <h4>Executive Member</h4>
                 </div>
                 <div class="executive_member_image member-card">
-                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member"
+                            loading="lazy">
+                    </picture>
                     <h3>Provash Dey</h3>
                     <h4>Executive Member</h4>
                 </div>
                 <div class="executive_member_image member-card">
-                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member"
+                            loading="lazy">
+                    </picture>
                     <h3>Mongol Das</h3>
                     <h4>Executive Member</h4>
                 </div>
                 <div class="executive_member_image member-card">
-                    <picture><source srcset="image/members/bidan_datta.webp" type="image/webp"><img src="image/members/bidan_datta.jpg" alt="Bidan Datta" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/members/bidan_datta.webp" type="image/webp"><img
+                            src="image/members/bidan_datta.jpg" alt="Bidan Datta" loading="lazy">
+                    </picture>
                     <h3>Bidan Datta</h3>
                     <h4>Executive Member</h4>
                 </div>
                 <div class="executive_member_image member-card">
-                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member"
+                            loading="lazy">
+                    </picture>
                     <h3>Rabindra Das</h3>
                     <h4>Executive Member</h4>
                 </div>
                 <div class="executive_member_image member-card">
-                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member"
+                            loading="lazy">
+                    </picture>
                     <h3>Gopal Dey</h3>
                     <h4>Executive Member</h4>
                 </div>
                 <div class="executive_member_image member-card">
-                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member"
+                            loading="lazy">
+                    </picture>
                     <h3>Kishore Sikder</h3>
                     <h4>Executive Member</h4>
                 </div>
                 <div class="executive_member_image member-card">
-                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member"
+                            loading="lazy">
+                    </picture>
                     <h3>Sunil Banik</h3>
                     <h4>Executive Member</h4>
                 </div>
                 <div class="executive_member_image member-card">
-                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member"
+                            loading="lazy">
+                    </picture>
                     <h3>Nikhil Das</h3>
                     <h4>Executive Member</h4>
                 </div>
                 <div class="executive_member_image member-card">
-                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member"
+                            loading="lazy">
+                    </picture>
                     <h3>Ronjon Sarkar</h3>
                     <h4>Executive Member</h4>
                 </div>
                 <div class="executive_member_image member-card">
-                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member"
+                            loading="lazy">
+                    </picture>
                     <h3>Mithu Talukder</h3>
                     <h4>Executive Member</h4>
                 </div>
                 <div class="executive_member_image member-card">
-                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member"
+                            loading="lazy">
+                    </picture>
                     <h3>Ratan Roy</h3>
                     <h4>Executive Member</h4>
                 </div>
             </div>
 
             <!-- Trust Members -->
-            <div class="community_members trust_members members grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" data-member-category="trust" style="display:none;" data-aos="fade-up">
+            <div class="community_members trust_members members grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+                data-member-category="trust" style="display:none;" data-aos="fade-up">
                 <div class="trust_member_image member-card">
-                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member"
+                            loading="lazy">
+                    </picture>
                     <h3>Trust Member 1</h3>
                     <h4>Trustee</h4>
                 </div>
                 <div class="trust_member_image member-card">
-                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member"
+                            loading="lazy">
+                    </picture>
                     <h3>Trust Member 2</h3>
                     <h4>Trustee</h4>
                 </div>
                 <div class="trust_member_image member-card">
-                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member"
+                            loading="lazy">
+                    </picture>
                     <h3>Trust Member 3</h3>
                     <h4>Trustee</h4>
                 </div>
                 <div class="trust_member_image member-card">
-                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member"
+                            loading="lazy">
+                    </picture>
                     <h3>Trust Member 4</h3>
                     <h4>Trustee</h4>
                 </div>
                 <div class="trust_member_image member-card">
-                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member"
+                            loading="lazy">
+                    </picture>
                     <h3>Trust Member 5</h3>
                     <h4>Trustee</h4>
                 </div>
                 <div class="trust_member_image member-card">
-                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member"
+                            loading="lazy">
+                    </picture>
                     <h3>Trust Member 6</h3>
                     <h4>Trustee</h4>
                 </div>
                 <div class="trust_member_image member-card">
-                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member"
+                            loading="lazy">
+                    </picture>
                     <h3>Trust Member 7</h3>
                     <h4>Trustee</h4>
                 </div>
                 <div class="trust_member_image member-card">
-                    <picture><source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="image/member.webp" type="image/webp"><img src="image/member.png" alt="Member"
+                            loading="lazy">
+                    </picture>
                     <h3>Trust Member 8</h3>
                     <h4>Trustee</h4>
                 </div>
@@ -544,12 +727,14 @@
     </section>
 
     <!-- Sacred Moments (Gallery) Section -->
-    <section id="gallery" class="section-padding section-bg-lavender">
+    <section id="gallery" class="section-padding">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <span class="section-badge" data-aos="fade-up">Memories</span>
-                <h2 class="section-title-gradient" data-aos="fade-up" data-aos-delay="100">Sacred <span>Moments</span></h2>
-                <p class="text-gray-500 mt-4 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">Relive the beautiful memories from our festivals, ceremonies, and community gatherings.</p>
+                <h2 class="section-title-gradient" data-aos="fade-up" data-aos-delay="100">Sacred <span>Moments</span>
+                </h2>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">Relive the
+                    beautiful memories from our festivals, ceremonies, and community gatherings.</p>
             </div>
 
             <!-- Gallery Category Filters -->
@@ -561,83 +746,145 @@
             </div>
 
             <div class="gallery_container" data-aos="fade-up" data-aos-duration="1000">
-                <a class="lightbox" href="./image/gallery/2.jpg" data-lightbox="homePortfolio" data-title="Festival Celebration">
-                    <picture><source srcset="./image/gallery/2.webp" type="image/webp"><img src="./image/gallery/2.jpg" alt="Festival Celebration" loading="lazy"></picture>
+                <a class="lightbox" href="./image/gallery/2.jpg" data-lightbox="homePortfolio"
+                    data-title="Festival Celebration">
+                    <picture>
+                        <source srcset="./image/gallery/2.webp" type="image/webp"><img src="./image/gallery/2.jpg"
+                            alt="Festival Celebration" loading="lazy">
+                    </picture>
                     <div class="gallery-overlay"><span>Festival Celebration</span></div>
                 </a>
 
-                <a class="lightbox" href="./image/gallery/3.jpg" data-lightbox="homePortfolio" data-title="Puja Ceremony">
-                    <picture><source srcset="./image/gallery/3.webp" type="image/webp"><img src="./image/gallery/3.jpg" alt="Puja Ceremony" loading="lazy"></picture>
+                <a class="lightbox" href="./image/gallery/3.jpg" data-lightbox="homePortfolio"
+                    data-title="Puja Ceremony">
+                    <picture>
+                        <source srcset="./image/gallery/3.webp" type="image/webp"><img src="./image/gallery/3.jpg"
+                            alt="Puja Ceremony" loading="lazy">
+                    </picture>
                     <div class="gallery-overlay"><span>Puja Ceremony</span></div>
                 </a>
 
-                <a class="lightbox" href="./image/gallery/4.jpg" data-lightbox="homePortfolio" data-title="Community Gathering">
-                    <picture><source srcset="./image/gallery/4.webp" type="image/webp"><img src="./image/gallery/4.jpg" alt="Community Gathering" loading="lazy"></picture>
+                <a class="lightbox" href="./image/gallery/4.jpg" data-lightbox="homePortfolio"
+                    data-title="Community Gathering">
+                    <picture>
+                        <source srcset="./image/gallery/4.webp" type="image/webp"><img src="./image/gallery/4.jpg"
+                            alt="Community Gathering" loading="lazy">
+                    </picture>
                     <div class="gallery-overlay"><span>Community Gathering</span></div>
                 </a>
 
-                <a class="lightbox" href="./image/gallery/1.webp" data-lightbox="homePortfolio" data-title="Sacred Rituals">
-                    <picture><source srcset="./image/gallery/1.webp" type="image/webp"><img src="./image/gallery/1.webp" alt="Sacred Rituals" loading="lazy"></picture>
+                <a class="lightbox" href="./image/gallery/1.webp" data-lightbox="homePortfolio"
+                    data-title="Sacred Rituals">
+                    <picture>
+                        <source srcset="./image/gallery/1.webp" type="image/webp"><img src="./image/gallery/1.webp"
+                            alt="Sacred Rituals" loading="lazy">
+                    </picture>
                     <div class="gallery-overlay"><span>Sacred Rituals</span></div>
                 </a>
 
                 <a class="lightbox" href="./image/gallery/5.jpg" data-lightbox="homePortfolio" data-title="Event Decor">
-                    <picture><source srcset="./image/gallery/5.webp" type="image/webp"><img src="./image/gallery/5.jpg" alt="Event Decor" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="./image/gallery/5.webp" type="image/webp"><img src="./image/gallery/5.jpg"
+                            alt="Event Decor" loading="lazy">
+                    </picture>
                     <div class="gallery-overlay"><span>Event Decor</span></div>
                 </a>
 
-                <a class="lightbox" href="./image/gallery/6.webp" data-lightbox="homePortfolio" data-title="Devotional Moments">
-                    <picture><source srcset="./image/gallery/6.webp" type="image/webp"><img src="./image/gallery/6.webp" alt="Devotional Moments" loading="lazy"></picture>
+                <a class="lightbox" href="./image/gallery/6.webp" data-lightbox="homePortfolio"
+                    data-title="Devotional Moments">
+                    <picture>
+                        <source srcset="./image/gallery/6.webp" type="image/webp"><img src="./image/gallery/6.webp"
+                            alt="Devotional Moments" loading="lazy">
+                    </picture>
                     <div class="gallery-overlay"><span>Devotional Moments</span></div>
                 </a>
 
-                <a class="lightbox" href="./image/gallery/7.jpg" data-lightbox="homePortfolio" data-title="Cultural Program">
-                    <picture><source srcset="./image/gallery/7.webp" type="image/webp"><img src="./image/gallery/7.jpg" alt="Cultural Program" loading="lazy"></picture>
+                <a class="lightbox" href="./image/gallery/7.jpg" data-lightbox="homePortfolio"
+                    data-title="Cultural Program">
+                    <picture>
+                        <source srcset="./image/gallery/7.webp" type="image/webp"><img src="./image/gallery/7.jpg"
+                            alt="Cultural Program" loading="lazy">
+                    </picture>
                     <div class="gallery-overlay"><span>Cultural Program</span></div>
                 </a>
 
-                <a class="lightbox" href="./image/gallery/8.jpg" data-lightbox="homePortfolio" data-title="Temple Decoration">
-                    <picture><source srcset="./image/gallery/8.webp" type="image/webp"><img src="./image/gallery/8.jpg" alt="Temple Decoration" loading="lazy"></picture>
+                <a class="lightbox" href="./image/gallery/8.jpg" data-lightbox="homePortfolio"
+                    data-title="Temple Decoration">
+                    <picture>
+                        <source srcset="./image/gallery/8.webp" type="image/webp"><img src="./image/gallery/8.jpg"
+                            alt="Temple Decoration" loading="lazy">
+                    </picture>
                     <div class="gallery-overlay"><span>Temple Decoration</span></div>
                 </a>
 
-                <a class="lightbox" href="./image/gallery/2.jpg" data-lightbox="homePortfolio" data-title="Festival Celebration">
-                    <picture><source srcset="./image/gallery/2.webp" type="image/webp"><img src="./image/gallery/2.jpg" alt="Festival Celebration" loading="lazy"></picture>
+                <a class="lightbox" href="./image/gallery/2.jpg" data-lightbox="homePortfolio"
+                    data-title="Festival Celebration">
+                    <picture>
+                        <source srcset="./image/gallery/2.webp" type="image/webp"><img src="./image/gallery/2.jpg"
+                            alt="Festival Celebration" loading="lazy">
+                    </picture>
                     <div class="gallery-overlay"><span>Festival Celebration</span></div>
                 </a>
 
-                <a class="lightbox" href="./image/gallery/3.jpg" data-lightbox="homePortfolio" data-title="Puja Ceremony">
-                    <picture><source srcset="./image/gallery/3.webp" type="image/webp"><img src="./image/gallery/3.jpg" alt="Puja Ceremony" loading="lazy"></picture>
+                <a class="lightbox" href="./image/gallery/3.jpg" data-lightbox="homePortfolio"
+                    data-title="Puja Ceremony">
+                    <picture>
+                        <source srcset="./image/gallery/3.webp" type="image/webp"><img src="./image/gallery/3.jpg"
+                            alt="Puja Ceremony" loading="lazy">
+                    </picture>
                     <div class="gallery-overlay"><span>Puja Ceremony</span></div>
                 </a>
 
-                <a class="lightbox" href="./image/gallery/4.jpg" data-lightbox="homePortfolio" data-title="Community Gathering">
-                    <picture><source srcset="./image/gallery/4.webp" type="image/webp"><img src="./image/gallery/4.jpg" alt="Community Gathering" loading="lazy"></picture>
+                <a class="lightbox" href="./image/gallery/4.jpg" data-lightbox="homePortfolio"
+                    data-title="Community Gathering">
+                    <picture>
+                        <source srcset="./image/gallery/4.webp" type="image/webp"><img src="./image/gallery/4.jpg"
+                            alt="Community Gathering" loading="lazy">
+                    </picture>
                     <div class="gallery-overlay"><span>Community Gathering</span></div>
                 </a>
 
-                <a class="lightbox" href="./image/gallery/1.webp" data-lightbox="homePortfolio" data-title="Sacred Rituals">
-                    <picture><source srcset="./image/gallery/1.webp" type="image/webp"><img src="./image/gallery/1.webp" alt="Sacred Rituals" loading="lazy"></picture>
+                <a class="lightbox" href="./image/gallery/1.webp" data-lightbox="homePortfolio"
+                    data-title="Sacred Rituals">
+                    <picture>
+                        <source srcset="./image/gallery/1.webp" type="image/webp"><img src="./image/gallery/1.webp"
+                            alt="Sacred Rituals" loading="lazy">
+                    </picture>
                     <div class="gallery-overlay"><span>Sacred Rituals</span></div>
                 </a>
 
                 <a class="lightbox" href="./image/gallery/5.jpg" data-lightbox="homePortfolio" data-title="Event Decor">
-                    <picture><source srcset="./image/gallery/5.webp" type="image/webp"><img src="./image/gallery/5.jpg" alt="Event Decor" loading="lazy"></picture>
+                    <picture>
+                        <source srcset="./image/gallery/5.webp" type="image/webp"><img src="./image/gallery/5.jpg"
+                            alt="Event Decor" loading="lazy">
+                    </picture>
                     <div class="gallery-overlay"><span>Event Decor</span></div>
                 </a>
 
-                <a class="lightbox" href="./image/gallery/6.webp" data-lightbox="homePortfolio" data-title="Devotional Moments">
-                    <picture><source srcset="./image/gallery/6.webp" type="image/webp"><img src="./image/gallery/6.webp" alt="Devotional Moments" loading="lazy"></picture>
+                <a class="lightbox" href="./image/gallery/6.webp" data-lightbox="homePortfolio"
+                    data-title="Devotional Moments">
+                    <picture>
+                        <source srcset="./image/gallery/6.webp" type="image/webp"><img src="./image/gallery/6.webp"
+                            alt="Devotional Moments" loading="lazy">
+                    </picture>
                     <div class="gallery-overlay"><span>Devotional Moments</span></div>
                 </a>
 
-                <a class="lightbox" href="./image/gallery/7.jpg" data-lightbox="homePortfolio" data-title="Cultural Program">
-                    <picture><source srcset="./image/gallery/7.webp" type="image/webp"><img src="./image/gallery/7.jpg" alt="Cultural Program" loading="lazy"></picture>
+                <a class="lightbox" href="./image/gallery/7.jpg" data-lightbox="homePortfolio"
+                    data-title="Cultural Program">
+                    <picture>
+                        <source srcset="./image/gallery/7.webp" type="image/webp"><img src="./image/gallery/7.jpg"
+                            alt="Cultural Program" loading="lazy">
+                    </picture>
                     <div class="gallery-overlay"><span>Cultural Program</span></div>
                 </a>
 
-                <a class="lightbox" href="./image/gallery/8.jpg" data-lightbox="homePortfolio" data-title="Temple Decoration">
-                    <picture><source srcset="./image/gallery/8.webp" type="image/webp"><img src="./image/gallery/8.jpg" alt="Temple Decoration" loading="lazy"></picture>
+                <a class="lightbox" href="./image/gallery/8.jpg" data-lightbox="homePortfolio"
+                    data-title="Temple Decoration">
+                    <picture>
+                        <source srcset="./image/gallery/8.webp" type="image/webp"><img src="./image/gallery/8.jpg"
+                            alt="Temple Decoration" loading="lazy">
+                    </picture>
                     <div class="gallery-overlay"><span>Temple Decoration</span></div>
                 </a>
             </div>
@@ -649,12 +896,14 @@
     </section>
 
     <!-- Contact Us Section -->
-    <section id="contact" class="section-padding section-bg-warm">
+    <section id="contact" class="section-padding bg-white-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <span class="section-badge" data-aos="fade-up">Get In Touch</span>
-                <h2 class="section-title-gradient" data-aos="fade-up" data-aos-delay="100">Visit <span>Our Temple</span></h2>
-                <p class="text-gray-500 mt-4 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">We would love to hear from you. Reach out to us for any inquiries or visit our temple.</p>
+                <h2 class="section-title-gradient" data-aos="fade-up" data-aos-delay="100">Visit <span>Our Temple</span>
+                </h2>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">We would love to
+                    hear from you. Reach out to us for any inquiries or visit our temple.</p>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <!-- Contact Info (Left) -->
@@ -665,8 +914,10 @@
                     <div class="contact-card">
                         <div class="contact-card-icon">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
                         </div>
                         <div>
@@ -680,7 +931,8 @@
                     <div class="contact-card">
                         <div class="contact-card-icon">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                         </div>
                         <div>
@@ -693,8 +945,10 @@
 
                 <!-- Google Map (Right) -->
                 <div data-aos="fade-left">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.8952827954868!2d-73.13684372392458!3d40.80829487137926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e837a004d217ad%3A0x1728e7dc98f95538!2s542%20Beaver%20Ln%2C%20Ronkonkoma%2C%20NY%2011779%2C%20USA!5e0!3m2!1sen!2sbd!4v1725300871886!5m2!1sen!2sbd"
-                        class="w-full rounded-2xl shadow-lg" style="border:0; min-height: 420px; height: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.8952827954868!2d-73.13684372392458!3d40.80829487137926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e837a004d217ad%3A0x1728e7dc98f95538!2s542%20Beaver%20Ln%2C%20Ronkonkoma%2C%20NY%2011779%2C%20USA!5e0!3m2!1sen!2sbd!4v1725300871886!5m2!1sen!2sbd"
+                        class="w-full rounded-2xl shadow-lg" style="border:0; min-height: 420px; height: 100%;"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -713,7 +967,8 @@
                         </picture>
                         <span class="footer-brand">Sorbojonin<br>Hindu Parishad</span>
                     </div>
-                    <p class="text-gray-400 text-sm leading-relaxed">A sacred space for spiritual growth, community connection, and divine celebration in Ronkonkoma, Long Island.</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">A sacred space for spiritual growth, community
+                        connection, and divine celebration in Ronkonkoma, Long Island.</p>
                 </div>
 
                 <!-- Quick Links -->
@@ -745,15 +1000,29 @@
                     <h4 class="font-semibold mb-4">Contact Info</h4>
                     <ul class="space-y-3 text-gray-400 text-sm">
                         <li class="flex items-start gap-2">
-                            <svg class="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            <svg class="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-500" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
                             542 Beaver Ln, Ronkonkoma, NY 11779
                         </li>
                         <li class="flex items-start gap-2">
-                            <svg class="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                            <svg class="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-500" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
                             +1 (555) 123-4567
                         </li>
                         <li class="flex items-start gap-2">
-                            <svg class="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            <svg class="w-4 h-4 mt-0.5 flex-shrink-0 text-orange-500" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
                             info@sorbojoninhinduparishad.org
                         </li>
                     </ul>
@@ -792,7 +1061,9 @@
 
     <!-- Back to Top -->
     <a href="#hero" id="back-to-top" class="back-to-top smooth-scroll" title="Back to top">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
     </a>
 
     <!-- Scripts -->
