@@ -1,11 +1,11 @@
 /* ================================================
-   Responsive Styles — v3
+   Responsive Styles — v4
 ===================================================*/
 
 /* Large Desktop */
 @media (max-width: 1280px) {
     .hero-title {
-        font-size: 2.6rem;
+        font-size: 2.8rem;
     }
 
     .hero-collage {
@@ -49,7 +49,7 @@
     }
 
     .section-padding {
-        padding: 70px 0;
+        padding: 76px 0;
     }
 
     .about-main-image {
@@ -66,6 +66,17 @@
     .section-title-gradient {
         font-size: 2.4rem;
     }
+
+    /* Reduce floating orbs on tablet */
+    .hero-section::before {
+        width: 250px;
+        height: 250px;
+    }
+
+    .hero-section::after {
+        width: 200px;
+        height: 200px;
+    }
 }
 
 /* Mobile Landscape */
@@ -75,7 +86,6 @@
         font-size: 12px;
     }
 
-    /* Hide hero scroll indicator on mobile/tablet portrait */
     .scroll-indicator--hero {
         display: none !important;
     }
@@ -84,8 +94,10 @@
         padding-top: 100px;
     }
 
-    .hero-section::before {
-        width: 100%;
+    /* Hide decorative orbs on mobile */
+    .hero-section::before,
+    .hero-section::after {
+        display: none;
     }
 
     .hero-title {
@@ -108,6 +120,12 @@
     .hero-collage-card-3,
     .hero-collage-card-4 {
         height: 160px;
+    }
+
+    /* Remove collage stagger on mobile */
+    .hero-collage-card:nth-child(2),
+    .hero-collage-card:nth-child(3) {
+        transform: none;
     }
 
     .section-title {
@@ -157,7 +175,7 @@
     }
 
     .vision-card {
-        padding: 28px 20px;
+        padding: 28px 22px;
     }
 
     .contact-form {
@@ -179,6 +197,16 @@
         min-width: 44px;
         border-radius: 12px;
     }
+
+    .contact-card {
+        padding: 22px;
+    }
+
+    /* Reduce animation intensity on mobile */
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(16px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
 }
 
 /* Mobile Portrait */
@@ -197,11 +225,11 @@
     }
 
     .hero-title {
-        font-size: 1.6rem;
+        font-size: 1.7rem;
     }
 
     .hero-subtitle {
-        font-size: 0.85rem;
+        font-size: 0.88rem;
     }
 
     .hero-subtitle br {
@@ -226,11 +254,11 @@
     }
 
     .hero-stat-number {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 
     .hero-stat-label {
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .hero-collage {
@@ -257,7 +285,7 @@
     }
 
     .section-padding {
-        padding: 44px 0;
+        padding: 48px 0;
     }
 
     .about-main-image {
@@ -314,5 +342,30 @@
     .gallery-filter-btn {
         padding: 5px 12px;
         font-size: 12px;
+    }
+
+    /* Disable heavy animations on small screens */
+    .hero-btn::before,
+    .contact-submit-btn::before,
+    .event-card-btn::before {
+        display: none;
+    }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .hero-section::before,
+    .hero-section::after {
+        animation: none;
+    }
+
+    .footer-section::before {
+        animation: none;
     }
 }
