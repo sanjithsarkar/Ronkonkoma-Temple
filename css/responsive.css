@@ -1,5 +1,5 @@
 /* ================================================
-   Responsive Styles
+   Responsive Styles — v3
 ===================================================*/
 
 /* Large Desktop */
@@ -49,7 +49,7 @@
     }
 
     .section-padding {
-        padding: 60px 0;
+        padding: 70px 0;
     }
 
     .about-main-image {
@@ -80,12 +80,12 @@
         display: none !important;
     }
 
-    /* #navbar {
-        top: 32px !important;
-    } */
-
     .hero-section {
         padding-top: 100px;
+    }
+
+    .hero-section::before {
+        width: 100%;
     }
 
     .hero-title {
@@ -119,7 +119,7 @@
     }
 
     .section-padding {
-        padding: 50px 0;
+        padding: 56px 0;
     }
 
     .about-main-image {
@@ -157,7 +157,7 @@
     }
 
     .vision-card {
-        padding: 24px 20px;
+        padding: 28px 20px;
     }
 
     .contact-form {
@@ -171,6 +171,13 @@
     .gallery-filter-btn {
         padding: 6px 14px;
         font-size: 13px;
+    }
+
+    .contact-card-icon {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        border-radius: 12px;
     }
 }
 
@@ -250,7 +257,7 @@
     }
 
     .section-padding {
-        padding: 40px 0;
+        padding: 44px 0;
     }
 
     .about-main-image {
